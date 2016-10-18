@@ -1,29 +1,51 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+To run this project you will need to follow the next steps:
 
-### What is this repository for? ###
+### MakeMark Site ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+#Prerequisites
 
-### How do I get set up? ###
+```
+nodejs
+gulp
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+```
 
-### Contribution guidelines ###
+* Make sure you have Node.js installed on your system
+* After having Node.js, install Gulp
 
-* Writing tests
-* Code review
-* Other guidelines
+```
+sudo npm install gulp -g
 
-### Who do I talk to? ###
+```
 
-* Repo owner or admin
-* Other community or team contact
+* Install the following Gulp plugins for develop
+
+### Preprocessing with Gulp
+
+```
+sudo npm install gulp-sass --save-dev
+
+```
+
+### Live-reloading with Browser Sync
+
+```
+sudo npm install browser-sync --save-dev
+
+```
+
+* Sources
+
+[ nodejs ](https://nodejs.org/es/)
+[ gulpjs ](http://gulpjs.com/)
+
+### Patterns
+- ``app`` Folder with main code.
+- ``app/sass`` Folder with main style.
+- ``app/main.sass`` main style file.
+
+-----------------------
+
+- ``dist`` Folder with production code.
