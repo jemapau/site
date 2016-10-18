@@ -11,8 +11,8 @@ gulp
 
 ```
 
-Make sure you have Node.js installed on your system
-After having Node.js, install Gulp
+- Make sure you have Node.js installed on your system
+- After having Node.js, install Gulp
 
 ```
 sudo npm install gulp -g
