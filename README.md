@@ -35,11 +35,6 @@ sudo npm install browser-sync --save-dev
 
 ```
 
-* Sources
-
-- [ nodejs ](https://nodejs.org/es/)
-- [ gulpjs ](http://gulpjs.com/)
-
 ### Patterns
 - ``app`` Folder with main code.
 - ``app/sass`` Folder with main style.
@@ -48,3 +43,8 @@ sudo npm install browser-sync --save-dev
 -----------------------
 
 - ``dist`` Folder with production code.
+
+###Sources
+
+- [ nodejs ](https://nodejs.org/es/)
+- [ gulpjs ](http://gulpjs.com/)
