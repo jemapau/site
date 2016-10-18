@@ -1,10 +1,9 @@
 # README #
+### MakeMark Site ###
 
 To run this project you will need to follow the next steps:
 
-### MakeMark Site ###
-
-#Prerequisites
+###Prerequisites
 
 ```
 nodejs
@@ -12,15 +11,15 @@ gulp
 
 ```
 
-* Make sure you have Node.js installed on your system
-* After having Node.js, install Gulp
+Make sure you have Node.js installed on your system
+After having Node.js, install Gulp
 
 ```
 sudo npm install gulp -g
 
 ```
 
-* Install the following Gulp plugins for develop
+Install the following Gulp plugins for develop
 
 ### Preprocessing with Gulp
 
@@ -38,8 +37,8 @@ sudo npm install browser-sync --save-dev
 
 * Sources
 
-[ nodejs ](https://nodejs.org/es/)
-[ gulpjs ](http://gulpjs.com/)
+- [ nodejs ](https://nodejs.org/es/)
+- [ gulpjs ](http://gulpjs.com/)
 
 ### Patterns
 - ``app`` Folder with main code.
