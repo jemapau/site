@@ -1,3 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Pragati+Narrow");
+@import url("https://fonts.googleapis.com/css?family=Rozha+One");
+header .social {
+  display: flex; }
+  header .social-item {
+    display: inline-flex;
+    border: 1px solid pink;
+    width: 20px;
+    height: 20px;
+    margin: 10px 0px 0px 10px; }
+    header .social-item--link {
+      display: block; }
+
+header .nav-home {
+  position: absolute;
+  right: 0px;
+  float: right;
+  top: 35%; }
+
+header .nav-item--link {
+  position: relative;
+  display: block;
+  padding-right: 10px;
+  border-bottom: 1px solid #787878;
+  min-width: 180px;
+  height: 20px; }
+  header .nav-item--link:hover {
+    border-bottom: 1px solid #56bad2; }
+    header .nav-item--link:hover:before {
+      position: absolute;
+      content: '';
+      width: 25px;
+      height: 3px;
+      background-color: #56bad2;
+      bottom: -1.5px; }
+
 body {
   background: black;
+  overflow: hidden;
+  height: 100vh;
+  font-family: "Pragati Narrow", sans-serif;
+  color: #787878;
+  margin: 0pxe; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+ul {
+  padding-left: 0; }
+  ul li {
+    list-style: none; }
+
+a {
+  text-decoration: none;
   color: white; }
+
+.content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  font-size: 32px;
+  font-weight: normal; }
+
+footer {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid peru;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  color: #173435; }
