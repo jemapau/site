@@ -1,0 +1,45 @@
+@import "../variables.sass"
+
+.page-title
+  color: $color-darker-blue
+  font-size: $font-size-x-large
+  font-family: $font-title
+
+.service-title
+  position: absolute
+  left: -55px
+  font-family: $font-title
+  font-size: $font-size-large
+  letter-spacing: 5px
+
+.service
+  position: relative
+  margin-bottom: 60px
+  &-title
+    color: $color-blue
+    font-weight: normal
+  &-thumb
+    position: relative
+    &--link
+      position: absolute
+      right: 0
+      width: 212px
+      height: 212px
+      border: 1px solid $color-blue
+    &--img
+      width: 100%
+      height: 100%
+  &-desc
+    position: relative
+  &-text
+    position: relative
+    margin-top: 13%
+    span
+      color: black
+      display: inline-block
+      position: relative
+      &:first-letter
+        position: absolute
+        font-size: $font-size-large
+        font-family: $font-title
+        line-height: 5px

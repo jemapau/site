@@ -1,27 +1,47 @@
-@import "base.sass"
+@import "variables.sass"
+
+//Global setting
+html
+  height: 100%
+  box-sizing: border-box
+*, *:before, *:after
+  box-sizing: inherit
+
+.wrapper
+  min-height: 100%
+  &::after
+    content: ""
+    display: block
+
+ul
+  padding-left: 0
+  li
+    list-style: none
+a
+  text-decoration: none
+  color: white
 
 header
+  padding: 10px 0px 0px 10px
   .social
       display: flex
       &-item
         display: inline-flex
-        border: 1px solid pink
         width: 20px
         height: 20px
-        margin: 10px 0px 0px 10px
         &--link
           display: block
-  .nav-home
+  .nav
     position: absolute
     right: 0px
     float: right
     top: 35%
-  .nav-item
+  .nav-home
     &--link
       position: relative
       display: block
       padding-right: 10px
-      border-bottom: 1px solid $color-grey
+      border-bottom: 1px solid $color-dark-blue
       min-width: 180px
       height: 20px
       &:hover
@@ -34,39 +54,115 @@ header
           background-color: $color-blue
           bottom: -1.5px
 
-body
-  background: black
+.body
+  position: relative
+  background: $color-dark-blue
   overflow: hidden
-  height: 100vh
+  height: 100%
   font-family: $font-body
+  font-size: $font-size-small
+  line-height: 1.5
+  letter-spacing: 2px
   color: $color-grey
-  margin: 0pxe
+  margin: 0px
+  font-weight: normal
+  background-image: url('../images/home-bg.jpg')
+  background-size: cover
+  &-inner
+    background: white
+    overflow: inherit
+    top: 0 !important
+
+.top-header--inner
+  position: fixed
+  top: 0
+  z-index: 2
+  width: 100%
+  background-color: $color-dark-blue
+  color: white
+  display: block
+  min-height: 35px
+
+.social
+  float: left
+  width: 20%
+
+.logo-inner
+  margin: 0 auto
+  width: 40px
+  color: white
+
+.logo-inner--link
+  display: block
+
+.nav-inner
+  position: absolute
+  right: 0
+  top: 0
+  width: auto
 
 .container
+  position: relative
   max-width: $screen-lg-min
   margin: 0 auto
 
-ul
-  padding-left: 0
-  li
-    list-style: none
-a
-  text-decoration: none
-  color: white
-
 .content
   position: absolute
-  top: 50%
+  top: 40%
   width: 100%
   font-size: $font-size-large
   font-weight: normal
 
+.link
+  position: relative
+  color: white
+  font-size: $font-size-regular
+  a
+    span
+      position: absolute
+      color: $color-blue
+      font-size: $font-size-x-large
+      display: inline-block
+      margin-top: -5px
+      margin-left: -40px
+      opacity: 0.5
+.content-inner
+  top: 0 !important
+
 footer
-  display: block
-  width: 100%
-  padding: 10px
-  border: 1px solid peru
-  position: absolute
-  bottom: 0
+  margin-top: 100px
   text-align: center
-  color: $color-green
+.foo
+  position: relative
+  &-top
+    background-color: $color-darker-blue
+    padding: 100px 0
+    min-height: 160px
+    text-align: left
+    background-image: url('/images/foo-top-bg.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    &--date
+      display: block
+      color: white
+    &--phrase
+      position: relative
+      color: $color-blue
+      span
+        position: absolute
+        font-size: 24px
+        display: inline-block
+        margin-top: 0px
+        margin-left: 10px
+  &-bottom
+    text-align: right
+    min-height: 160px
+.lets-talk
+  color: white
+  font-family: $font-title
+  font-size: $font-size-x-large
+  position: absolute
+  left: 0
+  right: 0
+  bottom: -125px
+  text-align: center
