@@ -30,13 +30,13 @@
       </div>
       <nav class="nav-inner">
         <div class="nav-top" id="nav-open">
-          <div><i class="nav-top--line"></i></div>
-          <div><i class="nav-top--line"></i></div>
-          <div><i class="nav-top--line"></i></div>
+          <span class="nav-top--line"></span>
+          <span class="nav-top--line"></span>
+          <span class="nav-top--line"></span>
         </div>
       </nav>
       </div>
-      <div class="nav-full" id="full-menu" style="display:none">
+      <div class="nav-full" id="full-menu">
         <div class="container content--grid">
           <a href="index.html" class="nav-full--link">Inicio</a>
           <a href="#" class="nav-full--link">Nosotros</a>
@@ -56,7 +56,7 @@
             <div class="service-thumb col span_4_of_12">
               <a href="#" class="service-thumb--link" id="service-thumb--link">
                 <span class="graph-block" id="graph-block"></span>
-                <img src="images/service-img.jpg" alt="" class="service-thumb--img">
+                <img src="images/ad-graphic.svg" alt="" class="service-thumb--img">
               </a>
             </div>
             <div class="service-desc col span_8_of_12">
@@ -69,11 +69,11 @@
             </div>
           </div>
           <!-- Service One -->
-          <div class="service group">
+          <div class="service group hideme">
             <div class="service-thumb col span_4_of_12">
               <a href="#" class="service-thumb--link" id="service-thumb--link">
                 <span class="graph-block" id="graph-block"></span>
-                <img src="images/service-img.jpg" alt="" class="service-thumb--img">
+                <img src="images/dev-graph.svg" alt="" class="service-thumb--img">
               </a>
             </div>
             <div class="service-desc col span_8_of_12">
@@ -86,28 +86,11 @@
             </div>
           </div>
           <!-- Service One -->
-          <div class="service group">
+          <div class="service group hideme">
             <div class="service-thumb col span_4_of_12">
               <a href="#" class="service-thumb--link" id="service-thumb--link">
                 <span class="graph-block" id="graph-block"></span>
-                <img src="images/service-img.jpg" alt="" class="service-thumb--img">
-              </a>
-            </div>
-            <div class="service-desc col span_8_of_12">
-              <h2 class="service-title">Campañas Publicitarias</h2>
-              <p class="service-text">
-                <span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-          <!-- Service One -->
-          <div class="service group">
-            <div class="service-thumb col span_4_of_12">
-              <a href="#" class="service-thumb--link" id="service-thumb--link">
-                <span class="graph-block" id="graph-block"></span>
-                <img src="images/service-img.jpg" alt="" class="service-thumb--img">
+                <img src="images/social-graph.svg" alt="" class="service-thumb--img">
               </a>
             </div>
             <div class="service-desc col span_8_of_12">
@@ -121,34 +104,17 @@
             </div>
           </div>
           <!-- Service One -->
-          <div class="service group">
+          <div class="service group hideme">
             <div class="service-thumb col span_4_of_12">
               <a href="#" class="service-thumb--link" id="service-thumb--link">
                 <span class="graph-block" id="graph-block"></span>
-                <img src="images/service-img.jpg" alt="" class="service-thumb--img">
+                <img src="images/strategy-graph.svg" alt="" class="service-thumb--img">
               </a>
             </div>
             <div class="service-desc col span_8_of_12">
               <h2 class="service-title">Marketing Estratégico</h2>
               <p class="service-text">
                 <span>Facilisis varius.</span> Donec ut feugiat orci. Mauris sodales mollis mauris.
-                In hac habitasse platea dictumst. Ut sed velit convallis, dictum magna eu, vehicula magna. Nulla facilisi.
-                Fusce nunc eros, aliquet eget magna et, scelerisque ullamcorper neque.
-              </p>
-            </div>
-          </div>
-          <!-- Service One -->
-          <div class="service group">
-            <div class="service-thumb col span_4_of_12">
-              <a href="#" class="service-thumb--link" id="service-thumb--link">
-                <span class="graph-block" id="graph-block"></span>
-                <img src="images/service-img.jpg" alt="" class="service-thumb--img">
-              </a>
-            </div>
-            <div class="service-desc col span_8_of_12">
-              <h2 class="service-title">Campañas Publicitarias</h2>
-              <p class="service-text">
-                <span>Mauris finibus nunc.</span> a facilisis varius. Donec ut feugiat orci. Mauris sodales mollis mauris.
                 In hac habitasse platea dictumst. Ut sed velit convallis, dictum magna eu, vehicula magna. Nulla facilisi.
                 Fusce nunc eros, aliquet eget magna et, scelerisque ullamcorper neque.
               </p>
@@ -163,8 +129,8 @@
   <footer class="foo">
     <div class="foo-top">
       <div class="container">
-        <div class="foo-top--date">
-          10.03.2016
+        <div class="foo-top--date" id="date">
+
         </div>
         <div class="foo-top--phrase">
           Creamos desde el corazón de tu marca <span class="icon-ico-heart"></span>
@@ -196,4 +162,26 @@
   <script src="js/main.js"></script>
 <!-- endbuild -->
 <script src="js/viewportchecker.js"></script>
+<script  type="text/javascript">
+/* Every time the window is scrolled ... */
+$(window).scroll( function(){
+
+   /* Check the location of each desired element */
+   $('.hideme').each( function(i){
+
+       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+       var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+       /* If the object is completely visible in the window, fade it it */
+       if( bottom_of_window > bottom_of_object ){
+
+           $(this).animate({'opacity':'1'},500);
+
+       }
+
+   });
+
+});
+
+</script>
 </html>

@@ -24,99 +24,8 @@ a
   &:hover
     opacity: 0.5
 
-header
-  padding: 10px 0px 0px 10px
-  .social
-      display: flex
-      &-item
-        display: inline-flex
-        width: 20px
-        height: 20px
-        &--link
-          display: block
-  .nav
-    position: absolute
-    right: 0px
-    float: right
-    top: 35%
-  .nav-home
-    &--link
-      position: relative
-      display: block
-      padding-right: 10px
-      border-bottom: 1px solid $color-dark-blue
-      min-width: 180px
-      height: 20px
-      &:hover
-        border-bottom: 1px solid $color-blue
-        &:before
-          position: absolute
-          content: ''
-          width: 25px
-          height: 3px
-          background-color: $color-blue
-          bottom: -1.5px
-
-.body
-  position: relative
-  background: $color-dark-blue
-  overflow: hidden
-  height: 100%
-  font-family: $font-body
-  font-size: $font-size-small
-  line-height: 1.5
-  letter-spacing: 2px
-  color: $color-grey
-  margin: 0px
-  font-weight: normal
-  background-image: url('../images/home-bg.jpg')
-  background-size: cover
-  &-inner
-    background: white
-    overflow: inherit
-    top: 0 !important
-
-.top-header--inner
-  position: fixed
-  top: 0
-  z-index: 2
-  width: 100%
-  background-color: $color-dark-blue
-  color: white
-  display: block
-  min-height: 35px
-
-.social
-  float: left
-  width: 20%
-  padding-top: 10px
-
-.logo-inner
-  margin: 0 auto
-  width: 40px
-  color: white
-
-.logo-inner--link
-  display: block
-.show-menu
-  display: block !important
-.nav-inner
-  position: absolute
-  right: 0
-  top: 15px
-  width: auto
-
-.nav-top
-  &--line
-    display: block
-    width: 10px
-    height: 1px
-    background-color: white
-    margin-bottom: 2px
-    &:first-child
-      width: 3px
-    &:last-child
-      width: 15px
+.hideme
+  opacity: 0.2
 
 .container
   position: relative
@@ -130,7 +39,17 @@ header
   font-size: $font-size-large
   font-weight: normal
 
-.link
+.logo-makemark
+  display: block
+  width: 32%
+  position: absolute
+  padding-top: 26%
+
+.section-desc
+  font-size: $font-size-regular
+  margin: 20px 0
+
+.section-link
   position: relative
   color: white
   font-size: $font-size-regular
@@ -151,7 +70,7 @@ header
         margin-left: 0
 
 .content-inner
-  top: 0 !important
+  margin-top: 10%
 
 footer
   margin-top: 100px
@@ -172,11 +91,12 @@ footer
     &--phrase
       position: relative
       color: $color-blue
+      font-size: $font-size-regular
       span
         position: absolute
         font-size: 24px
         display: inline-block
-        margin-top: 0px
+        margin-top: 5px
         margin-left: 10px
   &-bottom
     text-align: right

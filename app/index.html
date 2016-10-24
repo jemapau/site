@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="vendor/css/jquery.fullPage.css" />
   <title>MakeMark Site</title>
 </head>
 <body class="body page-home">
@@ -12,40 +13,93 @@
     <div class="container">
       <div class="social">
         <div class="social-item">
-          <a href="#" class="social-item--link">
+          <a href="https://www.facebook.com/makemarkagency/?fref=ts" target="_blank" class="social-item--link">
             <span class="icon-ico-fb"></span>
           </a>
         </div>
         <div class="social-item">
-          <a href="#" class="social-item--link">
+          <a href="https://www.instagram.com/agenciamakemark/" target="_blank" class="social-item--link">
             <span class="icon-ico-instagram"></span>
           </a>
         </div>
       </div>
       </div>
       <nav class="nav">
-        <ul>
-          <li class="nav-home"><a href="#" class="nav-home--link"></a></li>
-          <li class="nav-home"><a href="#" class="nav-home--link"></a></li>
-          <li class="nav-home"><a href="#" class="nav-home--link"></a></li>
-          <li class="nav-home"><a href="#" class="nav-home--link"></a></li>
+        <ul id="menu">
+          <li class="nav-home" data-menuanchor="firstPage"><a href="#firstPage" class="nav-home--link active"></a></li>
+          <li class="nav-home" data-menuanchor="secondPage"><a href="#secondPage" class="nav-home--link"></a></li>
+          <li class="nav-home" data-menuanchor="thirdPage"><a href="#thirdPage" class="nav-home--link"></a></li>
+          <li class="nav-home" data-menuanchor="fourthPage"><a href="#fourthPage" class="nav-home--link"></a></li>
         </ul>
       </nav>
   </header>
-  <section class="parallax content">
-    <div class="container">
-      <div class="content">
-        <div class="logo-makemark span_4_of_12">
-          <img src="images/makemark-logo.svg" alt="" class="logo-makemark--big">
+  <div class="container">
+    <div class="logo-makemark span_4_of_12">
+      <img src="images/makemark-logo.svg" alt="" class="logo-makemark--big">
+    </div>
+  </div>
+  <div id="fullpage">
+    <section class="section" style="background-color:none">
+      <div class="container">
+        <div class="section-desc">
+          En Makemark pensamos y creamos desde el corazón de tu marca.
         </div>
-        <div class="link">
+        <div class="section-link">
           <a href="servicios.html">
             Leer más <span class="icon-ico-arrow"></span>
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <section class="section" style="background-color:none">
+      <div class="container">
+        <div class="section-desc">
+          Creamos marketing estratégico para tu marca.
+        </div>
+        <div class="section-link">
+          <a href="servicios.html">
+            Leer más <span class="icon-ico-arrow"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="background-color:none">
+      <div class="container">
+        <div class="section-desc">
+          Creamos social media marketing pensando en tu marca.
+        </div>
+        <div class="section-link">
+          <a href="servicios.html">
+            Leer más <span class="icon-ico-arrow"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="background-color:none">
+      <div class="container">
+        <div class="section-desc">
+          En MakeMark Diseñamos y desarrollamos el sitio web para tu marca.
+        </div>
+        <div class="section-link">
+          <a href="servicios.html">
+            Leer más <span class="icon-ico-arrow"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section" style="background-color:none">
+      <div class="container">
+        <div class="section-desc">
+          En MakeMark Creamos Campañas publicitarias para difusión de tu marca.
+        </div>
+        <div class="section-link">
+          <a href="servicios.html">
+            Leer más <span class="icon-ico-arrow"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
   <footer class="foo" style="display:none">
     this is my footer!! :)
   </footer>
@@ -54,5 +108,6 @@
 <!-- build:js js/main.min.js -->
   <script src="js/main.js"></script>
 <!-- endbuild -->
+<script type="text/javascript" src="vendor/js/jquery.fullPage.js"></script>
 
 </html>
