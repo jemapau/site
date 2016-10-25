@@ -20,7 +20,10 @@ ul
 a
   text-decoration: none
   color: white
-  transition: 0.5s
+  transition: all 0.2s linear
+    -moz-transition: all 0.2s linear
+    -ms-transition: all 0.2s linear
+    -o-transition: all 0.2s linear
   &:hover
     opacity: 0.5
 
@@ -71,6 +74,7 @@ a
 
 .content-inner
   margin-top: 10%
+  position: relative
 
 footer
   margin-top: 100px

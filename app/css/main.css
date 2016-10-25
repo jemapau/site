@@ -21,7 +21,10 @@ ul {
 a {
   text-decoration: none;
   color: white;
-  transition: 0.5s; }
+  transition: all 0.2s linear;
+    transition--moz-transition: all 0.2s linear;
+    transition--ms-transition: all 0.2s linear;
+    transition--o-transition: all 0.2s linear; }
   a:hover {
     opacity: 0.5; }
 
@@ -70,7 +73,8 @@ a {
       margin-left: 0; }
 
 .content-inner {
-  margin-top: 10%; }
+  margin-top: 10%;
+  position: relative; }
 
 footer {
   margin-top: 100px;
@@ -324,14 +328,13 @@ section.active {
     transform: rotate(-135deg); }
 
 .nav-full {
-  display: block;
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   background: #1a1b1f;
-  z-index: 2;
   opacity: 0;
   transition: all 0.2s linear;
     transition--moz-transition: all 0.2s linear;
@@ -373,6 +376,7 @@ section.active {
     border-bottom: 1px solid #56bad2; }
 
 .open-menu {
+  display: block;
   opacity: 1; }
 
 .videobg-wrp {
@@ -423,11 +427,14 @@ section.active {
   .service-thumb {
     position: relative; }
     .service-thumb--link {
+      overflow: hidden;
       position: absolute;
       right: 0;
       width: 212px;
       height: 212px;
       border: 1px solid #56bad2; }
+      .service-thumb--link:hover {
+        opacity: 1; }
     .service-thumb--img {
       width: 100%;
       height: 100%; }
@@ -446,12 +453,18 @@ section.active {
         font-family: "Rozha One", serif;
         line-height: 5px; }
 
-.opened {
+.graph-block {
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
-  background: pink; }
+  opacity: 0.9; }
+  .graph-block:hover {
+    margin-left: -220px;
+    transition: all 0.2s linear;
+      transition--moz-transition: all 0.2s linear;
+      transition--ms-transition: all 0.2s linear;
+      transition--o-transition: all 0.2s linear; }
 
 .underline-hover {
   color: #787878;

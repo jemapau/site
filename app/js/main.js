@@ -1,13 +1,14 @@
 $(document).ready(function() {
   $( "#nav-open" ).click(function() {
+    $(this).toggleClass('open');
     $( "#full-menu" ).toggleClass( "open-menu");
   });
 
-  $( "#service-thumb--link" ).mouseover(function() {
-    $( "#graph-block" ).fadeOut( "slow", function() {
+  //$( "#service-thumb--link" ).mouseover(function() {
+    //$( "#graph-block" ).fadeOut( "slow", function() {
       // Animation complete.
-    });
-  });
+    //});
+  //});
 
   var clock = (function(){
     'use-strict';
