@@ -3,7 +3,7 @@ $(document).ready(function() {
   	fullpage_f()
   	video_bg();	
   	links();
-
+  	
 });
 
 
@@ -46,7 +46,17 @@ function links() {
 	});
 }
 
-	
+function getNumber() {
+   
+	var cards = $(".cuadros li");
+	for(var i = 0; i < cards.length; i++){
+	    var target = Math.floor(Math.random() * cards.length -1) + 1;
+	    var target2 = Math.floor(Math.random() * cards.length -1) +1;
+	    cards.eq(target).before(cards.eq(target2));
+	}
+
+}   
+
 function fullpage_f() {
 	$('#fullpage').fullpage({
 	      //Navigation
@@ -106,7 +116,7 @@ function fullpage_f() {
 	      slideSelector: '.slide',
 
 	      //events
-	      onLeave: function(index, nextIndex, direction){},
+	      onLeave: function(index, nextIndex, direction){getNumber();},
 	      afterLoad: function(anchorLink, index){},
 	      afterRender: function(){},
 	      afterResize: function(){},
