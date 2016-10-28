@@ -1,8 +1,10 @@
+body
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+
 .videobg-wrp 
   background: #000
   
-   
-
 .videobg-elm 
   position: fixed
   display: none
@@ -18,24 +20,9 @@
   -webkit-transform: translateX(-50%) translateY(-50%)
   transform: translateX(-50%) translateY(-50%)
 
-.cuadros
-  position: absolute
-  top: 0
-  text-align: left
-  margin: 0
-  height: 100%
-  z-index: -98
-  li
-    background: #1a1b1f
-    width: 200px
-    height: 200px
-    float: left
-    z-index: -90
-    opacity: .97
-
-.opa
-  opacity: .9!important
-
+.section-desc 
+  color: #fff
+  
 .mas2
   background: white
   position: absolute
@@ -45,13 +32,6 @@
   mix-blend-mode: screen
   z-index: -99
 
-.bola
-  transform: scale(20)
-  -webkit-transition: all 2s ease-in-out
-  -moz-transition: all 2s ease-in-out
-  -o-transition: all 2s ease-in-out
-  transition: all 2s ease-in-out
-
 .letra
   color: #000
   font-size: 63vw
@@ -59,6 +39,17 @@
   top: -250px
   right: 30px
   font-weight: bold
+
+.move
+  position: absolute
+  width: 100px;
+  height: 100px
+  background: #000
+  border-radius: 50%
+  -webkit-animation: pulse 2s linear infinite alternate;
+  -moz-animation: pulse 2s linear infinite alternate;
+  -ms-animation: pulse 2s linear infinite alternate;
+  animation: pulse 2s linear infinite alternate;
 
 .bg
   width: 100%
@@ -72,19 +63,108 @@
   -moz-transition: all 1s ease-in-out
   -o-transition: all 1s ease-in-out
   transition: all 1s ease-in-out
+   background: rgba(255, 41, 84, 1)
 
-.baa
-  background: rgba(255, 41, 84, 1)
-  background: -moz-linear-gradient(-45deg, rgba(255, 41, 84, 1) 0%, rgba(107, 0, 29, 1) 100%)
-  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255, 41, 84, 1)), color-stop(100%, rgba(107, 0, 29, 1)))
-  background: -webkit-linear-gradient(-45deg, rgba(255, 41, 84, 1) 0%, rgba(107, 0, 29, 1) 100%)
-  background: -o-linear-gradient(-45deg, rgba(255, 41, 84, 1) 0%, rgba(107, 0, 29, 1) 100%)
-  background: -ms-linear-gradient(-45deg, rgba(255, 41, 84, 1) 0%, rgba(107, 0, 29, 1) 100%)
-  background: linear-gradient(135deg, rgba(255, 41, 84, 1) 0%, rgba(107, 0, 29, 1) 100%)
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2954', endColorstr='#6b001d', GradientType=1 )
+.bg
+  background: linear-gradient(to left, #650650, #444490, #2d2d67, #650650)
+  background-size: 1000% 100%
+  animation: AwesomeBG 20s linear infinite
+  overflow: hidden
 
-.bab
-  background: #253130
+@keyframes AwesomeBG
+  0%
+    background-position: 0 0
 
-.bac
-  background: #161f42
+  5%
+    background-position: 8% 0
+
+  13%
+    background-position: 15% 0
+
+  19%
+    background-position: 23% 0
+
+  25%
+    background-position: 30% 0
+
+  31%
+    background-position: 38% 0
+
+  38%
+    background-position: 45% 0
+
+  44%
+    background-position: 53% 0
+
+  50%
+    background-position: 60% 0
+
+  56%
+    background-position: 68% 0
+
+  63%
+    background-position: 75% 0
+
+  69%
+    background-position: 83% 0
+
+  75%
+    background-position: 90% 0
+
+  81%
+    background-position: 98% 0
+
+  88%
+    background-position: 105% 0
+
+  94%
+    background-position: 113% 0
+
+  100%
+    background-position: 120% 0
+
+
+@keyframes pulse
+  0%
+    -webkit-transform: scale(1.1)
+    -moz-transform: scale(1.1)
+    -o-transform: scale(1.1)
+    -ms-transform: scale(1.1)
+    transform: scale(1.1)
+
+  100%
+    -webkit-transform: scale(1.5)
+    -moz-transform: scale(1.5)
+    -o-transform: scale(1.5)
+    -ms-transform: scale(1.5)
+    transform: scale(1.5)
+
+
+@-moz-keyframes pulse
+  0%
+    -moz-transform: scale(1.1)
+    transform: scale(1.1)
+
+  100%
+    -moz-transform: scale(1.5)
+    transform: scale(1.5)
+
+
+@-webkit-keyframes pulse
+  0%
+    -webkit-transform: scale(1.1)
+    transform: scale(1.1)
+
+  100%
+    -webkit-transform: scale(1.5)
+    transform: scale(1.5)
+
+
+@-ms-keyframes pulse
+  0%
+    -ms-transform: scale(1.1)
+    transform: scale(1.1)
+
+  100%
+    -ms-transform: scale(1.5)
+    transform: scale(1.5)

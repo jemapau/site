@@ -1,28 +1,10 @@
 $(document).ready(function() {
 
-	fullpage_f()
-	video_bg();	
+	fullpage_f()	
 	links();
+	movemouse()
 
 });
-
-
-
-
-
-
-function video_bg() {
-
-	$('.section .container').on({
-		mouseenter: function(){
-			$('.letra').addClass('bola');
-		},
-		mouseleave: function(){
-			$('.letra').removeClass('bola');
-		}
-	});
-
-}
 
 
 function links() {
@@ -35,6 +17,14 @@ function links() {
 	});
 }
 
+function movemouse() {
+	$(document).on('mousemove', function(e){
+	    $('.move').css({
+	       "left":+ e.pageX - 40,
+	       "top": +  e.pageY - 50
+	    },10000);
+	});
+}
 
 
 function fullpage_f() {
@@ -42,7 +32,7 @@ function fullpage_f() {
 		//Navigation
 		menu: '#menu',
 		lockAnchors: false,
-		anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+		anchors:['01', '02', '03', '04', '05'],
 		navigation: false,
 		navigationPosition: 'right',
 		navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -65,6 +55,9 @@ function fullpage_f() {
 				reproduce.pause();
 				reproduce.currentTime = 0;
 			});
+
+
+
 		},
 		afterLoad: function(anchorLink, index){    
 			var video_name = $(this).attr('data-video');
@@ -75,20 +68,29 @@ function fullpage_f() {
 			reproduce.play();
 			console.log('entro', index, video_name );
 
-
 			if (index == 1) {
 				$('.letra').html('M');
-				$('.bg').addClass('baa');
+				
 			}
 			if (index == 2) {
 				$('.letra').html('A');
-				$('.bg').addClass('bab');
+				
+				
 			}
 			if (index == 3) {
 				$('.letra').html('K');
-				$('.bg').addClass('bac');
-
 			}
+
+			if (index == 4) {
+				$('.letra').html('E');
+			}
+
+			if (index == 5) {
+				$('.letra').html('D');
+			}
+
+			console.log();
+
 
 		},
 		afterRender: function(){},
