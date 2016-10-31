@@ -12,6 +12,9 @@ html {
   .wrapper::after {
     content: "";
     display: block; }
+  @media screen and (max-width: 767px) {
+    .wrapper {
+      padding: 0 20px; } }
 
 ul {
   padding-left: 0; }
@@ -35,6 +38,9 @@ a {
   position: relative;
   max-width: 1200px;
   margin: 0 auto; }
+  @media screen and (max-width: 767px) {
+    .container {
+      padding: 0 20px; } }
 
 .content {
   position: absolute;
@@ -48,6 +54,9 @@ a {
   width: 32%;
   position: absolute;
   padding-top: 26%; }
+  @media screen and (max-width: 767px) {
+    .logo-makemark {
+      width: 90% !important; } }
 
 .section-desc {
   font-size: 22px;
@@ -93,10 +102,17 @@ footer {
     .foo-top--date {
       display: block;
       color: white; }
+      @media screen and (max-width: 767px) {
+        .foo-top--date {
+          text-align: center; } }
     .foo-top--phrase {
       position: relative;
       color: #56bad2;
       font-size: 22px; }
+      @media screen and (max-width: 767px) {
+        .foo-top--phrase {
+          padding: 0px;
+          font-size: 20px; } }
       .foo-top--phrase span {
         position: absolute;
         font-size: 24px;
@@ -106,6 +122,10 @@ footer {
   .foo-bottom {
     text-align: right;
     min-height: 160px; }
+    @media screen and (max-width: 767px) {
+      .foo-bottom {
+        text-align: center;
+        margin-top: 40px; } }
 
 .lets-talk {
   color: white;
@@ -216,6 +236,9 @@ header {
         height: 3px;
         background-color: #56bad2;
         bottom: -1.5px; }
+    @media screen and (max-width: 767px) {
+      header .nav-home--link {
+        display: none; } }
 
 section.active {
   border-bottom: none; }
@@ -272,6 +295,10 @@ section.active {
   top: 15px;
   width: auto;
   z-index: 8; }
+  @media screen and (max-width: 767px) {
+    .nav-inner {
+      padding: 10px;
+      top: 8px; } }
 
 .nav-top--line {
   display: block;
@@ -357,6 +384,11 @@ section.active {
     padding-top: 35%;
     text-align: center;
     border-right: 1px solid #18191d; }
+    @media screen and (max-width: 767px) {
+      .nav-full--link {
+        width: 100%;
+        height: 50px;
+        padding-top: 20%; } }
     .nav-full--link:hover {
       background-color: #18191d; }
   .nav-full--en {
@@ -498,6 +530,9 @@ body {
   color: #18191d;
   font-size: 48px;
   font-family: "Rozha One", serif; }
+  @media screen and (max-width: 767px) {
+    .page-title {
+      margin-top: 80px; } }
 
 .service-title {
   position: absolute;
@@ -505,6 +540,10 @@ body {
   font-family: "Rozha One", serif;
   font-size: 32px;
   letter-spacing: 5px; }
+  @media screen and (max-width: 767px) {
+    .service-title {
+      position: relative;
+      left: 0; } }
 
 .service {
   position: relative;
@@ -517,6 +556,12 @@ body {
       position--webkit-box-sizing: border-box;
       position--moz-box-sizing: border-box;
     box-sizing: border-box; }
+    @media screen and (max-width: 767px) {
+      .service-thumb {
+        position: relative;
+        width: 100%;
+        float: left;
+        height: 212px; } }
     .service-thumb--link {
       overflow: hidden;
       position: absolute;
@@ -532,6 +577,9 @@ body {
       background-clip: border-box; }
       .service-thumb--link:hover {
         opacity: 1; }
+      @media screen and (max-width: 767px) {
+        .service-thumb--link {
+          left: 0; } }
     .service-thumb--img {
       width: 100%;
       height: 100%; }
@@ -552,7 +600,7 @@ body {
 
 .graph-block {
   position: absolute;
-  display: block;
+  display: none;
   width: 100%;
   height: 100%;
   background-color: rgba(24, 25, 29, 0.1);

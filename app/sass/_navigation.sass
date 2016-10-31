@@ -33,6 +33,8 @@ header
           height: 3px
           background-color: $color-blue
           bottom: -1.5px
+      @media screen and (max-width:$screen-xs-max)
+        display: none
 
 section.active
   border-bottom: none
@@ -87,6 +89,9 @@ section.active
   top: 15px
   width: auto
   z-index: 8
+  @media screen and (max-width:$screen-xs-max)
+    padding: 10px
+    top: 8px
 
 .nav-top
   &--line
@@ -175,6 +180,10 @@ section.active
     padding-top: 35%
     text-align: center
     border-right: 1px solid $color-darker-blue
+    @media screen and (max-width:$screen-xs-max)
+      width: 100%
+      height: 50px
+      padding-top: 20%
     &:hover
       background-color: $color-darker-blue
   &--en

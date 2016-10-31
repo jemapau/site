@@ -4,6 +4,7 @@
 html
   height: 100%
   box-sizing: border-box
+
 *, *:before, *:after
   box-sizing: inherit
 
@@ -12,6 +13,8 @@ html
   &::after
     content: ""
     display: block
+  @media screen and (max-width:$screen-xs-max)
+    padding: 0 20px
 
 ul
   padding-left: 0
@@ -34,6 +37,8 @@ a
   position: relative
   max-width: $screen-lg-min
   margin: 0 auto
+  @media screen and (max-width:$screen-xs-max)
+    padding: 0 20px
 
 .content
   position: absolute
@@ -47,6 +52,8 @@ a
   width: 32%
   position: absolute
   padding-top: 26%
+  @media screen and (max-width:$screen-xs-max)
+    width: 90% !important
 
 .section-desc
   font-size: $font-size-regular
@@ -92,10 +99,15 @@ footer
     &--date
       display: block
       color: white
+      @media screen and (max-width:$screen-xs-max)
+        text-align: center
     &--phrase
       position: relative
       color: $color-blue
       font-size: $font-size-regular
+      @media screen and (max-width:$screen-xs-max)
+        padding: 0px
+        font-size: 20px
       span
         position: absolute
         font-size: 24px
@@ -105,6 +117,9 @@ footer
   &-bottom
     text-align: right
     min-height: 160px
+    @media screen and (max-width:$screen-xs-max)
+      text-align: center
+      margin-top: 40px
 .lets-talk
   color: white
   font-family: $font-title
