@@ -23,8 +23,8 @@ function links() {
 function movemouse() {
 	$(document).on('mousemove', function(e){
 	    $('.move').css({
-	       "left":+ e.pageX - 40,
-	       "top": +  e.pageY - 50
+	       "left":+ e.pageX - 100,
+	       "top": +  e.pageY - 100
 	    },10000);
 	});
 }
