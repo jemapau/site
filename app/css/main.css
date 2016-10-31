@@ -198,8 +198,8 @@ header {
     position: relative;
     display: block;
     padding-right: 10px;
-    border-bottom: 1px solid #1a1b1f;
-    min-width: 180px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 95px;
     height: 20px; }
     header .nav-home--link:hover {
       border-bottom: 1px solid #56bad2; }
