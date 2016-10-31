@@ -198,8 +198,8 @@ header {
     position: relative;
     display: block;
     padding-right: 10px;
-    border-bottom: 1px solid #1a1b1f;
-    min-width: 180px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.47);
+    min-width: 120px;
     height: 20px; }
     header .nav-home--link:hover {
       border-bottom: 1px solid #56bad2; }
@@ -352,10 +352,12 @@ section.active {
       background-color: #18191d; }
 
 #menu {
-  display: block;
-  position: absolute;
+  position: fixed;
   right: 0;
-  margin-top: 20%; }
+  top: 0;
+  display: table;
+  bottom: 16%;
+  margin: auto; }
 
 .active {
   position: relative;
@@ -427,10 +429,24 @@ body {
   height: 100px;
   background: #000;
   border-radius: 50%;
-  -webkit-animation: pulse 2s linear infinite alternate;
-  -moz-animation: pulse 2s linear infinite alternate;
-  -ms-animation: pulse 2s linear infinite alternate;
-  animation: pulse 2s linear infinite alternate; }
+  -webkit-transition: transform 1s ease-in-out;
+  -moz-transition: transform 1s ease-in-out;
+  -o-transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out; }
+
+.moveg {
+  -webkit-transform: scale(5) !important;
+  -moz-transform: scale(5) !important;
+  -o-transform: scale(5) !important;
+  -ms-transform: scale(5) !important;
+  transform: scale(5) !important; }
+
+.moveg2 {
+  -webkit-transform: scale(50) !important;
+  -moz-transform: scale(50) !important;
+  -o-transform: scale(50) !important;
+  -ms-transform: scale(50) !important;
+  transform: scale(50) !important; }
 
 .bg {
   width: 100%;
@@ -525,6 +541,14 @@ body {
   100% {
     -ms-transform: scale(1.5);
     transform: scale(1.5); } }
+
+#particles-js {
+  position: fixed;
+  z-index: -2;
+  opacity: .4;
+  width: 100%;
+  height: 100%;
+  top: 0; }
 
 .page-title {
   color: #18191d;
