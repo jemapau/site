@@ -198,8 +198,8 @@ header {
     position: relative;
     display: block;
     padding-right: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.47);
-    min-width: 120px;
+    border-bottom: 1px solid #1a1b1f;
+    min-width: 180px;
     height: 20px; }
     header .nav-home--link:hover {
       border-bottom: 1px solid #56bad2; }
@@ -334,7 +334,10 @@ section.active {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: #1a1b1f;
+  background: rgba(26, 27, 31, 0.5);
+  background-image: url("/images/home-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   opacity: 0;
   transition: all 0.2s linear;
     transition--moz-transition: all 0.2s linear;
@@ -350,14 +353,27 @@ section.active {
     border-right: 1px solid #18191d; }
     .nav-full--link:hover {
       background-color: #18191d; }
+  .nav-full--en {
+    position: relative;
+    display: none;
+    float: right;
+    padding-left: 45px;
+    width: 100%;
+    color: #56bad2;
+    display: inline;
+    background: -webkit-linear-gradient(left, #18191d, #56bad2);
+    background-size: 200% 100%;
+    background-position: right 0;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transition: background 1s; }
 
 #menu {
-  position: fixed;
+  display: block;
+  position: absolute;
   right: 0;
-  top: 0;
-  display: table;
-  bottom: 16%;
-  margin: auto; }
+  margin-top: 20%; }
 
 .active {
   position: relative;
@@ -569,14 +585,23 @@ body {
     color: #56bad2;
     font-weight: normal; }
   .service-thumb {
-    position: relative; }
+    position: relative;
+      position--webkit-box-sizing: border-box;
+      position--moz-box-sizing: border-box;
+    box-sizing: border-box; }
     .service-thumb--link {
       overflow: hidden;
       position: absolute;
       right: 0;
       width: 212px;
       height: 212px;
-      border: 1px solid #56bad2; }
+      border-left: 1px solid #56bad2;
+      border-right: 1px solid #173435;
+      background-image: -webkit-linear-gradient(left, #56bad2, #173435), -webkit-linear-gradient(left, #56bad2, #173435);
+      background-size: 100% 1px;
+      background-position: 0 100%, 0 0;
+      background-repeat: no-repeat;
+      background-clip: border-box; }
       .service-thumb--link:hover {
         opacity: 1; }
     .service-thumb--img {
@@ -602,13 +627,28 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  opacity: 0.9; }
+  background-color: rgba(24, 25, 29, 0.1); }
   .graph-block:hover {
     margin-left: -220px;
-    transition: all 0.2s linear;
-      transition--moz-transition: all 0.2s linear;
-      transition--ms-transition: all 0.2s linear;
-      transition--o-transition: all 0.2s linear; }
+    transition: all 0.9s ease-in-out;
+      transition--moz-transition: all 0.9s ease-in-out;
+      transition--ms-transition: all 0.9s ease-in-out;
+      transition--o-transition: all 0.9s ease-in-out; }
+  .graph-block--mask {
+    width: 100%;
+    height: 100%; }
+
+.nav-full {
+  animation-duration: 0.4s;
+  animation-name: slidein; }
+
+@keyframes slidein {
+  from {
+    margin-bottom: 100%;
+    opacity: 0; }
+  to {
+    margin-bottom: 0%;
+    opacity: 1; } }
 
 .underline-hover {
   color: #787878;
