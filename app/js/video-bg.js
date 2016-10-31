@@ -5,6 +5,7 @@ $(document).ready(function() {
 	movemouse();
 	particles();
 	overs();
+	navegadores();
 
 });
 
@@ -101,4 +102,26 @@ function fullpage_f() {
 		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
 		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
 	});
+}
+
+
+function navegadores () {
+
+  var sBrowser, sUsrAg = navigator.userAgent;
+  if(sUsrAg.indexOf("Chrome") > -1) {
+  sBrowser = "Google Chrome";
+  } else if (sUsrAg.indexOf("Safari") > -1) {
+  	$('.videobg-elm').remove();
+  	$('.mas2, .move').removeClass();
+
+  	
+
+  } else if (sUsrAg.indexOf("Opera") > -1) {
+  sBrowser = "Opera";
+  } else if (sUsrAg.indexOf("Firefox") > -1) {
+  sBrowser = "Mozilla Firefox";
+  } else if (sUsrAg.indexOf("MSIE") > -1) {
+  sBrowser = "Microsoft Internet Explorer";
+  }
+  console.log("Usted está utilizando: " + sBrowser);
 }
