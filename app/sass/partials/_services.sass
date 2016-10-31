@@ -62,12 +62,12 @@
   width: 100%
   height: 100%
   background-color: transparentize($color-darker-blue,0.9)
+  transition: all 0.9s ease-in-out
+    -moz-transition: all 0.9s ease-in-out
+    -ms-transition: all 0.9s ease-in-out
+    -o-transition: all 0.9s ease-in-out
   &:hover
     margin-left: -220px
-    transition: all 0.9s ease-in-out
-      -moz-transition: all 0.9s ease-in-out
-      -ms-transition: all 0.9s ease-in-out
-      -o-transition: all 0.9s ease-in-out
   &--mask
     width: 100%
     height: 100%
@@ -83,3 +83,52 @@
   to
     margin-bottom: 0%
     opacity: 1
+
+.icon-ico-smile:before
+  content: "\e90b"
+  -webkit-animation: cambio_smile 2s infinite linear
+  -moz-animation: cambio_smile 2s infinite linear
+  animation: cambio_smile 2s infinite linear
+
+.icon-ico-coffee:before
+  content: "\e905"
+  -webkit-animation: cambio_coffe 2s infinite linear
+  -moz-animation: cambio_coffe 2s infinite linear
+  animation: cambio_coffe 2s infinite linear
+
+@keyframes cambio_smile
+  from
+    content: "\e90b"
+  to
+    content: "\e90a"
+
+@-webkit-keyframes cambio_smile
+  from
+    content: "\e90b"
+  to
+    content: "\e90a"
+
+@-moz-keyframes cambio_smile
+  from
+    content: "\e90b"
+  to
+    content: "\e90a"
+
+
+@keyframes cambio_coffe
+  from
+    content: "\e905"
+  to
+    content: "\e904"
+
+@-webkit-keyframes cambio_coffe
+  from
+    content: "\e905"
+  to
+    content: "\e904"
+
+@-moz-keyframes cambio_coffe
+  from
+    content: "\e905"
+  to
+    content: "\e904"
