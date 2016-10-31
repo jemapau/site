@@ -1,13 +1,16 @@
 $(document).ready(function() {
   $( "#nav-open" ).click(function() {
+    $(this).toggleClass('open');
     $( "#full-menu" ).toggleClass( "open-menu");
   });
 
-  $( "#service-thumb--link" ).mouseover(function() {
-    $( "#graph-block" ).fadeOut( "slow", function() {
-      // Animation complete.
-    });
-  });
+// Menu hover
+
+$('a.nav-full--link').mouseover(function() {
+  $(this).fadeIn('.nav-full--en');
+});
+
+//Date and phrases
 
   var clock = (function(){
     'use-strict';
@@ -26,6 +29,7 @@ $(document).ready(function() {
         showDate: function(){
             // if exists
             if (this._("#date")) {
+
                 // days
                 var days = [
                     'Domingo', 'Lunes',
@@ -40,12 +44,21 @@ $(document).ready(function() {
                     'Julio', 'Agosto', 'Septiembre',
                     'Octubre', 'Noviembre', 'Diciembre'
                 ];
+
+                //
+                var phrases = [
+                  'Creando experiencias de marca <span class="icon-ico-heart"></span>', 'Creamos desde el corazón de tu marca <span class="icon-ico-smile"></span>',
+                  'Cuentanos de tu marca <span class="icon-ico-coffee"></span>', 'Creando experiencias de marca <span class="icon-ico-heart"></span>',
+                  'Creamos desde el corazón de tu marca <span class="icon-ico-heart"></span>', 'Creando experiencias de marca <span class="icon-ico-heart icon-animate-heart"></span>',
+                  'Creando experiencias de marca <span class="icon-ico-smile"></span>',
+                ]
+
                 // show html
                 this._("#date").innerHTML =
                     days[this.now.getDay()] + ", " +
                     this.checkTime(this.now.getDate()) + " de " +
                     months[this.now.getMonth()] + " de " +
-                    this.now.getFullYear();
+                    this.now.getFullYear() +  "<div class='foo-top--phrase'>" + phrases[this.now.getDay()] + " </div> ";
             }
         },
         // init clock and date
@@ -54,12 +67,7 @@ $(document).ready(function() {
             setInterval(this.newClock,1000);
             this.showDate();
         }
-    };
-})();
-clock.init();
-
-
-  
-
-
+      };
+  })();
+  clock.init();
 });
