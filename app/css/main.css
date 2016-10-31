@@ -198,8 +198,8 @@ header {
     position: relative;
     display: block;
     padding-right: 10px;
-    border-bottom: 1px solid #1a1b1f;
-    min-width: 180px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.47);
+    min-width: 120px;
     height: 20px; }
     header .nav-home--link:hover {
       border-bottom: 1px solid #56bad2; }
@@ -352,10 +352,12 @@ section.active {
       background-color: #18191d; }
 
 #menu {
-  display: block;
-  position: absolute;
+  position: fixed;
   right: 0;
-  margin-top: 20%; }
+  top: 0;
+  display: table;
+  bottom: 16%;
+  margin: auto; }
 
 .active {
   position: relative;

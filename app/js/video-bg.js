@@ -33,6 +33,7 @@ function overs() {
 
 	$('.container').mouseover(function() {
 	   $('.move').addClass('moveg');
+	   
 	})
  	.mouseout(function() {
     	  $('.move').removeClass('moveg');
@@ -41,6 +42,7 @@ function overs() {
 
   $('.links').mouseover(function() {
 		$('.move').addClass('moveg2');
+
 	}).mouseout(function() {
     	 $('.move').removeClass('moveg2');
   	});
