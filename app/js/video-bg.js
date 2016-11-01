@@ -6,7 +6,6 @@ $(document).ready(function() {
 	particles();
 	overs();
 	navegadores();
-
 });
 
 
@@ -53,6 +52,7 @@ function overs() {
 function particles(){
 	particlesJS.load('particles-js', 'js/particlesjs-config.json');
 }
+
 
 function fullpage_f() {
 	$('#fullpage').fullpage({

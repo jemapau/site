@@ -522,6 +522,47 @@ body {
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
 
+.bg {
+  background: linear-gradient(to left, #650650, #444490, #2d2d67, #650650);
+  background-size: 1000% 100%;
+  animation: AwesomeBG 20s linear infinite; }
+
+@keyframes AwesomeBG {
+  0% {
+    background-position: 0 0; }
+  5% {
+    background-position: 8% 0; }
+  13% {
+    background-position: 15% 0; }
+  19% {
+    background-position: 23% 0; }
+  25% {
+    background-position: 30% 0; }
+  31% {
+    background-position: 38% 0; }
+  38% {
+    background-position: 45% 0; }
+  44% {
+    background-position: 53% 0; }
+  50% {
+    background-position: 60% 0; }
+  56% {
+    background-position: 68% 0; }
+  63% {
+    background-position: 75% 0; }
+  69% {
+    background-position: 83% 0; }
+  75% {
+    background-position: 90% 0; }
+  81% {
+    background-position: 98% 0; }
+  88% {
+    background-position: 105% 0; }
+  94% {
+    background-position: 113% 0; }
+  100% {
+    background-position: 120% 0; } }
+
 #particles-js {
   position: fixed;
   z-index: -2;
@@ -529,6 +570,16 @@ body {
   width: 100%;
   height: 100%;
   top: 0; }
+
+.progress {
+  width: 50%;
+  position: fixed;
+  height: 5px;
+  border: none;
+  left: 0;
+  background: linear-gradient(to left, #650650, #444490, #2d2d67, #650650);
+  background-size: 1000% 100%;
+  animation: AwesomeBG 1s linear infinite; }
 
 .page-title {
   color: #18191d;

@@ -4,6 +4,9 @@ $(document).ready(function() {
     $( "#full-menu" ).toggleClass( "open-menu");
   });
 
+
+// read bar 
+read_bar();
 // Menu hover
 
 $('a.nav-full--link').mouseover(function() {
@@ -70,4 +73,21 @@ $('a.nav-full--link').mouseover(function() {
       };
   })();
   clock.init();
+
 });
+
+
+function read_bar() {
+
+    var windHeight = $(window).height(), 
+    docHeight = $(document).height(),
+      progressBar = $('.progress'),
+
+    max = docHeight - windHeight;
+    progressBar.css('width', max);
+
+    $(document).on('scroll', function(){
+        value = $(window).scrollTop();
+        progressBar.css('width', value);
+    });
+}
