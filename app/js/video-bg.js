@@ -3,7 +3,6 @@ $(document).ready(function() {
 	fullpage_f();	
 	links();
 	movemouse();
-	particles();
 	overs();
 	navegadores();
 });
@@ -33,24 +32,17 @@ function overs() {
 
 	$('.container').mouseover(function() {
 	   $('.move').addClass('moveg');
-	   
 	})
  	.mouseout(function() {
     	  $('.move').removeClass('moveg');
-
   	});
 
   $('.links').mouseover(function() {
 		$('.move').addClass('moveg2');
-
 	}).mouseout(function() {
     	 $('.move').removeClass('moveg2');
   	});
 
-}
-
-function particles(){
-	particlesJS.load('particles-js', 'js/particlesjs-config.json');
 }
 
 
@@ -93,7 +85,21 @@ function fullpage_f() {
 			sel.stop().fadeIn('fast');
 			reproduce.currentTime = 0;
 			reproduce.play();
-			console.log('entro', index, video_name );
+			
+			if (index == 1) {
+				$('.letra').html('M');
+			}
+			if (index == 2) {
+				$('.letra').html('A');
+			}
+			if (index == 3) {
+				$('.letra').html('K');
+			}
+			if (index == 4) {
+				$('.letra').html('E');
+			}
+		
+		
 
 		},
 		afterRender: function(){},

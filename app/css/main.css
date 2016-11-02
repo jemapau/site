@@ -50,10 +50,12 @@ a {
   font-weight: normal; }
 
 .logo-makemark {
-  display: block;
   width: 32%;
-  position: absolute;
-  padding-top: 26%; }
+  position: fixed;
+  top: 0;
+  bottom: 30%;
+  display: table;
+  margin: auto; }
   @media screen and (max-width: 767px) {
     .logo-makemark {
       width: 90% !important; } }
@@ -476,8 +478,11 @@ body {
   color: #000;
   font-size: 63vw;
   position: absolute;
-  top: -250px;
-  right: 30px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: table;
+  right: 90px;
   font-weight: bold; }
 
 .move {
