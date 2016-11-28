@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Pragati+Narrow");
-@import url("https://fonts.googleapis.com/css?family=Rozha+One");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Pragati+Narrow:400,700");
 html {
   height: 100%;
   box-sizing: border-box; }
@@ -50,15 +49,16 @@ a {
   font-weight: normal; }
 
 .logo-makemark {
-  width: 32%;
-  position: fixed;
-  top: 0;
+  width: 318px;
   bottom: 30%;
   display: table;
-  margin: auto; }
+  margin: 200px auto 0px;
+  color: #18191d; }
   @media screen and (max-width: 767px) {
     .logo-makemark {
       width: 90% !important; } }
+  .logo-makemark--big {
+    width: 100%; }
 
 .section-desc {
   font-size: 22px;
@@ -131,7 +131,7 @@ footer {
 
 .lets-talk {
   color: white;
-  font-family: "Rozha One", serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 48px;
   position: absolute;
   left: 0;
@@ -218,7 +218,8 @@ header {
       width: 20px;
       height: 20px; }
       header .social-item--link {
-        display: block; }
+        display: block;
+        color: #18191d; }
   header .nav {
     position: relative;
     display: block; }
@@ -249,7 +250,7 @@ section.active {
 
 .body {
   position: relative;
-  background: #1a1b1f;
+  background: white;
   overflow: hidden;
   height: 100%;
   font-family: "Pragati Narrow", sans-serif;
@@ -306,7 +307,7 @@ section.active {
   display: block;
   width: 10px;
   height: 1px;
-  background-color: white;
+  background-color: #18191d;
   margin-bottom: 2px; }
   .nav-top--line:first-child {
     width: 3px; }
@@ -369,10 +370,7 @@ section.active {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: #1a1b1f;
-  background-image: url("../images/home-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: white;
   opacity: 0;
   transition: all 0.2s linear;
     transition--moz-transition: all 0.2s linear;
@@ -385,14 +383,14 @@ section.active {
     height: 100vh;
     padding-top: 35%;
     text-align: center;
-    border-right: 1px solid #18191d; }
+    border-right: 1px solid white; }
     @media screen and (max-width: 767px) {
       .nav-full--link {
         width: 100%;
         height: 50px;
         padding-top: 20%; } }
     .nav-full--link:hover {
-      background-color: #18191d; }
+      background-color: white; }
   .nav-full--en {
     position: relative;
     display: none;
@@ -436,6 +434,54 @@ section.active {
 .open-menu {
   display: block;
   opacity: 1; }
+
+.work {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+  .work-trigger {
+    display: inline-flex;
+    width: 20%;
+    background-color: #56bad2; }
+    .work-trigger--access {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      height: 100px;
+      width: 100%;
+      padding: 0 20px;
+      color: white; }
+    .work-trigger:nth-child(1) {
+      background-color: #77b4b4; }
+    .work-trigger:nth-child(2) {
+      background-color: white; }
+    .work-trigger:nth-child(3) {
+      background-color: #18191d; }
+    .work-trigger:nth-child(4) {
+      background-color: #56bad2; }
+    .work-trigger:nth-child(5) {
+      background-color: #18191d; }
+  .work-title {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 3;
+    color: #18191d;
+    text-align: right; }
+    .work-title span {
+      display: block;
+      width: 100%;
+      color: pink; }
+
+.text-slide {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 22px; }
+  .text-slide span {
+    font-family: "Libre Baskerville", serif;
+    font-style: italic;
+    color: #56bad2; }
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -589,7 +635,7 @@ body {
 .page-title {
   color: #18191d;
   font-size: 48px;
-  font-family: "Rozha One", serif; }
+  font-family: "Libre Baskerville", serif; }
   @media screen and (max-width: 767px) {
     .page-title {
       margin-top: 80px; } }
@@ -597,7 +643,7 @@ body {
 .service-title {
   position: absolute;
   left: -55px;
-  font-family: "Rozha One", serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 32px;
   letter-spacing: 5px; }
   @media screen and (max-width: 767px) {
@@ -655,7 +701,7 @@ body {
       .service-text span:first-letter {
         position: absolute;
         font-size: 32px;
-        font-family: "Rozha One", serif;
+        font-family: "Libre Baskerville", serif;
         line-height: 5px; }
 
 .graph-block {

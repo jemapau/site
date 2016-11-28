@@ -1,0 +1,48 @@
+
+.work
+  display: flex
+  position:  absolute
+  bottom: 0
+  width: 100%
+  &-trigger
+    display: inline-flex
+    width: 20%
+    background-color: $color-blue
+    &--access
+      display: flex
+      flex-wrap: wrap
+      align-content: center
+      height: 100px
+      width: 100%
+      padding: 0 20px
+      color: white
+    &:nth-child(1)
+      background-color: #77b4b4
+    &:nth-child(2)
+      background-color: white
+    &:nth-child(3)
+      background-color: $color-darker-blue
+    &:nth-child(4)
+      background-color: $color-blue
+    &:nth-child(5)
+      background-color: $color-darker-blue
+  &-title
+    align-items: center
+    display: flex
+    justify-content: flex-end
+    flex-grow: 3
+    color: $color-darker-blue
+    text-align: right
+    span
+      display: block
+      width: 100%
+      color: pink
+
+.text-slide
+  margin-top: 15px
+  text-align: center
+  font-size: $font-size-regular
+  span
+    font-family: $font-italic
+    font-style: italic
+    color: $color-blue
