@@ -4,10 +4,26 @@
   position:  absolute
   bottom: 0
   width: 100%
+  @media screen and (max-width:$screen-xs-max)
+    display: block
+    position: relative
   &-trigger
     display: inline-flex
     width: 20%
     background-color: $color-blue
+    position: relative
+    @media screen and (max-width:$screen-xs-max)
+      display: block
+      width: 100% !important
+    &::after
+      position: absolute
+      content: ''
+      width: 100%
+      height: 88px
+      top: -81px
+      left: 0
+      @media screen and (max-width:$screen-xs-max)
+        display: none
     &--access
       display: flex
       flex-wrap: wrap
@@ -20,18 +36,38 @@
       font-style: italic
     &:nth-child(1)
       background-color: #77b4b4
+      background-image: url('../images/access/access-1-brand-bg.png')
+      background-repeat: no-repeat
+      &::after
+        background-image: url('../images/access/access-1-brand-after.png')
       div
         color: white
     &:nth-child(2)
       background-color: white
+      background-image: url('../images/access/access-2-social-bg.png')
+      background-repeat: no-repeat
+      &::after
+        background-image: url('../images/access/access-2-social-after.png')
     &:nth-child(3)
       background-color: $color-darker-blue
+      background-image: url('../images/access/access-3-develop-bg.png')
+      background-repeat: no-repeat
+      &::after
+        background-image: url('../images/access/access-3-develop-after.png')
       div
         color: white
     &:nth-child(4)
       background-color: $color-blue
+      background-image: url('../images/access/access-4-marketing-bg.png')
+      background-repeat: no-repeat
+      &::after
+        background-image: url('../images/access/access-4-marketing-after.png')
     &:nth-child(5)
       background-color: $color-darker-blue
+      background-image: url('../images/access/access-5-btl-bg.png')
+      background-repeat: no-repeat
+      &::after
+        background-image: url('../images/access/access-5-btl-after.png')
       div
         color: white
   &-title
@@ -46,6 +82,42 @@
       width: 100%
       color: pink
 
+.cl-effect-10
+  position: relative
+  z-index: 1
+  a
+    overflow: hidden
+    margin: 0 15px
+    span
+      display: block
+      padding: 10px 20px
+      background: #0f7c67
+      -webkit-transition: -webkit-transform 0.3s
+      -moz-transition: -moz-transform 0.3s
+      transition: transform 0.3s
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+      padding: 10px 20px
+      width: 100%
+      height: 100%
+      background: #fff
+      color: #0f7c67
+      content: attr(data-hover)
+      -webkit-transition: -webkit-transform 0.3s
+      -moz-transition: -moz-transform 0.3s
+      transition: transform 0.3s
+      -webkit-transform: translateX(-25%)
+    &:hover span, &:focus span
+      -webkit-transform: translateX(100%)
+      -moz-transform: translateX(100%)
+      transform: translateX(100%)
+    &:hover::before, &:focus::before
+      -webkit-transform: translateX(0%)
+      -moz-transform: translateX(0%)
+      transform: translateX(0%)
 .text-slide
   margin-top: 15px
   text-align: center
