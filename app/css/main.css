@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Pragati+Narrow:400,700");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Pragati+Narrow:400,700|Open+Sans:400,400i,60");
 html {
   height: 100%;
   box-sizing: border-box; }
@@ -21,14 +21,7 @@ ul {
     list-style: none; }
 
 a {
-  text-decoration: none;
-  color: white;
-  transition: all 0.2s linear;
-    transition--moz-transition: all 0.2s linear;
-    transition--ms-transition: all 0.2s linear;
-    transition--o-transition: all 0.2s linear; }
-  a:hover {
-    opacity: 0.5; }
+  text-decoration: none; }
 
 .hideme {
   opacity: 0.2; }
@@ -131,7 +124,7 @@ footer {
 
 .lets-talk {
   color: white;
-  font-family: "Libre Baskerville", serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 48px;
   position: absolute;
   left: 0;
@@ -370,42 +363,16 @@ section.active {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: white;
-  opacity: 0;
-  transition: all 0.2s linear;
-    transition--moz-transition: all 0.2s linear;
-    transition--ms-transition: all 0.2s linear;
-    transition--o-transition: all 0.2s linear; }
-  .nav-full--link {
-    display: inline-block;
-    float: left;
-    width: 19%;
-    height: 100vh;
-    padding-top: 35%;
-    text-align: center;
-    border-right: 1px solid white; }
-    @media screen and (max-width: 767px) {
-      .nav-full--link {
-        width: 100%;
-        height: 50px;
-        padding-top: 20%; } }
-    .nav-full--link:hover {
-      background-color: white; }
-  .nav-full--en {
-    position: relative;
-    display: none;
-    float: right;
-    padding-left: 45px;
-    width: 100%;
-    color: #56bad2;
-    display: inline;
-    background: -webkit-linear-gradient(left, #18191d, #56bad2);
-    background-size: 200% 100%;
-    background-position: right 0;
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-transition: background 1s; }
+  background: black;
+  opacity: 0.8; }
+
+.nav-container {
+  flex-wrap: wrap;
+  background-color: white;
+  height: 50vh;
+  opacity: 1;
+  border-radius: 0 0 5px 5px;
+  padding: 20px; }
 
 #menu {
   display: block;
@@ -432,8 +399,7 @@ section.active {
     border-bottom: 1px solid #56bad2; }
 
 .open-menu {
-  display: block;
-  opacity: 1; }
+  display: block; }
 
 .work {
   display: flex;
@@ -448,20 +414,28 @@ section.active {
       display: flex;
       flex-wrap: wrap;
       align-content: center;
-      height: 100px;
+      height: 150px;
       width: 100%;
       padding: 0 20px;
-      color: white; }
+      color: white;
+      font-family: "Open Sans", sans-serif;
+      font-style: italic; }
     .work-trigger:nth-child(1) {
       background-color: #77b4b4; }
+      .work-trigger:nth-child(1) div {
+        color: white; }
     .work-trigger:nth-child(2) {
       background-color: white; }
     .work-trigger:nth-child(3) {
       background-color: #18191d; }
+      .work-trigger:nth-child(3) div {
+        color: white; }
     .work-trigger:nth-child(4) {
       background-color: #56bad2; }
     .work-trigger:nth-child(5) {
       background-color: #18191d; }
+      .work-trigger:nth-child(5) div {
+        color: white; }
   .work-title {
     align-items: center;
     display: flex;
@@ -635,7 +609,7 @@ body {
 .page-title {
   color: #18191d;
   font-size: 48px;
-  font-family: "Libre Baskerville", serif; }
+  font-family: "Open Sans", sans-serif; }
   @media screen and (max-width: 767px) {
     .page-title {
       margin-top: 80px; } }
@@ -643,7 +617,7 @@ body {
 .service-title {
   position: absolute;
   left: -55px;
-  font-family: "Libre Baskerville", serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 32px;
   letter-spacing: 5px; }
   @media screen and (max-width: 767px) {
@@ -701,7 +675,7 @@ body {
       .service-text span:first-letter {
         position: absolute;
         font-size: 32px;
-        font-family: "Libre Baskerville", serif;
+        font-family: "Open Sans", sans-serif;
         line-height: 5px; }
 
 .graph-block {
