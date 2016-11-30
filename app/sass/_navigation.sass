@@ -160,12 +160,6 @@ section.active
       transform: rotate(-135deg)
 
 .nav-full
-  /*display: none
-  /*position: absolute
-  /*left: 0
-  /*top: 0
-  /*width: 100vw
-  /*height: 100vh
   background: transparentize(black,0.2) !important
   position: fixed
   top: 0
@@ -191,6 +185,8 @@ section.active
   opacity: 1
   border-radius: 0 0 5px 5px
   padding: 20px
+  @media screen and (max-width:$screen-xs-max)
+    height: 100vh
   &--info
     flex-wrap: wrap
     align-content: space-between
@@ -207,27 +203,34 @@ section.active
   flex-wrap: wrap
   display: inline-flex
   width: 20%
+  @media screen and (max-width:$screen-xs-max)
+    display: block
+    width: 100%
+    padding: 20px 0
   &--link
     color: $color-blue
     display: block
     width: 100%
-    &:first-child
-      font-style: italic
-      position: relative
-      font-size: 22px
-      color: black
-      margin-bottom: 15px
-      &::before
-        position: absolute
-        left: 0
-        bottom: 0
-        content: ''
-        width: 30px
-        height: 3px
-        background-color: $color-blue
+  &--title
+    font-style: italic
+    position: relative
+    font-size: 22px
+    color: black
+    margin-bottom: 15px
+    &::before
+      position: absolute
+      left: 0
+      bottom: 0
+      content: ''
+      width: 30px
+      height: 3px
+      background-color: $color-blue
   &--message
     font-size: 22px
     padding: 18px
+    @media screen and (max-width:$screen-xs-max)
+      padding: 20px 0px
+
     span
       color: $color-blue
       font-style: italic
@@ -239,6 +242,42 @@ section.active
     padding: 4px 0
     text-align: center
     width: 180px
+
+.cl-effect-10
+  position: relative
+  z-index: 1
+  a
+    overflow: hidden
+    span
+      display: block
+      padding: 10px 0px
+      background: white
+      -webkit-transition: -webkit-transform 0.3s
+      -moz-transition: -moz-transform 0.3s
+      transition: transform 0.3s
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+      padding: 10px 20px
+      width: 100%
+      height: 100%
+      background: $color-blue
+      color: white
+      content: attr(data-hover)
+      -webkit-transition: -webkit-transform 0.3s
+      -moz-transition: -moz-transform 0.3s
+      transition: transform 0.3s
+      -webkit-transform: translateX(-25%)
+    &:hover span, &:focus span
+      -webkit-transform: translateX(100%)
+      -moz-transform: translateX(100%)
+      transform: translateX(100%)
+    &:hover::before, &:focus::before
+      -webkit-transform: translateX(0%)
+      -moz-transform: translateX(0%)
+      transform: translateX(0%)
 
 .find-us
   padding: 0 15px
