@@ -21,15 +21,8 @@ ul
   li
     list-style: none
 a
+  color: $color-grey
   text-decoration: none
-  color: white
-  transition: all 0.2s linear
-    -moz-transition: all 0.2s linear
-    -ms-transition: all 0.2s linear
-    -o-transition: all 0.2s linear
-  &:hover
-    opacity: 0.5
-
 .hideme
   opacity: 0.2
 
@@ -48,14 +41,15 @@ a
   font-weight: normal
 
 .logo-makemark
-  width: 32%;
-  position: fixed;
-  top: 0;
-  bottom: 30%;
-  display: table;
-  margin: auto;
+  width: 318px
+  bottom: 30%
+  display: table
+  margin: 200px auto 0px
+  color: $color-darker-blue
   @media screen and (max-width:$screen-xs-max)
     width: 90% !important
+  &--big
+    width: 100%
 
 .section-desc
   font-size: $font-size-regular

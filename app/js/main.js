@@ -4,8 +4,14 @@ $(document).ready(function() {
     $( "#full-menu" ).toggleClass( "open-menu");
   });
 
+  $("#nav-close").click(function(a) {
+      a.preventDefault(),
+      $("#full-menu").removeClass("open-menu"),
+      $header.headroom("pin")
+  }),
 
-// read bar 
+
+// read bar
 read_bar();
 // Menu hover
 
@@ -79,7 +85,7 @@ $('a.nav-full--link').mouseover(function() {
 
 function read_bar() {
 
-    var windHeight = $(window).height(), 
+    var windHeight = $(window).height(),
     docHeight = $(document).height(),
       progressBar = $('.progress'),
 
