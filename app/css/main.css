@@ -255,6 +255,10 @@ section.active {
   margin: 0px;
   font-weight: normal;
   background-size: cover; }
+  @media screen and (max-width: 767px) {
+    .body {
+      position: inherit;
+      overflow: inherit; } }
   .body-inner {
     background: white;
     overflow: inherit;
@@ -575,7 +579,8 @@ section.active {
   @media screen and (max-width: 767px) {
     .work {
       display: block;
-      position: relative; } }
+      position: relative;
+      margin-top: 40px; } }
   .work-trigger {
     display: inline-flex;
     width: 20%;
@@ -649,7 +654,6 @@ section.active {
     color: #18191d;
     text-align: right; }
     .work-title span {
-      display: block;
       width: 100%;
       font-size: 24px; }
 
