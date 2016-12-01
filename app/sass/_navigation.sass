@@ -159,11 +159,13 @@ section.active
   z-index: 20
   width: 20px
   height: 20px
-  right: 0
+  right: 0px
   top: 20px
   margin-right: 20px
   position: absolute
   cursor: pointer
+  @media screen and (max-width:$screen-xs-max)
+    right: 20px
   span
     display: block
     position: absolute
