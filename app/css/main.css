@@ -288,7 +288,7 @@ section.active {
 
 .nav-inner {
   position: absolute;
-  right: 0;
+  right: 40px;
   top: 15px;
   width: auto;
   z-index: 8; }
@@ -344,15 +344,61 @@ section.active {
   #nav-open span:nth-child(3) {
     top: 8px; }
   #nav-open.open span:nth-child(1) {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  #nav-open.open span:nth-child(3) {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+#nav-close {
+  z-index: 20;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: 20px;
+  margin-right: 20px;
+  position: absolute;
+  cursor: pointer; }
+  #nav-close span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    opacity: 1;
+    left: 0; }
+    #nav-close span:nth-child(1) {
+      top: 8px !important;
+      -webkit-transform: rotate(135deg);
+      -moz-transform: rotate(135deg);
+      -o-transform: rotate(135deg);
+      transform: rotate(135deg); }
+    #nav-close span:nth-child(2) {
+      display: none; }
+    #nav-close span:nth-child(3) {
+      top: 8px !important;
+      -webkit-transform: rotate(-135deg);
+      -moz-transform: rotate(-135deg);
+      -o-transform: rotate(-135deg);
+      transform: rotate(-135deg); }
+  #nav-close span:nth-child(1) {
+    top: 0px; }
+  #nav-close span:nth-child(2) {
+    top: 4px; }
+  #nav-close span:nth-child(3) {
+    top: 8px; }
+  #nav-close.open span:nth-child(1) {
     top: 8px;
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -o-transform: rotate(135deg);
     transform: rotate(135deg); }
-  #nav-open.open span:nth-child(2) {
+  #nav-close.open span:nth-child(2) {
     opacity: 0;
     left: -60px; }
-  #nav-open.open span:nth-child(3) {
+  #nav-close.open span:nth-child(3) {
     top: 8px;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
@@ -447,7 +493,8 @@ section.active {
 
 .cl-effect-10 {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  width: 90%; }
   .cl-effect-10 a {
     overflow: hidden; }
     .cl-effect-10 a span {
