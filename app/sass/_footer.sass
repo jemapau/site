@@ -30,7 +30,47 @@ footer
         margin-top: 5px
         margin-left: 10px
   &-bottom
+    flex-wrap: wrap
+    padding: 40px 0
     min-height: 160px
+    text-align: left
     @media screen and (max-width:$screen-xs-max)
       text-align: center
       margin-top: 40px
+    &--phrase
+      color: $color-blue
+      font-size: $font-size-regular
+      text-align: center
+      display: inline-flex
+      align-items: center
+      width: 30% !important
+    &--list
+      display: inline-flex
+      align-items: stretch
+      width: 26%
+      @media screen and (max-width:$screen-xs-max)
+        display: block
+        width: 100%
+      &:last-child
+        width: 15%
+        @media screen and (max-width:$screen-xs-max)
+          display: block
+          width: 100%
+      ul
+        display: block
+        width: 100%
+        li
+          &:first-child
+            position: relative
+            border-bottom: 1px solid transparentize($color-grey, 0.8)
+            padding-bottom: 10px
+            margin-bottom: 10px
+            color: black
+            font-style: italic
+            &::before
+              position: absolute
+              content: ''
+              width: 40px
+              height: 2px
+              background-color: $color-blue
+              bottom: 0

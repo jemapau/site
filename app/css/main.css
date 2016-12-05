@@ -808,11 +808,52 @@ footer {
         margin-top: 5px;
         margin-left: 10px; }
   .foo-bottom {
-    min-height: 160px; }
+    flex-wrap: wrap;
+    padding: 40px 0;
+    min-height: 160px;
+    text-align: left; }
     @media screen and (max-width: 767px) {
       .foo-bottom {
         text-align: center;
         margin-top: 40px; } }
+    .foo-bottom--phrase {
+      color: #56bad2;
+      font-size: 22px;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      width: 30% !important; }
+    .foo-bottom--list {
+      display: inline-flex;
+      align-items: stretch;
+      width: 26%; }
+      @media screen and (max-width: 767px) {
+        .foo-bottom--list {
+          display: block;
+          width: 100%; } }
+      .foo-bottom--list:last-child {
+        width: 15%; }
+        @media screen and (max-width: 767px) {
+          .foo-bottom--list:last-child {
+            display: block;
+            width: 100%; } }
+      .foo-bottom--list ul {
+        display: block;
+        width: 100%; }
+        .foo-bottom--list ul li:first-child {
+          position: relative;
+          border-bottom: 1px solid rgba(120, 120, 120, 0.2);
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          color: black;
+          font-style: italic; }
+          .foo-bottom--list ul li:first-child::before {
+            position: absolute;
+            content: '';
+            width: 40px;
+            height: 2px;
+            background-color: #56bad2;
+            bottom: 0; }
 
 .inner-title {
   position: relative; }
@@ -859,6 +900,7 @@ footer {
   .content-inner--lightbox ul {
     border-left: 1px solid #787878; }
     .content-inner--lightbox ul li {
+      text-transform: uppercase;
       padding: 0px 20px; }
 
 .graph-block {
@@ -968,6 +1010,32 @@ footer {
     left: 0;
     right: 0; }
 
+.btn-send {
+  position: relative;
+  float: right;
+  margin-top: 20px;
+  border-radius: 22px;
+  width: auto;
+  padding: 10px 20px;
+  background-color: #56bad2;
+  background: #56bad2;
+  color: white;
+  text-transform: uppercase;
+  border: none; }
+
+.form-label {
+  display: block; }
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px; }
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px; }
+
 /*  SECTIONS */
 .section {
   clear: both;
@@ -980,6 +1048,13 @@ footer {
   float: left;
   margin: 1% 0 1% 1.6%; }
   .col:first-child {
+    margin-left: 0; }
+
+.no-margin {
+  display: block;
+  float: left;
+  margin: 1% 0; }
+  .no-margin:first-child {
     margin-left: 0; }
 
 /*  GROUPING */

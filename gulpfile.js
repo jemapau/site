@@ -7,9 +7,14 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
+var imagemin = require('gulp-imagemin');
+var babel = require('babelify');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream')
 
-gulp.task('default', function() {
-  runSequence(['sass','browserSync', 'watch'],
+
+gulp.task('default', function(callback) {
+  runSequence(['sass','browserSync', 'watch', 'useref', 'images', 'scripts'],
     callback
   )
 });
@@ -59,6 +64,15 @@ gulp.task('watch',['browserSync', 'sass'],function(){
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
 })
+
+gulp.task('scripts', function () {
+  browserify('./src/main.js')
+    .transform(babel)
+    .bundle()
+    .pipe(source('main.js'))
+    .pipe(gulp.dest('dist'));
+})
+
 
 //Gulp build syntax
 gulp.task('build', function (callback) {
