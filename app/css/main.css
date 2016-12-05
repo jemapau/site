@@ -679,6 +679,10 @@ section.active {
   background-color: white;
   background-image: url("../images/access/access-2-social-bg.png");
   background-repeat: no-repeat; }
+  .socialm::after {
+    background-image: url("../images/access/access-2-social-after.png"); }
+  .socialm div {
+    color: white; }
 
 .desarrollow {
   background-color: #18191d;
@@ -705,26 +709,47 @@ section.active {
   .btl div {
     color: white; }
 
-.giro {
-  animation: giro 2s linear infinite;
+.svg {
+  position: fixed;
+  width: 50%;
+  top: 140px;
+  right: -16%; }
+
+#giro, #patas * {
+  animation: complete 1s ease-out infinite;
   transform-origin: center center;
   stroke-dashArray: 3; }
 
-.st15 {
-  animation: complete 2s linear infinite alternate;
+#lineas, #lineas_1_, #cuadrado, #circulo, #cruz {
+  animation: complete 5s linear infinite alternate;
+  transform-origin: center center;
+  stroke-dasharray: 20; }
+
+#cursor {
+  animation: cursore 5s ease-out infinite alternate;
   transform-origin: center center; }
 
 @keyframes giro {
   from {
     transform: translate(0px, 0px) rotate(180deg); }
   to {
-    transform: translate(0px, 0px) rotate(9deg); } }
+    transform: translate(0px, 0px) rotate(0deg); } }
 
 @keyframes complete {
   from {
-    transform: scale(1); }
+    stroke-dashoffset: 0; }
   to {
-    transform: scale(1.2); } }
+    stroke-dashoffset: -100; } }
+
+@keyframes cursore {
+  0% {
+    transform: translate(0px, 0px); }
+  30% {
+    transform: translate(40px, 28px); }
+  60% {
+    transform: translate(-41px, -29px); }
+  100% {
+    transform: translate(0px, 0px); } }
 
 body {
   -webkit-font-smoothing: antialiased;
