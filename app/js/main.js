@@ -10,6 +10,16 @@ $(document).ready(function() {
       $header.headroom("pin")
   }),
 
+$('.work-trigger').on('mouseenter',function () {
+  var service = $(this).attr('data-service');
+  $('.svg').fadeOut(function() {
+    $('.svg').load('images/index/'+service+'-img.svg');
+    $('.svg').fadeIn();
+  });
+  
+});
+
+
 
 // read bar
 read_bar();
