@@ -9,7 +9,7 @@ $(document).ready(function() {
       $("#full-menu").removeClass("open-menu"),
       $header.headroom("pin")
   }),
-
+$('.svg').load('images/index/f1.svg');
 
 // read bar
 read_bar();

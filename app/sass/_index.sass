@@ -1,33 +1,35 @@
 
 .work
-  display: flex
-  position:  absolute
+  position: absolute
   bottom: 0
   width: 100%
+  height: 150px
   @media screen and (max-width:$screen-xs-max)
     display: block
     position: relative
     margin-top: 40px
   &-trigger
-    display: inline-flex
+    display: table
     width: 20%
-    background-color: $color-blue
+    float: left
     position: relative
+    .work--giro
+      -webkit-transition: all .5s
+      transition: all .5s 
+      -webkit-transform-style: preserve-3d
+      transform-style: preserve-3d
+      backface-visibility: hidden
+    &:hover .work--giro 
+      -webkit-transform: rotateX(90deg) translateZ(74px)
+      transform: rotateX(90deg) translateZ(74px)
+      backface-visibility: hidden 
     @media screen and (max-width:$screen-xs-max)
       display: block
       width: 100% !important
-    &::after
-      position: absolute
-      content: ''
-      width: 100%
-      height: 88px
-      top: -81px
-      left: 0
       @media screen and (max-width:$screen-xs-max)
         display: none
     &--access
-      display: flex
-      flex-wrap: wrap
+      display: table
       align-content: center
       height: 150px
       width: 100%
@@ -35,42 +37,16 @@
       color: white
       font-family: $font-title
       font-style: italic
-    &:nth-child(1)
-      background-color: #77b4b4
-      background-image: url('../images/access/access-1-brand-bg.png')
-      background-repeat: no-repeat
+      -webkit-transform: rotateX(0deg) translateZ(0)
+      transform: rotateX(0deg) translateZ(0)
+      backface-visibility: hidden
       &::after
-        background-image: url('../images/access/access-1-brand-after.png')
-      div
-        color: white
-    &:nth-child(2)
-      background-color: white
-      background-image: url('../images/access/access-2-social-bg.png')
-      background-repeat: no-repeat
-      &::after
-        background-image: url('../images/access/access-2-social-after.png')
-    &:nth-child(3)
-      background-color: $color-darker-blue
-      background-image: url('../images/access/access-3-develop-bg.png')
-      background-repeat: no-repeat
-      &::after
-        background-image: url('../images/access/access-3-develop-after.png')
-      div
-        color: white
-    &:nth-child(4)
-      background-color: $color-blue
-      background-image: url('../images/access/access-4-marketing-bg.png')
-      background-repeat: no-repeat
-      &::after
-        background-image: url('../images/access/access-4-marketing-after.png')
-    &:nth-child(5)
-      background-color: $color-darker-blue
-      background-image: url('../images/access/access-5-btl-bg.png')
-      background-repeat: no-repeat
-      &::after
-        background-image: url('../images/access/access-5-btl-after.png')
-      div
-        color: white
+        position: absolute
+        content: ''
+        width: 100%
+        height: 88px
+        top: -81px
+        left: 0
   &-title
     align-items: center
     display: flex
@@ -78,6 +54,8 @@
     flex-grow: 3
     color: $color-darker-blue
     text-align: right
+    position: relative
+    z-index: 2
     span
       width: 100%
       font-size: 24px
@@ -90,3 +68,89 @@
     font-family: $font-italic
     font-style: italic
     color: $color-blue
+
+.front 
+  transform: rotateX(0deg) translateZ(74px)
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  z-index: 1
+
+.back
+  transform: rotateX(-90deg) translateZ(-75px)
+  overflow: hidden
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  z-index: 2
+  &::before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 1
+    background: rgba(0, 0, 0, 0.5)
+
+.branding
+  background-color: #77b4b4
+  background-image: url('../images/access/access-1-brand-bg.png')
+  background-repeat: no-repeat
+  &::after
+    background-image: url('../images/access/access-1-brand-after.png')
+  div
+    color: white
+
+.socialm
+  background-color: white
+  background-image: url('../images/access/access-2-social-bg.png')
+  background-repeat: no-repeat
+
+.desarrollow
+  background-color: $color-darker-blue
+  background-image: url('../images/access/access-3-develop-bg.png')
+  background-repeat: no-repeat
+  &::after
+    background-image: url('../images/access/access-3-develop-after.png')
+  div
+    color: white
+
+.publicidad
+  background-color: $color-blue
+  background-image: url('../images/access/access-4-marketing-bg.png')
+  background-repeat: no-repeat
+  &::after
+    background-image: url('../images/access/access-4-marketing-after.png')
+
+.btl
+  background-color: $color-darker-blue
+  background-image: url('../images/access/access-5-btl-bg.png')
+  background-repeat: no-repeat
+  &::after
+    background-image: url('../images/access/access-5-btl-after.png')
+  div
+    color: white
+
+.giro
+  animation: giro 2s linear infinite
+  transform-origin: center center;
+  stroke-dashArray: 3;
+
+.st15
+  animation: complete 2s linear infinite alternate
+  transform-origin: center center;
+
+
+@keyframes giro
+  from
+    transform: translate(0px, 0px) rotate(180deg)
+   
+  to
+    transform: translate(0px, 0px) rotate(9deg)
+
+@keyframes complete
+  from
+   transform: scale(1)
+   
+  to
+    transform: scale(1.2)
+
