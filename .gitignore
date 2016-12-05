@@ -9,3 +9,5 @@
 .Trashes
 ehThumbs.db
 Thumbs.db
+
+node_modules/
