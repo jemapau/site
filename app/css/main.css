@@ -587,8 +587,8 @@ section.active {
     float: left;
     position: relative; }
     .work-trigger .work--giro {
-      -webkit-transition: all .5s;
-      transition: all .5s;
+      -webkit-transition: all .6s;
+      transition: all .6s;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
       backface-visibility: hidden; }
@@ -604,7 +604,7 @@ section.active {
     .work-trigger {
       display: none; } }
     .work-trigger--access {
-      display: table;
+      display: inline-flex;
       align-content: center;
       height: 150px;
       width: 100%;
@@ -616,6 +616,7 @@ section.active {
       transform: rotateX(0deg) translateZ(0);
       backface-visibility: hidden; }
       .work-trigger--access::after {
+        pointer-events: none;
         position: absolute;
         content: '';
         width: 100%;
@@ -713,12 +714,36 @@ section.active {
   position: fixed;
   width: 50%;
   top: 140px;
-  right: -16%; }
+  right: -10%; }
 
-#giro, #patas * {
-  animation: complete 1s ease-out infinite;
+.svg * {
   transform-origin: center center;
-  stroke-dashArray: 3; }
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  -webkit-transition: all 1.5s, fill .5s;
+  transition: all 1.5s, fill .5s; }
+
+.animates * {
+  fill: transparent !important; }
+
+.lines * {
+  stroke-width: 1px;
+  stroke: #58bbd2; }
+
+.fills * {
+  stroke-dashoffset: 0; }
+
+#globo, #mensaje {
+  animation: moveup 3s ease-out infinite alternate;
+  transform-origin: center center; }
+
+#se1 {
+  animation: opac 5s linear infinite alternate;
+  transform-origin: center center; }
+
+#se2 {
+  animation: opac 1s linear infinite alternate;
+  transform-origin: center center; }
 
 #lineas, #lineas_1_, #cuadrado, #circulo, #cruz {
   animation: complete 5s linear infinite alternate;
@@ -729,17 +754,17 @@ section.active {
   animation: cursore 5s ease-out infinite alternate;
   transform-origin: center center; }
 
-@keyframes giro {
+@keyframes moveup {
   from {
-    transform: translate(0px, 0px) rotate(180deg); }
+    transform: translate(0px, 0px); }
   to {
-    transform: translate(0px, 0px) rotate(0deg); } }
+    transform: translate(0px, -20px); } }
 
-@keyframes complete {
+@keyframes opac {
   from {
-    stroke-dashoffset: 0; }
+    display: none; }
   to {
-    stroke-dashoffset: -100; } }
+    display: block; } }
 
 @keyframes cursore {
   0% {
