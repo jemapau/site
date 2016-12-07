@@ -8,9 +8,6 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
-var babel = require('babelify');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream')
 
 
 gulp.task('default', function(callback) {
