@@ -1,33 +1,35 @@
 
 .work
-  display: flex
-  position:  absolute
+  position: absolute
   bottom: 0
   width: 100%
+  height: 150px
   @media screen and (max-width:$screen-xs-max)
     display: block
     position: relative
     margin-top: 40px
   &-trigger
-    display: inline-flex
+    display: table
     width: 20%
-    background-color: $color-blue
+    float: left
     position: relative
+    .work--giro
+      -webkit-transition: all .6s
+      transition: all .6s 
+      -webkit-transform-style: preserve-3d
+      transform-style: preserve-3d
+      backface-visibility: hidden
+    &:hover .work--giro 
+      -webkit-transform: rotateX(90deg) translateZ(74px)
+      transform: rotateX(90deg) translateZ(74px)
+      backface-visibility: hidden 
     @media screen and (max-width:$screen-xs-max)
       display: block
       width: 100% !important
-    &::after
-      position: absolute
-      content: ''
-      width: 100%
-      height: 88px
-      top: -81px
-      left: 0
       @media screen and (max-width:$screen-xs-max)
         display: none
     &--access
-      display: flex
-      flex-wrap: wrap
+      display: inline-flex
       align-content: center
       height: 150px
       width: 100%
@@ -35,42 +37,17 @@
       color: white
       font-family: $font-title
       font-style: italic
-    &:nth-child(1)
-      background-color: #77b4b4
-      background-image: url('../images/access/access-1-brand-bg.png')
-      background-repeat: no-repeat
+      -webkit-transform: rotateX(0deg) translateZ(0)
+      transform: rotateX(0deg) translateZ(0)
+      backface-visibility: hidden
       &::after
-        background-image: url('../images/access/access-1-brand-after.png')
-      div
-        color: white
-    &:nth-child(2)
-      background-color: white
-      background-image: url('../images/access/access-2-social-bg.png')
-      background-repeat: no-repeat
-      &::after
-        background-image: url('../images/access/access-2-social-after.png')
-    &:nth-child(3)
-      background-color: $color-darker-blue
-      background-image: url('../images/access/access-3-develop-bg.png')
-      background-repeat: no-repeat
-      &::after
-        background-image: url('../images/access/access-3-develop-after.png')
-      div
-        color: white
-    &:nth-child(4)
-      background-color: $color-blue
-      background-image: url('../images/access/access-4-marketing-bg.png')
-      background-repeat: no-repeat
-      &::after
-        background-image: url('../images/access/access-4-marketing-after.png')
-    &:nth-child(5)
-      background-color: $color-darker-blue
-      background-image: url('../images/access/access-5-btl-bg.png')
-      background-repeat: no-repeat
-      &::after
-        background-image: url('../images/access/access-5-btl-after.png')
-      div
-        color: white
+        pointer-events: none;
+        position: absolute
+        content: ''
+        width: 100%
+        height: 88px
+        top: -81px
+        left: 0
   &-title
     align-items: center
     display: flex
@@ -78,6 +55,8 @@
     flex-grow: 3
     color: $color-darker-blue
     text-align: right
+    position: relative
+    z-index: 2
     span
       width: 100%
       font-size: 24px
@@ -90,3 +69,146 @@
     font-family: $font-italic
     font-style: italic
     color: $color-blue
+
+.front 
+  transform: rotateX(0deg) translateZ(74px)
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  z-index: 1
+
+.back
+  transform: rotateX(-90deg) translateZ(-75px)
+  overflow: hidden
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  z-index: 2
+  &::before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: 1
+    background: rgba(0, 0, 0, 0.5)
+
+.branding
+  background-color: #77b4b4
+  background-image: url('../images/access/access-1-brand-bg.png')
+  background-repeat: no-repeat
+  &::after
+    background-image: url('../images/access/access-1-brand-after.png')
+  div
+    color: white
+
+.socialm
+  background-color: white
+  background-image: url('../images/access/access-2-social-bg.png')
+  background-repeat: no-repeat
+  &::after
+    background-image: url('../images/access/access-2-social-after.png')
+  div
+    color: white
+.desarrollow
+  background-color: $color-darker-blue
+  background-image: url('../images/access/access-3-develop-bg.png')
+  background-repeat: no-repeat
+  &::after
+    background-image: url('../images/access/access-3-develop-after.png')
+  div
+    color: white
+
+.publicidad
+  background-color: $color-blue
+  background-image: url('../images/access/access-4-marketing-bg.png')
+  background-repeat: no-repeat
+  &::after
+    background-image: url('../images/access/access-4-marketing-after.png')
+
+.btl
+  background-color: $color-darker-blue
+  background-image: url('../images/access/access-5-btl-bg.png')
+  background-repeat: no-repeat
+  &::after
+    background-image: url('../images/access/access-5-btl-after.png')
+  div
+    color: white
+
+.svg
+  position: fixed
+  width: 50%
+  top: 140px
+  right: -10%
+
+.svg *
+  transform-origin: center center
+  stroke-dasharray: 3000
+  stroke-dashoffset: 3000
+  -webkit-transition: all 1.5s, fill .5s
+  transition: all 1.5s, fill .5s
+
+.animates *
+  fill: rgba(0, 0, 0, 0) !important
+
+.lines *
+  stroke-width: 1px
+  stroke: rgb(88, 187, 210)
+
+.fills *
+  stroke-dashoffset: 0
+
+#globo, #mensaje
+  animation: moveup 3s ease-out infinite alternate
+  transform-origin: center center
+
+#se1
+  animation: opac 5s linear infinite alternate
+  transform-origin: center center
+#se2
+  animation: opac 1s linear infinite alternate
+  transform-origin: center center
+
+#lineas, #lineas_1_, #cuadrado, #circulo, #cruz, 
+  animation: complete 5s linear infinite alternate
+  transform-origin: center center
+  stroke-dasharray: 20
+
+#cursor
+  animation: cursore 5s ease-out infinite alternate
+  transform-origin: center center
+
+
+@keyframes moveup
+  from
+    transform: translate(0px, 0px) 
+   
+  to
+    transform: translate(0px, -20px)
+
+@keyframes opac
+  from
+    display: none
+   
+  to
+   display: block
+
+@keyframes cursore
+  0%
+    transform: translate(0px, 0px)
+   
+  30%
+    transform: translate(40px, 28px)
+
+  60%
+    transform: translate(-41px, -29px);
+  
+  100%
+    transform: translate(0px, 0px)
+
+
+
+
+
+    
+
+    

@@ -35,6 +35,30 @@ $('.work-trigger').on('mouseenter',function () {
 
 
 
+// svg animations
+$('.work-trigger').on('mouseenter',function () {
+  var service = $(this).attr('data-service');
+  
+  $('.svg').fadeOut(function() {
+    $('.svg').removeClass('fills').addClass('animates');
+    $('.svg').html('');
+    $('.svg').load('images/index/'+service+'-img.svg', function() {
+       $('.svg').fadeIn(function() {
+          $('.svg').addClass('fills');
+          $('.fills > svg').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+            $('.svg').removeClass('animates').promise().done(function () {
+                $('.svg').removeClass('fills');
+            });
+         });
+      });
+
+    });
+  });
+  
+});
+
+
+
 // read bar
 read_bar();
 // Menu hover
