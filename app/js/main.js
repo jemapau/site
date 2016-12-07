@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  load_files();
+  $('.anim').fadeIn('slow');
+
   $( "#nav-open" ).click(function() {
     $(this).toggleClass('open');
     $( "#full-menu" ).toggleClass( "open-menu");
@@ -10,6 +13,53 @@ $(document).ready(function() {
       $header.headroom("pin");
   });
 
+  function load_files() {
+  	$( ".top-header--inner" ).load( "views/header.html", function(){
+  		menu();
+  		links();
+  	});
+  	$( ".foo" ).load( "views/footer.html" );
+  }
+
+  function menu () {
+  	$( "#nav-open" ).click(function() {
+  	  $( "#full-menu" ).toggleClass( "open-menu");
+  	});
+
+    $("#nav-close").click(function(a) {
+        a.preventDefault();
+        $("#full-menu").removeClass("open-menu");
+        $header.headroom("pin");
+    });
+  }
+
+  function links() {
+  	$('a.link').click(function(){
+  		event.preventDefault();
+  		var enlace = $(this).attr('href');
+  		$('body').fadeOut("slow", function () {
+  			window.location.href = enlace;
+  		});
+  	});
+  }
+
+  function read_bar() {
+
+      var windHeight = $(window).height(),
+      docHeight = $(document).height(),
+        progressBar = $('.progress'),
+
+      max = docHeight - windHeight;
+      progressBar.css('width', max);
+
+      $(document).on('scroll', function(){
+          value = $(window).scrollTop();
+          progressBar.css('width', value);
+      });
+  }
+
+  // read bar
+  read_bar();
 
 // svg animations
 $('.work-trigger').on('mouseenter',function () {
@@ -27,40 +77,10 @@ $('.work-trigger').on('mouseenter',function () {
             });
          });
       });
-
     });
   });
-
 });
 
-
-
-// svg animations
-$('.work-trigger').on('mouseenter',function () {
-  var service = $(this).attr('data-service');
-  
-  $('.svg').fadeOut(function() {
-    $('.svg').removeClass('fills').addClass('animates');
-    $('.svg').html('');
-    $('.svg').load('images/index/'+service+'-img.svg', function() {
-       $('.svg').fadeIn(function() {
-          $('.svg').addClass('fills');
-          $('.fills > svg').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
-            $('.svg').removeClass('animates').promise().done(function () {
-                $('.svg').removeClass('fills');
-            });
-         });
-      });
-
-    });
-  });
-  
-});
-
-
-
-// read bar
-read_bar();
 // Menu hover
 
 $('a.nav-full--link').mouseover(function() {
@@ -129,19 +149,3 @@ $('a.nav-full--link').mouseover(function() {
   clock.init();
 
 });
-
-
-function read_bar() {
-
-    var windHeight = $(window).height(),
-    docHeight = $(document).height(),
-      progressBar = $('.progress'),
-
-    max = docHeight - windHeight;
-    progressBar.css('width', max);
-
-    $(document).on('scroll', function(){
-        value = $(window).scrollTop();
-        progressBar.css('width', value);
-    });
-}

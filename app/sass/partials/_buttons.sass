@@ -30,15 +30,26 @@
     left: 0
     right: 0
 
-.btn-send
+button.btn-send
   position: relative
   float: right
-  margin-top: 20px
   border-radius: 22px
-  width: auto
   padding: 10px 20px
   background-color: $color-blue
   background: $color-blue
   color: white
   text-transform: uppercase
-  border: none;
+  border: none
+  margin-top: 40px
+  @media screen and (max-width:$screen-xs-max)
+    width: 100%
+
+input
+  border: 1px solid $color-grey
+  text-align: center
+  width: 50%
+  @media screen and (max-width:$screen-xs-max)
+    width: 100%
+
+input.newsletter
+  border-radius: 20px

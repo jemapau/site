@@ -1,8 +1,8 @@
 @import "../variables.sass"
 
-
 .inner-title
   position: relative
+  height: 150px
   &--desc
     max-width: 565px
     padding: 20px
@@ -36,7 +36,10 @@
   &--img
     width: 100%
     top: -150px
-    position: absolute
+    position: relative
+    @media screen and (max-width:$screen-xs-max)
+      top: 0px
+      height: 100%
 
 .content-inner
   display: inline-block
