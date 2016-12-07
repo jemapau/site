@@ -1,17 +1,3 @@
-var page = require('page');
-
-var main = document.getElementById('main-container');
-
-page('/', function(ctx, next) {
-  main.innerHTML = 'Home <a href="/signup">Signup</a>';
-})
-
-page('/signup', function(ctx, next) {
-  main.innerHTML = 'Signup <a href="/">Home</a>';
-})
-
-page();
-
 $(document).ready(function() {
   $( "#nav-open" ).click(function() {
     $(this).toggleClass('open');
@@ -19,10 +5,34 @@ $(document).ready(function() {
   });
 
   $("#nav-close").click(function(a) {
-      a.preventDefault(),
-      $("#full-menu").removeClass("open-menu"),
-      $header.headroom("pin")
-  }),
+      a.preventDefault();
+      $("#full-menu").removeClass("open-menu");
+      $header.headroom("pin");
+  });
+
+
+// svg animations
+$('.work-trigger').on('mouseenter',function () {
+  var service = $(this).attr('data-service');
+
+  $('.svg').fadeOut(function() {
+    $('.svg').removeClass('fills').addClass('animates');
+    $('.svg').html('');
+    $('.svg').load('images/index/'+service+'-img.svg', function() {
+       $('.svg').fadeIn(function() {
+          $('.svg').addClass('fills');
+          $('.fills > svg').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+            $('.svg').removeClass('animates').promise().done(function () {
+                $('.svg').removeClass('fills');
+            });
+         });
+      });
+
+    });
+  });
+
+});
+
 
 
 // read bar
@@ -74,7 +84,7 @@ $('a.nav-full--link').mouseover(function() {
                   'Cuentanos de tu marca <span class="icon-ico-coffee"></span>', 'Creando experiencias de marca <span class="icon-ico-heart"></span>',
                   'Creamos desde el corazón de tu marca <span class="icon-ico-heart"></span>', 'Creando experiencias de marca <span class="icon-ico-heart icon-animate-heart"></span>',
                   'Creando experiencias de marca <span class="icon-ico-smile"></span>',
-                ]
+                ];
 
                 // show html
                 this._("#date").innerHTML =
