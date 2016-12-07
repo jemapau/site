@@ -5,10 +5,34 @@ $(document).ready(function() {
   });
 
   $("#nav-close").click(function(a) {
-      a.preventDefault(),
-      $("#full-menu").removeClass("open-menu"),
-      $header.headroom("pin")
-  }),
+      a.preventDefault();
+      $("#full-menu").removeClass("open-menu");
+      $header.headroom("pin");
+  });
+
+
+// svg animations
+$('.work-trigger').on('mouseenter',function () {
+  var service = $(this).attr('data-service');
+
+  $('.svg').fadeOut(function() {
+    $('.svg').removeClass('fills').addClass('animates');
+    $('.svg').html('');
+    $('.svg').load('images/index/'+service+'-img.svg', function() {
+       $('.svg').fadeIn(function() {
+          $('.svg').addClass('fills');
+          $('.fills > svg').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+            $('.svg').removeClass('animates').promise().done(function () {
+                $('.svg').removeClass('fills');
+            });
+         });
+      });
+
+    });
+  });
+
+});
+
 
 
 // svg animations
@@ -84,7 +108,7 @@ $('a.nav-full--link').mouseover(function() {
                   'Cuentanos de tu marca <span class="icon-ico-coffee"></span>', 'Creando experiencias de marca <span class="icon-ico-heart"></span>',
                   'Creamos desde el corazón de tu marca <span class="icon-ico-heart"></span>', 'Creando experiencias de marca <span class="icon-ico-heart icon-animate-heart"></span>',
                   'Creando experiencias de marca <span class="icon-ico-smile"></span>',
-                ]
+                ];
 
                 // show html
                 this._("#date").innerHTML =
