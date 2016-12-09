@@ -15,14 +15,14 @@
     position: relative
     .work--giro
       -webkit-transition: all .6s
-      transition: all .6s 
+      transition: all .6s
       -webkit-transform-style: preserve-3d
       transform-style: preserve-3d
       backface-visibility: hidden
-    &:hover .work--giro 
+    &:hover .work--giro
       -webkit-transform: rotateX(90deg) translateZ(74px)
       transform: rotateX(90deg) translateZ(74px)
-      backface-visibility: hidden 
+      backface-visibility: hidden
     @media screen and (max-width:$screen-xs-max)
       display: block
       width: 100% !important
@@ -41,7 +41,7 @@
       transform: rotateX(0deg) translateZ(0)
       backface-visibility: hidden
       &::after
-        pointer-events: none;
+        pointer-events: none
         position: absolute
         content: ''
         width: 100%
@@ -70,7 +70,7 @@
     font-style: italic
     color: $color-blue
 
-.front 
+.front
   transform: rotateX(0deg) translateZ(74px)
   -webkit-backface-visibility: hidden
   backface-visibility: hidden
@@ -98,7 +98,9 @@
   background-repeat: no-repeat
   &::after
     background-image: url('../images/access/access-1-brand-after.png')
-  div
+  //div
+    //color: white
+  &--title
     color: white
 
 .socialm
@@ -107,15 +109,20 @@
   background-repeat: no-repeat
   &::after
     background-image: url('../images/access/access-2-social-after.png')
-  div
+  //div
     color: white
+  &--title
+    color: white
+
 .desarrollow
   background-color: $color-darker-blue
   background-image: url('../images/access/access-3-develop-bg.png')
   background-repeat: no-repeat
   &::after
     background-image: url('../images/access/access-3-develop-after.png')
-  div
+  //div
+    color: white
+  &--title
     color: white
 
 .publicidad
@@ -124,6 +131,8 @@
   background-repeat: no-repeat
   &::after
     background-image: url('../images/access/access-4-marketing-after.png')
+  &--title
+    color: white
 
 .btl
   background-color: $color-darker-blue
@@ -131,7 +140,9 @@
   background-repeat: no-repeat
   &::after
     background-image: url('../images/access/access-5-btl-after.png')
-  div
+  //div
+    color: white
+  &--title
     color: white
 
 .svg
@@ -168,7 +179,7 @@
   animation: opac 1s linear infinite alternate
   transform-origin: center center
 
-#lineas, #lineas_1_, #cuadrado, #circulo, #cruz, 
+#lineas, #lineas_1_, #cuadrado, #circulo, #cruz,
   animation: complete 5s linear infinite alternate
   transform-origin: center center
   stroke-dasharray: 20
@@ -180,35 +191,27 @@
 
 @keyframes moveup
   from
-    transform: translate(0px, 0px) 
-   
+    transform: translate(0px, 0px)
+
   to
     transform: translate(0px, -20px)
 
 @keyframes opac
   from
     display: none
-   
+
   to
    display: block
 
 @keyframes cursore
   0%
     transform: translate(0px, 0px)
-   
+
   30%
     transform: translate(40px, 28px)
 
   60%
-    transform: translate(-41px, -29px);
-  
+    transform: translate(-41px, -29px)
+
   100%
     transform: translate(0px, 0px)
-
-
-
-
-
-    
-
-    

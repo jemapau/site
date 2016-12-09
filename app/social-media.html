@@ -21,10 +21,20 @@
   <title>MakeMark Site</title>
 </head>
 <body class="body body-inner">
-  <div class="wrapper" id="main-container">
+  <div class="wrapper">
     <header class="top-header--inner">
         <!-- Load Header.html -->
+        <div class="progress"></div>
     </header>
+  </div>
+  <div class="container">
+    <div class="breadcrumb">
+      <ul class="breadcrumb-block">
+        <li class="breadcrumb-list"><a href="index.html" class="breadcrumb-list--link">Inicio</a></li>
+        <li class="breadcrumb-list"><a href="social-media.html" class="breadcrumb-list--link active">Social Media</a></li>
+      </ul>
+    </div>
+  </div>
     <section>
       <div class="inner-slide">
         <img src="../images/slider/marketing-slider.jpg" alt="" class="inner-slide--img">
@@ -33,6 +43,7 @@
           ¡Estar en internet no es hacerse visible!
         </div>
       </div>
+  <div class="wrapper">
       <div class="container">
           <div class="inner-title">
             <div class="inner-title--icon"></div>
@@ -114,7 +125,9 @@
   </footer>
 </body>
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="js/main.min.js"></script>
+<!-- build:js js/main.min.js -->
+  <script src="js/main.js"></script>
+<!-- endbuild -->
 <script src="js/viewportchecker.js"></script>
 <script  type="text/javascript">
 /* Every time the window is scrolled ... */

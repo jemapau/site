@@ -16,6 +16,35 @@ html
   @media screen and (max-width:$screen-xs-max)
     padding: 0 20px
 
+.body
+  position: relative
+  background: white
+  overflow: hidden
+  height: 100%
+  font-family: $font-body
+  font-size: $font-size-small
+  line-height: 1.5
+  letter-spacing: 2px
+  color: $color-grey
+  margin: 0px
+  font-weight: normal
+  background-size: cover
+  @media screen and (max-width:$screen-xs-max)
+    position: inherit
+    overflow: inherit
+  &-inner
+    background: white
+    overflow: inherit
+    top: 0 !important
+
+.body-inner
+  .wrapper
+    min-height: 0 !important
+
+body.branding , body.btl , body.btl , body.desarrollo-web , body.quienes-somos , body.servicios, body.social-media
+  background-color: white
+  background: white
+
 ul
   padding-left: 0
   li
@@ -78,7 +107,7 @@ a
 .content-inner
   margin-top: 10%
   position: relative
-  
+
 .lets-talk
   color: white
   font-family: $font-title

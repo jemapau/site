@@ -15,6 +15,35 @@ html {
     .wrapper {
       padding: 0 20px; } }
 
+.body {
+  position: relative;
+  background: white;
+  overflow: hidden;
+  height: 100%;
+  font-family: "Pragati Narrow", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: #787878;
+  margin: 0px;
+  font-weight: normal;
+  background-size: cover; }
+  @media screen and (max-width: 767px) {
+    .body {
+      position: inherit;
+      overflow: inherit; } }
+  .body-inner {
+    background: white;
+    overflow: inherit;
+    top: 0 !important; }
+
+.body-inner .wrapper {
+  min-height: 0 !important; }
+
+body.branding, body.btl, body.btl, body.desarrollo-web, body.quienes-somos, body.servicios, body.social-media {
+  background-color: white;
+  background: white; }
+
 ul {
   padding-left: 0; }
   ul li {
@@ -169,9 +198,11 @@ header {
       display: inline-flex;
       width: 20px;
       height: 20px; }
-      header .social-item--link {
+      header .social-item--links {
         display: block;
         color: #18191d; }
+      header .social-item--inner {
+        color: white !important; }
   header .nav {
     position: relative;
     display: block; }
@@ -200,42 +231,36 @@ section.active {
   section.active::before {
     display: none; }
 
-.body {
-  position: relative;
-  background: white;
-  overflow: hidden;
-  height: 100%;
-  font-family: "Pragati Narrow", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 2px;
-  color: #787878;
-  margin: 0px;
-  font-weight: normal;
-  background-size: cover; }
-  @media screen and (max-width: 767px) {
-    .body {
-      position: inherit;
-      overflow: inherit; } }
-  .body-inner {
-    background: white;
-    overflow: inherit;
-    top: 0 !important; }
+.breadcrumb {
+  position: absolute;
+  z-index: 1; }
+  .breadcrumb-list {
+    display: inline-block; }
+    .breadcrumb-list--link {
+      display: block;
+      padding: 2px; }
+      .breadcrumb-list--link:hover {
+        opacity: 0.8;
+        border-bottom: 1px solid #787878; }
+  .breadcrumb-block {
+    position: relative;
+    top: 40px; }
 
 .top-header--inner {
   position: fixed;
   top: 0;
   z-index: 2;
   width: 100%;
-  background-color: #1a1b1f;
-  color: white;
+  background-color: #18191d;
   display: block;
-  min-height: 35px; }
+  min-height: 40px;
+  padding-top: 0px; }
 
 .social {
   float: left;
   width: 20%;
-  padding-top: 10px; }
+  padding-top: 10px;
+  line-height: 20px; }
 
 .logo-inner {
   margin: 0 auto;
@@ -258,6 +283,8 @@ section.active {
     .nav-inner {
       padding: 10px;
       top: 8px; } }
+  .nav-inner--line {
+    background-color: white !important; }
 
 .nav-top--line {
   display: block;
@@ -503,20 +530,7 @@ section.active {
   margin-top: 20%; }
 
 .active {
-  position: relative;
-  display: block;
-  padding-right: 10px;
-  min-width: 180px;
-  height: 20px;
-  border-bottom: 1px solid #56bad2; }
-  .active:before {
-    position: absolute;
-    content: '';
-    width: 25px;
-    height: 3px;
-    background-color: #56bad2;
-    bottom: -1.5px;
-    z-index: 2; }
+  color: #56bad2; }
   .active .nav-home--link {
     border-bottom: 1px solid #56bad2; }
 
@@ -631,7 +645,7 @@ section.active {
   background-repeat: no-repeat; }
   .branding::after {
     background-image: url("../images/access/access-1-brand-after.png"); }
-  .branding div {
+  .branding--title {
     color: white; }
 
 .socialm {
@@ -640,7 +654,7 @@ section.active {
   background-repeat: no-repeat; }
   .socialm::after {
     background-image: url("../images/access/access-2-social-after.png"); }
-  .socialm div {
+  .socialm--title {
     color: white; }
 
 .desarrollow {
@@ -649,7 +663,7 @@ section.active {
   background-repeat: no-repeat; }
   .desarrollow::after {
     background-image: url("../images/access/access-3-develop-after.png"); }
-  .desarrollow div {
+  .desarrollow--title {
     color: white; }
 
 .publicidad {
@@ -658,6 +672,8 @@ section.active {
   background-repeat: no-repeat; }
   .publicidad::after {
     background-image: url("../images/access/access-4-marketing-after.png"); }
+  .publicidad--title {
+    color: white; }
 
 .btl {
   background-color: #18191d;
@@ -665,7 +681,7 @@ section.active {
   background-repeat: no-repeat; }
   .btl::after {
     background-image: url("../images/access/access-5-btl-after.png"); }
-  .btl div {
+  .btl--title {
     color: white; }
 
 .svg {
@@ -966,7 +982,8 @@ footer {
             bottom: 0; }
 
 .inner-title {
-  position: relative; }
+  position: relative;
+  height: 150px; }
   .inner-title--desc {
     max-width: 565px;
     padding: 20px;
@@ -999,7 +1016,11 @@ footer {
   .inner-slide--img {
     width: 100%;
     top: -150px;
-    position: absolute; }
+    position: relative; }
+    @media screen and (max-width: 767px) {
+      .inner-slide--img {
+        top: 0px;
+        height: 100%; } }
 
 .content-inner {
   display: inline-block; }
@@ -1089,6 +1110,37 @@ footer {
   to {
     content: "\e904"; } }
 
+h1.page-title {
+  font-family: "Libre Baskerville", serif;
+  color: #18191d;
+  margin-top: 100px; }
+
+h2 {
+  font-family: "Libre Baskerville", serif;
+  color: #18191d; }
+
+.video-team {
+  height: 445px;
+  margin-bottom: 45px !important; }
+
+.newsletter {
+  text-align: center;
+  color: #787878; }
+
+.social-feed {
+  margin-top: 40px;
+  display: block; }
+  .social-feed--list {
+    display: block; }
+  .social-feed--post {
+    display: inline-block;
+    width: 32%;
+    height: 250px;
+    background: pink; }
+    @media screen and (max-width: 767px) {
+      .social-feed--post {
+        width: 100%; } }
+
 .underline-hover {
   color: #787878;
   display: inline-block;
@@ -1120,18 +1172,31 @@ footer {
     left: 0;
     right: 0; }
 
-.btn-send {
+button.btn-send {
   position: relative;
   float: right;
-  margin-top: 20px;
   border-radius: 22px;
-  width: auto;
   padding: 10px 20px;
   background-color: #56bad2;
   background: #56bad2;
   color: white;
   text-transform: uppercase;
-  border: none; }
+  border: none;
+  margin-top: 40px; }
+  @media screen and (max-width: 767px) {
+    button.btn-send {
+      width: 100%; } }
+
+input {
+  border: 1px solid #787878;
+  text-align: center;
+  width: 50%; }
+  @media screen and (max-width: 767px) {
+    input {
+      width: 100%; } }
+
+input.newsletter {
+  border-radius: 20px; }
 
 .form-label {
   display: block; }
@@ -1166,6 +1231,9 @@ textarea {
   margin: 1% 0; }
   .no-margin:first-child {
     margin-left: 0; }
+
+.pull-center {
+  margin: 0 auto; }
 
 /*  GROUPING */
 .group {
