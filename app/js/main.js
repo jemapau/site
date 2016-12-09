@@ -21,6 +21,10 @@ $(document).ready(function() {
   	$( ".foo" ).load( "views/footer.html" );
   }
 
+  var newClass = window.location.pathname;
+  newClass = newClass.substring(newClass.lastIndexOf('/') + 1, newClass.lastIndexOf("."));
+  $('body').addClass(newClass);
+
   function menu () {
   	$( "#nav-open" ).click(function() {
   	  $( "#full-menu" ).toggleClass( "open-menu");

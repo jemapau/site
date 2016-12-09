@@ -40,6 +40,10 @@ html {
 .body-inner .wrapper {
   min-height: 0 !important; }
 
+body.branding, body.btl, body.btl, body.desarrollo-web, body.quienes-somos, body.servicios, body.social-media {
+  background-color: white;
+  background: white; }
+
 ul {
   padding-left: 0; }
   ul li {
@@ -641,7 +645,7 @@ section.active {
   background-repeat: no-repeat; }
   .branding::after {
     background-image: url("../images/access/access-1-brand-after.png"); }
-  .branding div {
+  .branding--title {
     color: white; }
 
 .socialm {
@@ -650,7 +654,7 @@ section.active {
   background-repeat: no-repeat; }
   .socialm::after {
     background-image: url("../images/access/access-2-social-after.png"); }
-  .socialm div {
+  .socialm--title {
     color: white; }
 
 .desarrollow {
@@ -659,7 +663,7 @@ section.active {
   background-repeat: no-repeat; }
   .desarrollow::after {
     background-image: url("../images/access/access-3-develop-after.png"); }
-  .desarrollow div {
+  .desarrollow--title {
     color: white; }
 
 .publicidad {
@@ -668,6 +672,8 @@ section.active {
   background-repeat: no-repeat; }
   .publicidad::after {
     background-image: url("../images/access/access-4-marketing-after.png"); }
+  .publicidad--title {
+    color: white; }
 
 .btl {
   background-color: #18191d;
@@ -675,7 +681,7 @@ section.active {
   background-repeat: no-repeat; }
   .btl::after {
     background-image: url("../images/access/access-5-btl-after.png"); }
-  .btl div {
+  .btl--title {
     color: white; }
 
 .svg {
