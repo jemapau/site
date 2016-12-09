@@ -949,6 +949,11 @@ footer {
       display: inline-flex;
       align-items: center;
       width: 30% !important; }
+      .foo-bottom--phrase span {
+        width: 70%; }
+        @media screen and (max-width: 767px) {
+          .foo-bottom--phrase span {
+            width: 100%; } }
     .foo-bottom--list {
       display: inline-flex;
       align-items: stretch;

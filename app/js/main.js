@@ -2,6 +2,17 @@ $(document).ready(function() {
   load_files();
   $('.anim').fadeIn('slow');
 
+  function load_files() {
+    $( ".top-header--inner" ).load( "views/header.html", function(){
+      menu();
+      links();
+    });
+    $( ".foo" ).load( "views/footer.html", function() {
+      initclock();
+      read_bar();
+    });
+  }
+
   $( "#nav-open" ).click(function() {
     $(this).toggleClass('open');
     $( "#full-menu" ).toggleClass( "open-menu");
@@ -12,14 +23,6 @@ $(document).ready(function() {
       $("#full-menu").removeClass("open-menu");
       $header.headroom("pin");
   });
-
-  function load_files() {
-  	$( ".top-header--inner" ).load( "views/header.html", function(){
-  		menu();
-  		links();
-  	});
-  	$( ".foo" ).load( "views/footer.html" );
-  }
 
   var newClass = window.location.pathname;
   newClass = newClass.substring(newClass.lastIndexOf('/') + 1, newClass.lastIndexOf("."));
@@ -62,9 +65,6 @@ $(document).ready(function() {
       });
   }
 
-  // read bar
-  read_bar();
-
 // svg animations
 $('.work-trigger').on('mouseenter',function () {
   var service = $(this).attr('data-service');
@@ -93,6 +93,7 @@ $('a.nav-full--link').mouseover(function() {
 
 //Date and phrases
 
+function initclock(){
   var clock = (function(){
     'use-strict';
     return {
@@ -118,6 +119,7 @@ $('a.nav-full--link').mouseover(function() {
                     'Jueves', 'Viernes',
                     'Sábado'
                 ];
+
                 // months
                 var months = [
                     'Enero', 'Febrero', 'Marzo',
@@ -128,10 +130,7 @@ $('a.nav-full--link').mouseover(function() {
 
                 //
                 var phrases = [
-                  'Creando experiencias de marca <span class="icon-ico-heart"></span>', 'Creamos desde el corazón de tu marca <span class="icon-ico-smile"></span>',
-                  'Cuentanos de tu marca <span class="icon-ico-coffee"></span>', 'Creando experiencias de marca <span class="icon-ico-heart"></span>',
-                  'Creamos desde el corazón de tu marca <span class="icon-ico-heart"></span>', 'Creando experiencias de marca <span class="icon-ico-heart icon-animate-heart"></span>',
-                  'Creando experiencias de marca <span class="icon-ico-smile"></span>',
+                  'Creando experiencias de marca <span class="icon-ico-heart"></span>', 'Creamos desde el corazón de tu marca <span class="icon-ico-smile"></span>', 'Cuentanos de tu marca <span class="icon-ico-coffee"></span>', 'Creando experiencias de marca <span class="icon-ico-heart"></span>', 'Creamos desde el corazón de tu marca <span class="icon-ico-heart"></span>', 'Creando experiencias de marca <span class="icon-ico-heart icon-animate-heart"></span>', 'Creando experiencias de marca <span class="icon-ico-smile"></span>',
                 ];
 
                 // show html
@@ -151,5 +150,5 @@ $('a.nav-full--link').mouseover(function() {
       };
   })();
   clock.init();
-
+}
 });
