@@ -1021,6 +1021,17 @@ footer {
       .inner-slide--img {
         top: 0px;
         height: 100%; } }
+  .inner-slide--deck {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 25%;
+    text-align: center;
+    color: white;
+    font-size: 22px; }
+    .inner-slide--deck span {
+      width: 100%;
+      display: block; }
 
 .content-inner {
   display: inline-block; }
