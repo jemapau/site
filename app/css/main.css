@@ -1126,6 +1126,14 @@ h2 {
 .newsletter {
   text-align: center;
   color: #787878; }
+  .newsletter-input {
+    border-radius: 20px;
+    margin: 0px !important; }
+  .newsletter-btn {
+    margin-top: 0px !important; }
+    @media screen and (max-width: 767px) {
+      .newsletter-btn {
+        margin-top: 20px !important; } }
 
 .social-feed {
   margin-top: 40px;
@@ -1136,7 +1144,7 @@ h2 {
     display: inline-block;
     width: 32%;
     height: 250px;
-    background: pink; }
+    background: peru; }
     @media screen and (max-width: 767px) {
       .social-feed--post {
         width: 100%; } }

@@ -15,7 +15,13 @@ h2
 .newsletter
   text-align: center
   color: $color-grey
-
+  &-input
+    border-radius: 20px
+    margin: 0px !important
+  &-btn
+    margin-top: 0px !important
+    @media screen and (max-width:$screen-xs-max)
+      margin-top: 20px !important
 .social-feed
   margin-top: 40px
   display: block
@@ -25,6 +31,6 @@ h2
     display: inline-block
     width: 32%
     height: 250px
-    background: pink
+    background: peru
     @media screen and (max-width:$screen-xs-max)
       width: 100%
