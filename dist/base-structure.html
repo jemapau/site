@@ -21,55 +21,20 @@
   <title>MakeMark Site</title>
 </head>
 <body class="body body-inner">
-  <div class="wrapper" id="main-container">
+  <div class="wrapper">
     <header class="top-header--inner">
-      <div class="container">
-        <div class="social">
-          <div class="social-item">
-            <a href="https://www.facebook.com/makemarkagency/?fref=ts" target="_blank" class="social-item--link">
-              <span class="icon-ico-fb"></span>
-            </a>
-          </div>
-          <div class="social-item">
-            <a href="https://www.instagram.com/agenciamakemark/" target="_blank" class="social-item--link">
-              <span class="icon-ico-instagram"></span>
-            </a>
-          </div>
-        </div>
-        <div class="logo-inner">
-          <a href="index.html" class="logo-inner--link">
-            <img src="images/logo-inner.svg" alt="" class="logo-inner--img">
-          </a>
-        </div>
-        <nav class="nav-inner">
-          <div class="nav-top" id="nav-open">
-            <span class="nav-top--line"></span>
-            <span class="nav-top--line"></span>
-            <span class="nav-top--line"></span>
-          </div>
-        </nav>
-        </div>
-        <div class="nav-full" id="full-menu">
-          <div class="container content--grid">
-            <a href="index.html" class="nav-full--link" id="nav-full--link">Inicio
-                <span class="nav-full--en">Home</span>
-            </a>
-            <a href="#" class="nav-full--link" id="nav-full--link">Nosotros
-                <span class="nav-full--en">About Us</span>
-            </a>
-            <a href="servicios.html" class="nav-full--link" id="nav-full--link">Servicios
-                <span class="nav-full--en">Services</span>
-            </a>
-            <a href="#" class="nav-full--link" id="nav-full--link">Portafolio
-                <span class="nav-full--en">Portfolio</span>
-            </a>
-            <a href="#" class="nav-full--link" id="nav-full--link">Contáctanos
-                <span class="nav-full--en">Contact Us</span>
-            </a>
-          </div>
-        </div>
+        <!-- Load Header.html -->
         <div class="progress"></div>
     </header>
+  </div>
+  <div class="container">
+    <div class="breadcrumb">
+      <ul class="breadcrumb-block">
+        <li class="breadcrumb-list"><a href="index.html" class="breadcrumb-list--link">Inicio</a></li>
+        <li class="breadcrumb-list"><a href="branding.html" class="breadcrumb-list--link active">Branding</a></li>
+      </ul>
+    </div>
+  </div>
     <section>
       <div class="inner-slide">
         <img src="../images/slider/marketing-slider.jpg" alt="" class="inner-slide--img">
@@ -78,6 +43,7 @@
           ¡Estar en internet no es hacerse visible!
         </div>
       </div>
+  <div class="wrapper">
       <div class="container">
           <div class="inner-title">
             <div class="inner-title--icon"></div>
@@ -129,24 +95,52 @@
             </p>
           </div>
           <div class="content-inner col span_6_of_12">
-            <form class="form" action="index.html" method="post">
+            <form class="form" action="http://formspree.io/je.mapau@gmail.com" method="POST">
                 <div>
                   <label class="form-label" for="name">Nombre</label>
-                  <input type="text" name="" value="">
+                  <input type="text" name="name" value="">
                 </div>
                 <div>
                   <label class="form-label" for="last-name">Apellido</label>
-                  <input type="text" name="" value="">
-                </div>
-                <div class="">
-                  <label class="form-label" for="">Selecciona 3 de nuestros servicios</label>
+                  <input type="text" name="last-name" value="">
                 </div>
                 <div>
-                  <label class="form-label" for="">Mensaje</label>
-                  <textarea name="name" rows="8" cols="80"></textarea>
+                <label class="form-label" for="">Selecciona 3 de nuestros servicios</label>
+                 <div class="inputs">
+                    <div class="area">
+                      <span class="input">
+                        <label for="checkbox-1">Branding</label>
+                        <input class="checkbox" type="checkbox" name="checkbox" id="checkbox-1">
+                      </span>
+                      <span class="input">
+                        <label for="checkbox-2">Marketing estrátegico</label>
+                        <input class="checkbox" type="checkbox" name="checkbox" id="checkbox-2">
+                      </span>
+                      <span class="input">
+                        <label for="checkbox-3">Btl</label>
+                        <input class="checkbox" type="checkbox" name="checkbox" id="checkbox-3">
+                      </span>
+                      <span class="input">
+                        <label for="checkbox-4">Social Media</label>
+                        <input class="checkbox" type="checkbox" name="checkbox" id="checkbox-4">
+                      </span>
+                      <span class="input">
+                        <label for="checkbox-5">Desarrollo Web</label>
+                        <input class="checkbox" type="checkbox" name="checkbox" id="checkbox-5">
+                      </span>
+                      <span class="input">
+                        <label for="checkbox-6">Publicidad</label>
+                        <input class="checkbox" type="checkbox" name="checkbox" id="checkbox-6">
+                      </span>
+                    </div>
+                 </div>
                 </div>
                 <div>
-                  <button class="btn-send">Enviar</button>
+                  <label class="form-label" for="message">Mensaje</label>
+                  <textarea name="name" rows="8" cols="80" placeholder="Tu mensaje"></textarea>
+                </div>
+                <div>
+                  <button class="btn-send" type="submit">Enviar</button>
                 </div>
             </form>
           </div>
@@ -155,46 +149,7 @@
     </section>
   </div>
   <footer class="foo">
-    <div class="foo-top">
-      <div class="container">
-        <div class="foo-top--date hideme" id="date">
-
-        </div>
-      </div>
-    </div>
-    <div class="foo-bottom">
-      <div class="container">
-        <div class="section group">
-          <div class="foo-bottom--phrase">
-            ¿Ya tienes una verdadera estrategia?
-          </div>
-          <div class="foo-bottom--list">
-            <ul>
-              <li>Dirección</li>
-              <li>Complejo Ruta N</li>
-              <li>Calle 67 Nº 52-20 - Piso 5, torre A</li>
-              <li>Medellín - Colombia</li>
-            </ul>
-          </div>
-          <div class="foo-bottom--list">
-            <ul>
-              <li>Contacto</li>
-              <li>+57 (4) 516 7770 ext. 1086</li>
-              <li>+57 300 740 06 75</li>
-              <li>hola@makemark.com.co</li>
-            </ul>
-          </div>
-          <div class="foo-bottom--list">
-            <ul>
-              <li>Redes</li>
-              <li>Facebook</li>
-              <li>Google+</li>
-              <li>Instagram</li>
-            </ul>
-          </div>
-        </div>
-    </div>
-    </div>
+      <!-- Load Footer.html -->
   </footer>
 </body>
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -220,6 +175,5 @@ $(window).scroll( function(){
    });
 
 });
-
 </script>
 </html>
