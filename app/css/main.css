@@ -1242,11 +1242,8 @@ input.newsletter {
     position: relative;
     overflow: hidden;
     border-radius: 20px;
-    color: #fff;
     background-color: white;
-    border: 1px solid #787878; }
-    .area .input .checkbox {
-      color: white; }
+    border: 1px solid rgba(120, 120, 120, 0.2); }
     .area .input label {
       width: auto;
       float: left;
@@ -1255,7 +1252,6 @@ input.newsletter {
       display: none; }
     .area .input label {
       font-weight: 400;
-      color: white;
       text-align: center;
       text-transform: uppercase;
       cursor: pointer;

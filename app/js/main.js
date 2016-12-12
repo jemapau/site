@@ -172,9 +172,10 @@ $(".area .input").click(function(e) {
          if ($("input", this).attr("type") == "checkbox") {
             if ($("span", this).hasClass('click-efect')) {
                $(".click-efect").css({
+                  "color": "white",
                   "margin-left": (pX - oX) + "px",
-                  "margin-top": (pY - oY) + "px"
-               })
+                  "margin-top": (pY - oY) + "px",
+               });
                $(".click-efect", this).animate({
                   "width": "0",
                   "height": "0",
@@ -184,7 +185,7 @@ $(".area .input").click(function(e) {
                   $(this).remove();
                });
             } else {
-               $(this).append('<span class="click-efect x-' + oX + ' y-' + oY + '" style="margin-left:' + (pX - oX) + 'px;margin-top:' + (pY - oY) + 'px;"></span>')
+               $(this).append('<span class="click-efect x-' + oX + ' y-' + oY + '" style="margin-left:' + (pX - oX) + 'px;margin-top:' + (pY - oY) + 'px;"></span>');
                $('.x-' + oX + '.y-' + oY + '').animate({
                   "width": "500px",
                   "height": "500px",
@@ -211,7 +212,7 @@ $(".area .input").click(function(e) {
             });
 
             if (!$("span", this).hasClass('click-efect')) {
-               $(this).append('<span class="click-efect x-' + oX + ' y-' + oY + '" style="margin-left:' + (pX - oX) + 'px;margin-top:' + (pY - oY) + 'px;"></span>')
+               $(this).append('<span class="click-efect x-' + oX + ' y-' + oY + '" style="margin-left:' + (pX - oX) + 'px;margin-top:' + (pY - oY) + 'px;"></span>');
                $('.x-' + oX + '.y-' + oY + '').animate({
                   "width": "500px",
                   "height": "500px",
@@ -223,7 +224,7 @@ $(".area .input").click(function(e) {
          }
       }
       if ($(this).hasClass('active-2')) {
-         $(this).removeClass('active-2')
+         $(this).removeClass('active-2');
       } else {
          $(this).addClass('active-2');
       }
