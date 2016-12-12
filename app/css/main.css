@@ -1222,6 +1222,57 @@ input {
 input.newsletter {
   border-radius: 20px; }
 
+.text {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  height: 70px; }
+
+.area {
+  width: 100%;
+  float: left;
+  margin-top: 15px;
+  border: 1px solid #787878;
+  padding: 20px; }
+  .area .input {
+    width: auto;
+    padding: 0px 15px;
+    float: left;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    color: #fff;
+    background-color: white;
+    border: 1px solid #787878; }
+    .area .input .checkbox {
+      color: white; }
+    .area .input label {
+      width: auto;
+      float: left;
+      position: relative; }
+    .area .input input {
+      display: none; }
+    .area .input label {
+      font-weight: 400;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-size: 14px;
+      z-index: 3;
+      height: 30px;
+      line-height: 30px; }
+    .area .input:hover {
+      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+
+.click-efect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #56bad2;
+  border-radius: 50%; }
+
 .form-label {
   display: block; }
 
