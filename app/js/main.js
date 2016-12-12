@@ -2,6 +2,18 @@ $(document).ready(function() {
   load_files();
   $('.anim').fadeIn('slow');
 
+  function load_files() {
+    $( ".top-header--inner" ).load( "views/header.html", function(){
+      menu();
+      links();
+    });
+    $( ".foo" ).load( "views/footer.html", function() {
+      initclock();
+      read_bar();
+      checkbox();
+    });
+  }
+
   $( "#nav-open" ).click(function() {
     $(this).toggleClass('open');
     $( "#full-menu" ).toggleClass( "open-menu");
@@ -12,14 +24,6 @@ $(document).ready(function() {
       $("#full-menu").removeClass("open-menu");
       $header.headroom("pin");
   });
-
-  function load_files() {
-  	$( ".top-header--inner" ).load( "views/header.html", function(){
-  		menu();
-  		links();
-  	});
-  	$( ".foo" ).load( "views/footer.html" );
-  }
 
   var newClass = window.location.pathname;
   newClass = newClass.substring(newClass.lastIndexOf('/') + 1, newClass.lastIndexOf("."));
@@ -62,9 +66,6 @@ $(document).ready(function() {
       });
   }
 
-  // read bar
-  read_bar();
-
 // svg animations
 $('.work-trigger').on('mouseenter',function () {
   var service = $(this).attr('data-service');
@@ -93,6 +94,7 @@ $('a.nav-full--link').mouseover(function() {
 
 //Date and phrases
 
+function initclock(){
   var clock = (function(){
     'use-strict';
     return {
@@ -118,6 +120,7 @@ $('a.nav-full--link').mouseover(function() {
                     'Jueves', 'Viernes',
                     'Sábado'
                 ];
+
                 // months
                 var months = [
                     'Enero', 'Febrero', 'Marzo',
@@ -128,10 +131,7 @@ $('a.nav-full--link').mouseover(function() {
 
                 //
                 var phrases = [
-                  'Creando experiencias de marca <span class="icon-ico-heart"></span>', 'Creamos desde el corazón de tu marca <span class="icon-ico-smile"></span>',
-                  'Cuentanos de tu marca <span class="icon-ico-coffee"></span>', 'Creando experiencias de marca <span class="icon-ico-heart"></span>',
-                  'Creamos desde el corazón de tu marca <span class="icon-ico-heart"></span>', 'Creando experiencias de marca <span class="icon-ico-heart icon-animate-heart"></span>',
-                  'Creando experiencias de marca <span class="icon-ico-smile"></span>',
+                  'Creando experiencias de marca <span class="icon-ico-heart"></span>', 'Creamos desde el corazón de tu marca <span class="icon-ico-smile"></span>', 'Cuentanos de tu marca <span class="icon-ico-coffee"></span>', 'Creando experiencias de marca <span class="icon-ico-heart"></span>', 'Creamos desde el corazón de tu marca <span class="icon-ico-heart"></span>', 'Creando experiencias de marca <span class="icon-ico-heart icon-animate-heart"></span>', 'Creando experiencias de marca <span class="icon-ico-smile"></span>',
                 ];
 
                 // show html
@@ -151,5 +151,84 @@ $('a.nav-full--link').mouseover(function() {
       };
   })();
   clock.init();
+}
+});
+
+function checkbox() {
+
+$(".area .input").click(function(e) {
+
+   $("label[type='checkbox']", this)
+   var pX = e.pageX,
+      pY = e.pageY,
+      oX = parseInt($(this).offset().left),
+      oY = parseInt($(this).offset().top);
+
+   $(this).addClass('active');
+
+   if ($(this).hasClass('active')) {
+      $(this).removeClass('active')
+      if ($(this).hasClass('active-2')) {
+         if ($("input", this).attr("type") == "checkbox") {
+            if ($("span", this).hasClass('click-efect')) {
+               $(".click-efect").css({
+                  "margin-left": (pX - oX) + "px",
+                  "margin-top": (pY - oY) + "px"
+               })
+               $(".click-efect", this).animate({
+                  "width": "0",
+                  "height": "0",
+                  "top": "0",
+                  "left": "0"
+               }, 400, function() {
+                  $(this).remove();
+               });
+            } else {
+               $(this).append('<span class="click-efect x-' + oX + ' y-' + oY + '" style="margin-left:' + (pX - oX) + 'px;margin-top:' + (pY - oY) + 'px;"></span>')
+               $('.x-' + oX + '.y-' + oY + '').animate({
+                  "width": "500px",
+                  "height": "500px",
+                  "top": "-250px",
+                  "left": "-250px",
+               }, 600);
+            }
+         }
+
+         if ($("input", this).attr("type") == "radio") {
+
+            $(".area .input input[type='radio']").parent().removeClass('active-radio').addClass('no-active-radio');
+            $(this).addClass('active-radio').removeClass('no-active-radio');
+
+            $(".area .input.no-active-radio").each(function() {
+               $(".click-efect", this).animate({
+                  "width": "0",
+                  "height": "0",
+                  "top": "0",
+                  "left": "0"
+               }, 400, function() {
+                  $(this).remove();
+               });
+            });
+
+            if (!$("span", this).hasClass('click-efect')) {
+               $(this).append('<span class="click-efect x-' + oX + ' y-' + oY + '" style="margin-left:' + (pX - oX) + 'px;margin-top:' + (pY - oY) + 'px;"></span>')
+               $('.x-' + oX + '.y-' + oY + '').animate({
+                  "width": "500px",
+                  "height": "500px",
+                  "top": "-250px",
+                  "left": "-250px",
+               }, 600);
+            }
+
+         }
+      }
+      if ($(this).hasClass('active-2')) {
+         $(this).removeClass('active-2')
+      } else {
+         $(this).addClass('active-2');
+      }
+   }
 
 });
+
+}
