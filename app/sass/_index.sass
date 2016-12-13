@@ -4,6 +4,7 @@
   bottom: 0
   width: 100%
   height: 150px
+  z-index: 999
   @media screen and (max-width:$screen-xs-max)
     display: block
     position: relative
@@ -93,11 +94,12 @@
     background: rgba(0, 0, 0, 0.5)
 
 .branding
-  background-color: #77b4b4
-  background-image: url('../images/access/access-1-brand-bg.png')
+  //background-color: #77b4b4
+  //background-image: url('../images/access/access-1-brand-bg.png')
+  background: rgb(184, 162, 254)
   background-repeat: no-repeat
   &::after
-    background-image: url('../images/access/access-1-brand-after.png')
+    //background-image: url('../images/access/access-1-brand-after.png')
   //div
     //color: white
   &--title
@@ -188,6 +190,9 @@
   animation: cursore 5s ease-out infinite alternate
   transform-origin: center center
 
+.logo-makemark *
+  fill: #000
+  
 
 @keyframes moveup
   from

@@ -12,6 +12,7 @@ $(document).ready(function() {
       read_bar();
       checkbox();
     });
+    $( ".logo-makemark" ).load( "images/makemark-logo.svg");
   }
 
   $( "#nav-open" ).click(function() {
@@ -68,23 +69,25 @@ $(document).ready(function() {
 
 // svg animations
 $('.work-trigger').on('mouseenter',function () {
-  var service = $(this).attr('data-service');
-
-  $('.svg').fadeOut(function() {
-    $('.svg').removeClass('fills').addClass('animates');
-    $('.svg').html('');
-    $('.svg').load('images/index/'+service+'-img.svg', function() {
-       $('.svg').fadeIn(function() {
-          $('.svg').addClass('fills');
-          $('.fills > svg').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
-            $('.svg').removeClass('animates').promise().done(function () {
-                $('.svg').removeClass('fills');
-            });
-         });
-      });
-    });
-  });
+  var video_name = $(this).attr('data-service');
+  var sel = $('#'+video_name);
+  var reproduce = $('#'+video_name)[0];
+  $('.videobg-elm, .videobg-wrp').fadeOut('fast');
+  $('.videobg-wrp').fadeIn('fast');
+  $('.logo-makemark *').css({'fill':'#fff'});
+  sel.stop().fadeIn('fast');
+  reproduce.currentTime = 0;
+  reproduce.play();
+}).on('mouseleave',function () {
+  var video_name = $(this).attr('data-service');
+  var sel = $('#'+video_name);
+  var reproduce = $('#'+video_name)[0];
+  $('.videobg-elm, .videobg-wrp').fadeOut('fast');
+  $('.logo-makemark *').css({'fill':'#000'});
+  reproduce.pause();
+  reproduce.currentTime = 0;
 });
+
 
 // Menu hover
 

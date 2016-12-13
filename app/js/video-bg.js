@@ -67,37 +67,14 @@ function fullpage_f() {
 
 		//events
 		onLeave: function(index, nextIndex, direction){
-			var video_name = $(this).attr('data-video');
-			var sel = $('#'+video_name);
-			var reproduce = $('#'+video_name)[0];
-			sel.fadeOut('fast',function() {
-				reproduce.pause();
-				reproduce.currentTime = 0;
-			});
+		
 
 
 
 		},
 		afterLoad: function(anchorLink, index){    
-			var video_name = $(this).attr('data-video');
-			var sel = $('#'+video_name);
-			var reproduce = $('#'+video_name)[0];
-			sel.stop().fadeIn('fast');
-			reproduce.currentTime = 0;
-			reproduce.play();
 			
-			if (index == 1) {
-				$('.letra').html('M');
-			}
-			if (index == 2) {
-				$('.letra').html('A');
-			}
-			if (index == 3) {
-				$('.letra').html('K');
-			}
-			if (index == 4) {
-				$('.letra').html('E');
-			}
+		
 		
 		
 
