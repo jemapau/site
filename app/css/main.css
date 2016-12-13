@@ -1242,8 +1242,13 @@ input.newsletter {
   background: #56bad2;
   border-radius: 50%; }
 
+textarea {
+  font-family: "Pragati Narrow", sans-serif;
+  font-size: 16px; }
+
 .form-label {
-  display: block; }
+  display: block;
+  margin: 20px 0; }
 
 input {
   display: block;
