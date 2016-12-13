@@ -249,7 +249,7 @@ section.active {
 .top-header--inner {
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 5;
   width: 100%;
   background-color: #18191d;
   display: block;
@@ -1242,8 +1242,13 @@ input.newsletter {
   background: #56bad2;
   border-radius: 50%; }
 
+textarea {
+  font-family: "Pragati Narrow", sans-serif;
+  font-size: 16px; }
+
 .form-label {
-  display: block; }
+  display: block;
+  margin: 20px 0; }
 
 input {
   display: block;
