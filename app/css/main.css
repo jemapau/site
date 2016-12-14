@@ -548,7 +548,7 @@ section.active {
   bottom: 0;
   width: 100%;
   height: 150px;
-  z-index: 999; }
+  z-index: 1; }
   @media screen and (max-width: 767px) {
     .work {
       display: block;
@@ -612,7 +612,8 @@ section.active {
 .text-slide {
   margin-top: 15px;
   text-align: center;
-  font-size: 22px; }
+  color: #333;
+  font-size: 32px; }
   .text-slide span {
     font-family: "Libre Baskerville", serif;
     font-style: italic;
@@ -641,8 +642,11 @@ section.active {
     background: rgba(0, 0, 0, 0.5); }
 
 .branding {
-  background: #b8a2fe;
+  background-color: #77b4b4;
+  background-image: url("../images/access/access-1-brand-bg.png");
   background-repeat: no-repeat; }
+  .branding::after {
+    background-image: url("../images/access/access-1-brand-after.png"); }
   .branding--title {
     color: white; }
 
@@ -751,6 +755,36 @@ section.active {
   100% {
     transform: translate(0px, 0px); } }
 
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
@@ -764,7 +798,8 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url(../images/index/texturad.png) rgba(0, 0, 0, 0.5); }
+  z-index: -1;
+  background: url(../images/index/textura.png) rgba(0, 0, 0, 0.5); }
 
 .videobg-elm {
   position: fixed;

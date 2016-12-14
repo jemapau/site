@@ -5,6 +5,7 @@ $(document).ready(function() {
 	movemouse();
 	overs();
 	navegadores();
+	typed();
 });
 
 
@@ -87,7 +88,16 @@ function fullpage_f() {
 	});
 }
 
+function typed() {
 
+    $(".text-slide").typed({
+        strings: ["Conectamos con nuevas ^1000 <span>audiencias</span>", "Conectamos con nuevas ^1000 <span>emociones</span>", "Conectamos con nuevas ^1000 <span>alegrias</span>"],
+        typeSpeed: 12,
+        loop: true,
+        backDelay: 2000,
+    });
+	    
+}
 function navegadores () {
 
   var sBrowser, sUsrAg = navigator.userAgent;
