@@ -88,6 +88,9 @@ $('.work-trigger').on('mouseenter',function () {
   reproduce.currentTime = 0;
 });
 
+function Animation() {
+  $('#divAnimation').animateCss('fadeInLeft');
+}
 
 // Menu hover
 

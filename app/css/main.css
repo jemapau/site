@@ -1114,18 +1114,21 @@ h2 {
 
 .newsletter {
   text-align: center;
-  color: #787878; }
-  .newsletter-input {
+  color: #787878;
+  margin-top: 100px; }
+  .newsletter--input {
     border-radius: 20px;
     margin: 0px !important; }
-  .newsletter-btn {
+  .newsletter--btn {
     margin-top: 0px !important; }
     @media screen and (max-width: 767px) {
-      .newsletter-btn {
+      .newsletter--btn {
         margin-top: 20px !important; } }
+  .newsletter-form--info {
+    margin-bottom: 100px; }
 
 .social-feed {
-  margin-top: 40px;
+  padding-top: 100px !important;
   display: block; }
   .social-feed--list {
     display: block; }
@@ -1137,6 +1140,12 @@ h2 {
     @media screen and (max-width: 767px) {
       .social-feed--post {
         width: 100%; } }
+
+figure.thumbnail-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 8px !important; }
 
 .underline-hover {
   color: #787878;
@@ -1281,9 +1290,6 @@ textarea {
   .no-margin:first-child {
     margin-left: 0; }
 
-.pull-center {
-  margin: 0 auto; }
-
 /*  GROUPING */
 .group {
   zoom: 1;
@@ -1298,40 +1304,52 @@ textarea {
 
 /*  GRID OF TWELVE */
 .span_12_of_12 {
-  width: 100%; }
+  width: 100%;
+  margin: 0 auto; }
 
 .span_11_of_12 {
-  width: 91.53%; }
+  width: 91.53%;
+  margin: 0 auto; }
 
 .span_10_of_12 {
-  width: 83.06%; }
+  width: 83.06%;
+  margin: 0 auto; }
 
 .span_9_of_12 {
-  width: 74.6%; }
+  width: 74.6%;
+  margin: 0 auto; }
 
 .span_8_of_12 {
-  width: 66.13%; }
+  width: 66.13%;
+  margin: 0 auto; }
 
 .span_7_of_12 {
-  width: 57.66%; }
+  width: 57.66%;
+  margin: 0 auto; }
 
 .span_6_of_12 {
-  width: 49.2%; }
+  width: 49.2%;
+  margin: 0 auto; }
 
 .span_5_of_12 {
-  width: 40.73%; }
+  width: 40.73%;
+  margin: 0 auto; }
 
 .span_4_of_12 {
-  width: 32%; }
+  width: 32%;
+  margin: 0 auto; }
 
 .span_3_of_12 {
-  width: 23.8%; }
+  width: 23.8%;
+  margin: 0 auto; }
 
 .span_2_of_12 {
-  width: 15.33%; }
+  width: 15.33%;
+  margin: 0 auto; }
 
 .span_1_of_12 {
-  width: 6.866%; }
+  width: 6.866%;
+  margin: 0 auto; }
 
 /*  GO FULL WIDTH BELOW 480 PIXELS */
 @media only screen and (max-width: 480px) {
