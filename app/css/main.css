@@ -565,10 +565,6 @@ section.active {
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
       backface-visibility: hidden; }
-    .work-trigger:hover .work--giro {
-      -webkit-transform: rotateX(90deg) translateZ(74px);
-      transform: rotateX(90deg) translateZ(74px);
-      backface-visibility: hidden; }
     @media screen and (max-width: 767px) {
       .work-trigger {
         display: block;
@@ -595,7 +591,9 @@ section.active {
         width: 100%;
         height: 88px;
         top: -81px;
-        left: 0; }
+        left: 0;
+        -webkit-transition: ease-in-out .5s;
+        transition: ease-in-out .5s; }
   .work-title {
     align-items: center;
     display: flex;
@@ -604,7 +602,9 @@ section.active {
     color: #18191d;
     text-align: right;
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    -webkit-transition: ease-in-out .5s;
+    transition: ease-in-out .5s; }
     .work-title span {
       width: 100%;
       font-size: 24px; }
@@ -639,52 +639,88 @@ section.active {
     top: 0;
     left: 0;
     z-index: 1;
-    background: rgba(0, 0, 0, 0.5); }
+    transform: translateY(400px);
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-transition: ease-in-out .5s;
+    transition: ease-in-out .5s; }
 
 .branding {
-  background-color: #77b4b4;
-  background-image: url("../images/access/access-1-brand-bg.png");
-  background-repeat: no-repeat; }
+  background: #77b4b4 url("../images/access/access-1-brand-bg.png") no-repeat; }
   .branding::after {
     background-image: url("../images/access/access-1-brand-after.png"); }
   .branding--title {
     color: white; }
 
 .socialm {
-  background-color: white;
-  background-image: url("../images/access/access-2-social-bg.png");
-  background-repeat: no-repeat; }
+  background: white url("../images/access/access-2-social-bg.png") no-repeat; }
   .socialm::after {
     background-image: url("../images/access/access-2-social-after.png"); }
   .socialm--title {
     color: white; }
 
 .desarrollow {
-  background-color: #18191d;
-  background-image: url("../images/access/access-3-develop-bg.png");
-  background-repeat: no-repeat; }
+  background: #18191d url("../images/access/access-3-develop-bg.png") no-repeat; }
   .desarrollow::after {
-    background-image: url("../images/access/access-3-develop-after.png"); }
+    background: url("../images/access/access-3-develop-after.png"); }
   .desarrollow--title {
     color: white; }
 
 .publicidad {
-  background-color: #56bad2;
-  background-image: url("../images/access/access-4-marketing-bg.png");
-  background-repeat: no-repeat; }
+  background: #56bad2 url("../images/access/access-4-marketing-bg.png") no-repeat; }
   .publicidad::after {
     background-image: url("../images/access/access-4-marketing-after.png"); }
   .publicidad--title {
     color: white; }
 
 .btl {
-  background-color: #18191d;
-  background-image: url("../images/access/access-5-btl-bg.png");
-  background-repeat: no-repeat; }
+  background: #18191d url("../images/access/access-5-btl-bg.png") no-repeat; }
   .btl::after {
     background-image: url("../images/access/access-5-btl-after.png"); }
   .btl--title {
     color: white; }
+
+.work--gire {
+  -webkit-transform: rotateX(90deg) translateZ(74px);
+  transform: rotateX(90deg) translateZ(74px);
+  backface-visibility: hidden; }
+
+.blue .work-trigger:nth-child(1) .back::before {
+  transform: translateY(0px);
+  background: #29B4D6;
+  -webkit-transition: ease-in-out .6s;
+  transition: ease-in-out .6s; }
+
+.blue .work-trigger:nth-child(2) .back::before {
+  transform: translateY(0px);
+  background: #2CBEE3;
+  -webkit-transition: ease-in-out .8s;
+  transition: ease-in-out .8s; }
+
+.blue .work-trigger:nth-child(3) .back::before {
+  transform: translateY(0px);
+  background: #2EC7ED;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s; }
+
+.blue .work-trigger:nth-child(4) .back::before {
+  transform: translateY(0px);
+  background: #2FCEF5;
+  -webkit-transition: ease-in-out 1.2s;
+  transition: ease-in-out 1.2s; }
+
+.blue .work-trigger:nth-child(5) .back::before {
+  transform: translateY(0px);
+  background: #2DC3E8;
+  -webkit-transition: ease-in-out 1.4s;
+  transition: ease-in-out 1.4s; }
+
+.blue .work-title {
+  color: #ffffff; }
+
+.work-trigger:hover .back::before {
+  background: #1E839C !important;
+  -webkit-transition: ease-in-out .6s;
+  transition: ease-in-out .6s; }
 
 .svg {
   position: fixed;
@@ -733,6 +769,53 @@ section.active {
 .logo-makemark * {
   fill: #000; }
 
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+.text-sli {
+  display: inline-table; }
+
+#wrapper {
+  -webkit-perspective: 2000px;
+  perspective: 2000px; }
+
+#cont {
+  transform: translateZ(0px); }
+
+#cont, #cubo {
+  height: 100%;
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+#cubo {
+  position: absolute;
+  transform: rotateX(0deg) rotateY(0deg); }
+
+.caras {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+#facefront {
+  background: #fff;
+  overflow: hidden; }
+
+#faceback {
+  background: red; }
+
+.aleja {
+  transform: translateZ(-880px); }
+
+.rotate {
+  transform: rotateX(90deg) translateZ(0) !important; }
+
 @keyframes moveup {
   from {
     transform: translate(0px, 0px); }
@@ -754,12 +837,6 @@ section.active {
     transform: translate(-41px, -29px); }
   100% {
     transform: translate(0px, 0px); } }
-
-.typed-cursor {
-  opacity: 1;
-  -webkit-animation: blink 0.7s infinite;
-  -moz-animation: blink 0.7s infinite;
-  animation: blink 0.7s infinite; }
 
 @keyframes blink {
   0% {
@@ -785,9 +862,14 @@ section.active {
   100% {
     opacity: 1; } }
 
-body {
+body, html {
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+  height: 100%; }
+
+.page-home {
+  background: #56bad2 !important; }
 
 .videobg-wrp {
   display: none; }

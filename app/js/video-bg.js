@@ -1,11 +1,10 @@
-$(document).ready(function() {
-
-	fullpage_f();	
+$(document).ready(function() {	
 	links();
 	movemouse();
 	overs();
 	navegadores();
 	typed();
+	cube();
 });
 
 
@@ -47,50 +46,9 @@ function overs() {
 }
 
 
-function fullpage_f() {
-	$('#fullpage').fullpage({
-		//Navigation
-		menu: '#menu',
-		lockAnchors: false,
-		anchors:['01', '02', '03', '04', '05'],
-		navigation: false,
-		navigationPosition: 'right',
-		navigationTooltips: ['firstSlide', 'secondSlide'],
-		showActiveTooltip: true,
-		slidesNavigation: true,
-		slidesNavPosition: 'bottom',
-
-
-
-		//Custom selectors
-		sectionSelector: '.section',
-		slideSelector: '.slide',
-
-		//events
-		onLeave: function(index, nextIndex, direction){
-		
-
-
-
-		},
-		afterLoad: function(anchorLink, index){    
-			
-		
-		
-		
-
-		},
-		afterRender: function(){},
-		afterResize: function(){},
-		afterResponsive: function(isResponsive){},
-		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
-	});
-}
-
 function typed() {
 
-    $(".text-slide").typed({
+    $(".text-sli").typed({
         strings: ["Conectamos con nuevas ^1000 <span>audiencias</span>", "Conectamos con nuevas ^1000 <span>emociones</span>", "Conectamos con nuevas ^1000 <span>alegrias</span>"],
         typeSpeed: 12,
         loop: true,
@@ -98,6 +56,39 @@ function typed() {
     });
 	    
 }
+
+function cube() {
+	var w = $(window).width(); 
+	var h = $(window).height();
+	var transZ = w / 2;
+	$('#cont').css({'transform': 'translateZ('+-transZ+'px)'});
+	$('#wrapper, #cubo, .caras').width(w).height(h);
+	$('#facefront').css({'transform': 'translateZ('+transZ+'px)'});
+	$('#faceback').css({'transform': 'rotateY(90deg) translateZ('+transZ+'px)'});
+
+	$(window).resize(function() {
+		var w = $(window).width(); 
+		var h = $(window).height();
+		var transZ = w / 2;
+		$('#wrapper, #cubo, .caras').width(w).height(h);
+		$('#facefront').css({'transform': 'translateZ('+transZ+'px)'});
+		$('#faceback').css({'transform': 'rotateY(90deg) translateZ('+transZ+'px) '});
+
+
+
+	});
+
+	$('.work-trigger').click(function() {
+	    event.preventDefault();
+	    var enlace = $(this).attr('href');
+	    $('#cont').css({'transform': 'translateZ('+-w+'px)'});
+	    // $('body').fadeOut("slow", function () {
+	    //   window.location.href = enlace;
+	    // });
+	});
+
+}
+
 function navegadores () {
 
   var sBrowser, sUsrAg = navigator.userAgent;
