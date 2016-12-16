@@ -30,14 +30,28 @@ h2
   padding-top:100px !important
   display: block
   &--list
-    display: block
-  &--post
     display: inline-block
-    width: 32%
+    width: 250px
     height: 250px
-    background: peru
+    overflow: hidden
+    padding: 5px
+    &:hover
+      opacity: 0.8
     @media screen and (max-width:$screen-xs-max)
       width: 100%
+      height: auto
+  &--link
+    display: block
+    overflow: hidden
+  &--post
+    display: block
+    @media screen and (max-width:$screen-xs-max)
+      width: 100%
+  &--img
+    width: 100%
+    height: 250px
+    @media screen and (max-width:$screen-xs-max)
+      height: auto
 
 figure.thumbnail-image
   position: absolute
