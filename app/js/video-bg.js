@@ -1,10 +1,15 @@
-$(document).ready(function() {
-
-	fullpage_f();	
+$(document).ready(function() {	
 	links();
 	movemouse();
 	overs();
 	navegadores();
+	typed();
+	cube();
+	back_user();
+
+	$(window).resize(function() {
+		cube();
+	});
 });
 
 
@@ -46,45 +51,76 @@ function overs() {
 }
 
 
-function fullpage_f() {
-	$('#fullpage').fullpage({
-		//Navigation
-		menu: '#menu',
-		lockAnchors: false,
-		anchors:['01', '02', '03', '04', '05'],
-		navigation: false,
-		navigationPosition: 'right',
-		navigationTooltips: ['firstSlide', 'secondSlide'],
-		showActiveTooltip: true,
-		slidesNavigation: true,
-		slidesNavPosition: 'bottom',
+function typed() {
 
+    $(".text-sli").typed({
+        strings: ["Conectamos con nuevas ^1000 <span>audiencias</span>", "Conectamos con nuevas ^1000 <span>emociones</span>", "Conectamos con nuevas ^1000 <span>alegrias</span>"],
+        typeSpeed: 12,
+        loop: true,
+        backDelay: 2000,
+    });
+	    
+}
 
+function cube() {
+	var w = $(window).width(); 
+	var h = $(window).height();
+	var transZ = w / 2;
+	var anim = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+	$('#cont').css({'transform': 'translateZ('+-transZ+'px)'});
+	$('#wrapper, #cubo, .caras').width(w).height(h);
+	$('#facefront').css({'transform': 'translateZ('+transZ+'px)'});
+	$('#faceback').css({'transform': 'rotateY(90deg) translateZ('+transZ+'px)'});
 
-		//Custom selectors
-		sectionSelector: '.section',
-		slideSelector: '.slide',
-
-		//events
-		onLeave: function(index, nextIndex, direction){
-		
-
-
-
-		},
-		afterLoad: function(anchorLink, index){    
-			
-		
-		
-		
-
-		},
-		afterRender: function(){},
-		afterResize: function(){},
-		afterResponsive: function(isResponsive){},
-		afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-		onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+	$('.work-trigger').click(function() {
+	    event.preventDefault();
+	    var enlace = $(this).attr('href');
+	    $('#cont').css({'transform': 'translateZ('+-w+'px)'}).one(anim, function() {
+	    	 $('#cubo').delay(1000).queue(function() {
+			    $('#cubo').addClass('rotate').one(anim, function() {
+			    	$('#cont').css({'transform': 'translateZ('+-transZ+'px)'}).delay(2000).queue(function() {
+			    		window.location.href = enlace;
+			    	}); 	
+			   });    
+			});    
+		});
+		$('.work--giro').removeClass('work--gire');
+		$('.work').removeClass('blue');
+		$('.videobg-elm, .videobg-wrp').stop().fadeOut('fast');
+		$('.logo-makemark *').css({'fill':'#000'});
+		$('.text-sli').css({'color':'#333'});
 	});
+
+}
+
+function back_user() {
+   
+	$(window).blur(function() {
+	  	
+		var mensajes = ["Vuelve...", "Regresa...", "Oyeee...", "Si tú...","Estás ahí?..."];
+		function mensaje(i) {
+			if (mensajes.length == i) {
+				i = 0;
+			}
+			$('title').html(mensajes[i]).delay(1000).fadeIn(500, function() {
+				mensaje(i + 1);
+			});
+
+			$(window).focus(function() {
+				$("title").stop().html("Gracias :D").delay(2000).fadeIn(1000, function() {
+					$("title").html("MakeMark Agency")
+				});
+			});
+		};
+
+		
+
+
+		mensaje(0);
+	});
+
+	
+
 }
 
 
@@ -108,3 +144,4 @@ function navegadores () {
   }
   console.log("Usted está utilizando: " + sBrowser);
 }
+
