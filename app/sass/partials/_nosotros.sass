@@ -15,22 +15,61 @@ h2
 .newsletter
   text-align: center
   color: $color-grey
-  &-input
+  margin-top: 100px
+  &--input
     border-radius: 20px
     margin: 0px !important
-  &-btn
+  &--btn
     margin-top: 0px !important
     @media screen and (max-width:$screen-xs-max)
       margin-top: 20px !important
+  &-form
+    &--info
+      margin-bottom: 100px
 .social-feed
-  margin-top: 40px
+  padding-top:100px !important
   display: block
+  &--ico
+    position: absolute
+    bottom: 25px
+    left: 0px
+    width: 10px
+    height: 10px
+    background: transparentize( black, 0.8)
   &--list
-    display: block
-  &--post
+    position: relative
     display: inline-block
-    width: 32%
+    width: 250px
     height: 250px
-    background: peru
+    overflow: hidden
+    margin: 5px
+    &:hover
+      opacity: 0.8
+    @media screen and (max-width:$screen-xs-max)
+      max-width: 250px
+      height: auto
+  &--link
+    display: block
+    overflow: hidden
+    height: 250px
+  &--post
+    display: block
+    height: 250px
+    width: 250px
     @media screen and (max-width:$screen-xs-max)
       width: 100%
+  &--img
+    width: 100%
+    height: 250px
+    @media screen and (max-width:$screen-xs-max)
+      height: auto
+
+span.icon-twitter-ico.social-feed--ico
+    font-size: 40px
+    color: white
+
+figure.thumbnail-image
+  position: absolute
+  width: 100%
+  height: 100%
+  padding: 8px !important

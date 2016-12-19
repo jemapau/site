@@ -19,10 +19,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="stylesheet" href="css/main.css">
   <title>MakeMark Site</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 <body class="body body-inner">
   <div class="wrapper">
-    <header class="top-header--inner">
+    <header class="top-header--inner nav-down">
         <!-- Load Header.html -->
         <div class="progress"></div>
     </header>
@@ -35,40 +36,34 @@
         </div>
           <div class="section group">
             <h1 class="page-title">Nosotros</h1>
-            <div class="video-team span_8_of_12 pull-center hideme">
+            <div class="video-team span_8_of_12 pull-center hideme animated fadeInLeft" id="divAnimation">
               <iframe width="100%" height="445px" src="https://www.youtube.com/embed/fPDMkpMq6mY" frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
           <div class="section group">
-            <div class="newsletter span_6_of_12 pull-center hideme">
+            <div class="newsletter span_6_of_12 hideme animated fadeInLeft">
                 <div class="newsletter-desc">
                   <h2>Creando experiencias de marca</h2>
                   <p>Enteráte de nuestras últimas noticias</p>
                 </div>
                 <div class="newsletter-form">
-                  <form action="" class="newsletter col span_12_of_12 hideme">
-                    <input class="newsletter-input col span_7_of_12" type="email" placeholder="Ingresa tu E-mail">
-                    <button class="btn-send newsletter-btn col span_5_of_12" type="submit" name="submit">Enviar</button>
+                  <form action="" class="newsletter-form--info col span_12_of_12 hideme animated fadeInLeft" id="divAnimation">
+                    <input class="newsletter--input col span_7_of_12" type="email" placeholder="Ingresa tu E-mail">
+                    <button class="btn-send newsletter--btn col span_5_of_12" type="submit" name="submit">Enviar</button>
                   </form>
                 </div>
             </div>
           </div>
           <div class="section group">
-            <div class="social-feed span_8_of_12 pull-center hideme">
-              <ul class="social-feed--list">
-                <li class="social-feed--post"><a href="#" class="social-feed--link"></a></li>
-                <li class="social-feed--post"><a href="#" class="social-feed--link"></a></li>
-                <li class="social-feed--post"><a href="#" class="social-feed--link"></a></li>
-              </ul>
+            <div class="social-feed span_8_of_12 pull-center hideme animated fadeInLeft" id="divAnimation">
+              <div class="animated fadeInLeft" id="instafeed">
+
+              </div>
+
             </div>
           </div>
       </div>
   </div>
-
-
-  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BNfn0QzF6Vf/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Seguimos presentes en los eventos de ciudad, hoy en el último singles @singleslatam #emprendedores #medellin #emprendimiento #business #networking #publicidad #marketing</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Una foto publicada por Makemark (@agenciamakemark) el <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-12-02T00:08:45+00:00">1 de Dic de 2016 a la(s) 4:08 PST</time></p></div></blockquote>
-  <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-
 
   <footer class="foo">
       <!-- Load Footer.html -->
@@ -79,6 +74,8 @@
   <script src="js/main.js"></script>
 <!-- endbuild -->
 <script src="js/viewportchecker.js"></script>
+<script type="text/javascript" src="js/instafeed.min.js"></script>
+<!-- SnapWidget -->
 <script  type="text/javascript">
 /* Every time the window is scrolled ... */
 $(window).scroll( function(){
@@ -95,10 +92,20 @@ $(window).scroll( function(){
            $(this).animate({'opacity':'1'},500);
 
        }
-
    });
-
 });
-
+</script>
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+        clientId: ' cb94310f9d674503ab56b5801f60fcd7',
+        sortBy: 'most-recent',
+        limit: '18',
+        userId: '1599115738',
+        accessToken: '1599115738.cb94310.43f1489e2a684f6f9be11674fa97e038',
+        resolution: 'standard_resolution',
+        template: '<ul class="social-feed--list"><span class="icon-twitter-ico social-feed--ico"></span><li class="social-feed--post"><a href="{{link}}" target="_blank" class="social-feed--link"><img class="social-feed--img" src="{{image}}" /></a></ul>',
+    });
+    feed.run();
 </script>
 </html>
