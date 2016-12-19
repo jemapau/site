@@ -108,7 +108,8 @@ a {
 
 .content-inner {
   margin-top: 10%;
-  position: relative; }
+  position: relative;
+  padding: 0 5px; }
 
 .lets-talk {
   color: white;
@@ -280,6 +281,9 @@ section.active {
   margin: 0 auto;
   width: 40px;
   color: white; }
+  .logo-inner--img {
+    width: 25px;
+    margin-top: 8px; }
 
 .logo-inner--link {
   display: block; }
