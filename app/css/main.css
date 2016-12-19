@@ -140,6 +140,19 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/font-two.eot?jb6jsn");
+  src: url("../fonts/font-two.eot?jb6jsn#iefix") format("embedded-opentype"), url("../fonts/font-two.ttf?jb6jsn") format("truetype"), url("../fonts/font-two.woff?jb6jsn") format("woff"), url("../fonts/font-two.svg?jb6jsn#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.icon-twitter-ico:before {
+  content: "\e90f"; }
+
+.icon-home-ico:before {
+  content: "\e90fd"; }
+
 .icon-ico-ad:before {
   content: "\e900"; }
 
@@ -191,7 +204,8 @@ header {
   left: 0;
   right: 0;
   padding: 10px 0px 0px 10px;
-  z-index: 3; }
+  z-index: 3;
+  transition: top 0.6s ease-in-out; }
   header .social {
     display: flex; }
     header .social-item {
@@ -296,6 +310,9 @@ section.active {
     width: 3px; }
   .nav-top--line:last-child {
     width: 15px; }
+
+.nav-up {
+  top: -40px !important; }
 
 #nav-open {
   z-index: 20;
@@ -1130,23 +1147,34 @@ h2 {
 .social-feed {
   padding-top: 100px !important;
   display: block; }
+  .social-feed--ico {
+    position: absolute;
+    bottom: 25px;
+    left: 0px;
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.2); }
   .social-feed--list {
+    position: relative;
     display: inline-block;
     width: 250px;
     height: 250px;
     overflow: hidden;
-    padding: 5px; }
+    margin: 5px; }
     .social-feed--list:hover {
       opacity: 0.8; }
     @media screen and (max-width: 767px) {
       .social-feed--list {
-        width: 100%;
+        max-width: 250px;
         height: auto; } }
   .social-feed--link {
     display: block;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 250px; }
   .social-feed--post {
-    display: block; }
+    display: block;
+    height: 250px;
+    width: 250px; }
     @media screen and (max-width: 767px) {
       .social-feed--post {
         width: 100%; } }
@@ -1156,6 +1184,10 @@ h2 {
     @media screen and (max-width: 767px) {
       .social-feed--img {
         height: auto; } }
+
+span.icon-twitter-ico.social-feed--ico {
+  font-size: 40px;
+  color: white; }
 
 figure.thumbnail-image {
   position: absolute;
