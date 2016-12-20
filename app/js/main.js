@@ -1,4 +1,19 @@
 $(document).ready(function() {
+  $("html").css("display", "none");
+
+  $("html").fadeIn(600);
+
+  $("a.transition").click(function(event){
+      event.preventDefault();
+      linkLocation = this.href;
+      $("html").fadeOut(1000, redirectPage);
+  });
+
+  function redirectPage() {
+      window.location = linkLocation;
+  }
+
+
   load_files();
   $('.anim').fadeIn('slow');
 
@@ -57,7 +72,7 @@ $(document).ready(function() {
       });
   }
 
-// work 
+// work
 $('.work-trigger').mouseenter(function () {
 
   $('.work--giro').addClass('work--gire').dequeue();
@@ -75,16 +90,11 @@ $('.work-trigger').mouseenter(function () {
     var sel = $('#'+image_name);
   }
 
-
-  
   $('.videobg-elm, .videobg-wrp').fadeOut('fast');
   $('.videobg-wrp').fadeIn('fast');
   $('.logo-makemark *').css({'fill':'#fff'});
   $('.text-sli').css({'color':'#fff'});
   sel.stop().fadeIn('fast');
-
-  
-  
 
 }).mouseleave(function () {
 
@@ -92,7 +102,7 @@ $('.work-trigger').mouseenter(function () {
   $('.work--giro').removeClass('work--gire');
   $('.work').removeClass('blue');
 
-  
+
 
   if ( $(this).hasClass('video-bg') ) {
     var video_name = $(this).attr('data-service');
@@ -106,9 +116,9 @@ $('.work-trigger').mouseenter(function () {
   $('.videobg-elm, .videobg-wrp').stop().fadeOut('fast');
   $('.logo-makemark *').css({'fill':'#000'});
   $('.text-sli').css({'color':'#333'});
-    
 
-  
+
+
 
 });
 
