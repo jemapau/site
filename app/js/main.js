@@ -13,6 +13,9 @@ $(document).ready(function() {
       window.location = linkLocation;
   }
 
+  $(window).load(function() {
+    $("body").removeClass("preload");
+  });
 
   load_files();
   $('.anim').fadeIn('slow');

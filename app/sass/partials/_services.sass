@@ -33,11 +33,13 @@
   height: 470px
   position: relative
   overflow: hidden
-  background-color: grey
+  background: transparentize(black, 0.1) url('../images/index/textura.png')
+  background-repeat: repeat
   &--img
     width: 100%
     top: -150px
-    position: relative
+    position: absolute
+    opacity: 0.5
     @media screen and (max-width:$screen-xs-max)
       top: 0px
       height: 100%
