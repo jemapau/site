@@ -43,8 +43,10 @@ h2
     height: 250px
     overflow: hidden
     margin: 5px
+    -webkit-transition: opacity 2s
+    transition: opacity 2s
     &:hover
-      opacity: 0.8
+      opacity: 0.5
     @media screen and (max-width:$screen-xs-max)
       max-width: 250px
       height: auto
@@ -52,6 +54,10 @@ h2
     display: block
     overflow: hidden
     height: 250px
+    //-webkit-transition: opacity 2s
+    //transition: opacity 0.2s
+    //&:hover
+      opacity: 0.5
   &--post
     display: block
     height: 250px
