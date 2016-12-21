@@ -95,14 +95,14 @@
             </p>
           </div>
           <div class="content-inner col span_6_of_12 hideme animated fadeInLeft">
-            <form class="form" action="http://formspree.io/je.mapau@gmail.com" method="POST">
+            <form id="contact-form" class="form" action="http://formspree.io/je.mapau@gmail.com" method="POST">
                 <div>
                   <label class="form-label" for="name">Nombre</label>
-                  <input type="text" name="name" value="" required="required">
+                  <input type="text" name="name" value="" required>
                 </div>
                 <div>
                   <label class="form-label" for="last-name">Apellido</label>
-                  <input type="text" name="last-name" value="" required="required">
+                  <input type="text" name="last-name" value="" required>
                 </div>
                 <div>
                 <div class="form-label" for="">Selecciona 3 de nuestros servicios</div>
@@ -138,7 +138,7 @@
                   <textarea name="message" rows="8" cols="80" placeholder="Tu mensaje"></textarea>
                 </div>
                 <div>
-                  <button class="btn-send" type="submit">Enviar</button>
+                  <input class="btn-send" type="submit" value="Send">
                 </div>
             </form>
           </div>
@@ -155,6 +155,7 @@
   <script src="js/main.js"></script>
 <!-- endbuild -->
 <script src="js/viewportchecker.js"></script>
+<script src="js/formspree.js"></script>
 <script  type="text/javascript">
 /* Every time the window is scrolled ... */
 $(window).scroll( function(){
