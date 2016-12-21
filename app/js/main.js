@@ -17,17 +17,28 @@ $(document).ready(function() {
     $("body").removeClass("preload");
   });
 
+  initclock();
   load_files();
   $('.anim').fadeIn('slow');
 
   function load_files() {
     $( ".top-header--inner" ).load( "views/header.html", function(){
       menu();
-      links();
+    });
+    $( ".top_header" ).load( "views/header.html", function(){
+      menu();
+      $('.nav-top--line').removeClass('nav-inner--line');
+      $('.social-item--inner').removeClass('social-item--inner');
+      $('.logo-inner').hide();
+      $('.foo-top--phrase').appendTo('.info-box--message');
     });
     $( ".foo" ).load( "views/footer.html", function() {
       initclock();
       read_bar();
+      checkbox();
+      $('.foo-top--phrase').clone().appendTo('.info-box--message');
+    });
+    $( "#load-form-internas" ).load( "views/form-internas.html", function() {
       checkbox();
     });
     $( ".logo-makemark" ).load( "images/makemark-logo.svg");
@@ -135,6 +146,7 @@ function Animation() {
 $('a.nav-full--link').mouseover(function() {
   $(this).fadeIn('.nav-full--en');
 });
+
 
 //Date and phrases
 
@@ -314,5 +326,7 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
+
+
 
 }

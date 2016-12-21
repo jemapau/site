@@ -127,6 +127,9 @@ a {
   bottom: -125px;
   text-align: center; }
 
+.info-box--message .foo-top--phrase span {
+  display: none; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?m7wwg4");
@@ -1440,7 +1443,6 @@ input.newsletter {
   border-radius: 50%; }
 
 textarea {
-  font-family: "Pragati Narrow", sans-serif;
   font-size: 16px;
   border-radius: 3px;
   border: 1px solid #787878; }
@@ -1449,16 +1451,21 @@ textarea {
   display: block;
   margin: 20px 0; }
 
-input {
+input, textarea {
   display: block;
   width: 100%;
-  padding: 10px; }
+  padding: 10px;
+  text-align: left;
+  color: #6f6f6f;
+  font-size: 14px;
+  outline: none; }
 
 textarea {
   display: block;
   width: 100%;
   padding: 10px; }
 
+<<<<<<< HEAD
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1
@@ -3835,6 +3842,10 @@ textarea {
 .slideOutUp {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
+=======
+.inputs {
+  display: table; }
+>>>>>>> c1246b1f07ebad1d902c5430f2c9a44e14998860
 
 /*  SECTIONS */
 .section {

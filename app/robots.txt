@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /audio/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /js/
+Disallow: /lib/
+Disallow: /php/
+Disallow: /robots.txt/
+Disallow: /video/
+Disallow: /sass/
+Disallow: /fonts/
+Disallow: /views/
+Disallow: /vendor/
