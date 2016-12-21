@@ -121,6 +121,9 @@ a {
   bottom: -125px;
   text-align: center; }
 
+.info-box--message .foo-top--phrase span {
+  display: none; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?m7wwg4");
@@ -1429,7 +1432,6 @@ input.newsletter {
   border-radius: 50%; }
 
 textarea {
-  font-family: "Pragati Narrow", sans-serif;
   font-size: 16px;
   border-radius: 3px;
   border: 1px solid #787878; }
@@ -1438,15 +1440,22 @@ textarea {
   display: block;
   margin: 20px 0; }
 
-input {
+input, textarea {
   display: block;
   width: 100%;
-  padding: 10px; }
+  padding: 10px;
+  text-align: left;
+  color: #6f6f6f;
+  font-size: 14px;
+  outline: none; }
 
 textarea {
   display: block;
   width: 100%;
   padding: 10px; }
+
+.inputs {
+  display: table; }
 
 /*  SECTIONS */
 .section {
