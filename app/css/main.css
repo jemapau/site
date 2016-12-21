@@ -46,7 +46,7 @@ html {
 .body-inner .wrapper {
   min-height: 0 !important; }
 
-body.branding, body.btl, body.btl, body.desarrollo-web, body.quienes-somos, body.servicios, body.social-media {
+body.branding, body.btl, body.publicidad, body.desarrollo-web, body.quienes-somos, body.servicios, body.social-media {
   background-color: white;
   background: white; }
 
@@ -1447,6 +1447,57 @@ textarea {
   border-radius: 3px;
   border: 1px solid #787878; }
 
+.checkbox-form {
+  padding: 20px;
+  border: 1px solid #787878;
+  border-radius: 3px; }
+  .checkbox-form label {
+    margin-bottom: 10px; }
+
+input.input-click[type=checkbox] {
+  display: none; }
+
+span.click-me {
+  background-color: white;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(120, 120, 120, 0.4);
+  color: #787878;
+  font-size: .85em;
+  text-decoration: none;
+  text-align: center;
+  width: auto;
+  padding: 5px 20px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto 10px;
+  -webkit-transition: background-color 150ms ease-in;
+  -moz-transition: background-color 150ms ease-in;
+  -ms-transition: background-color 150ms ease-in;
+  -o-transition: background-color 150ms ease-in;
+  transition: background-color 150ms ease-in; }
+  span.click-me:hover {
+    background-color: #56bad2; }
+
+input.input-click[type=checkbox]:checked + span.click-me {
+  background-color: #56bad2;
+  color: white;
+  text-decoration: none;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-size: 15px 13px; }
+
+input.input-click[type=checkbox]:checked:hover + span.click-me {
+  background-color: #56bad2;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background-size: 15px 15px; }
+
 .form-label {
   display: block;
   margin: 20px 0; }
@@ -1465,7 +1516,9 @@ textarea {
   width: 100%;
   padding: 10px; }
 
-<<<<<<< HEAD
+.inputs {
+  display: table; }
+
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1
@@ -3842,10 +3895,6 @@ textarea {
 .slideOutUp {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
-=======
-.inputs {
-  display: table; }
->>>>>>> c1246b1f07ebad1d902c5430f2c9a44e14998860
 
 /*  SECTIONS */
 .section {
