@@ -1,48 +1,58 @@
-<form class="form" action="http://formspree.io/je.mapau@gmail.com" method="POST">
+
+<div class="btn-asesoria btn-cotizacion">Asesoria</div>
+<div class="btn-cotizar btn-cotizacion">Cotizar</div>
+<form id="contact-form" class="form" action="https://formspree.io/je.mapau@gmail.com" method="POST" name="form">
     <div>
       <label class="form-label" for="name">Nombre</label>
-      <input type="text" name="name" value="" required="required">
+      <input type="text" name="name" value="" required>
     </div>
     <div>
       <label class="form-label" for="last-name">Apellido</label>
-      <input type="text" name="last-name" value="" required="required">
+      <input type="text" name="last-name" value="" required>
+    </div>
+    <div class="cotiza-input">
+      <label class="form-label" for="time">Tiempo del proyecto</label>
+      <input type="text" name="time" value="">
+    </div>
+    <div class="cotiza-input">
+      <label class="form-label" for="budget">Presupuesto</label>
+      <input type="text" name="budget" value="">
     </div>
     <div>
-    <label class="form-label" for="">Selecciona 3 de nuestros servicios</label>
-     <div class="inputs">
-        <div class="area">
-          <span class="input">
-            <label for="branding-option">Branding</label>
-            <input class="checkbox" type="checkbox" name="branding-option" id="checkbox-1">
-          </span>
-          <span class="input">
-            <label for="marketing-option">Marketing estrátegico</label>
-            <input class="checkbox" type="checkbox" name="marketing-option" id="checkbox-2">
-          </span>
-          <span class="input">
-            <label for="btl-option">Btl</label>
-            <input class="checkbox" type="checkbox" name="btl-option" id="checkbox-3">
-          </span>
-          <span class="input">
-            <label for="social-option">Social Media</label>
-            <input class="checkbox" type="checkbox" name="social-option" id="checkbox-4">
-          </span>
-          <span class="input">
-            <label for="develop-option">Desarrollo Web</label>
-            <input class="checkbox" type="checkbox" name="develop-option" id="checkbox-5">
-          </span>
-          <span class="input">
-            <label for="advertising-option">Publicidad</label>
-            <input class="checkbox" type="checkbox" name="advertising-option" id="checkbox-6">
-          </span>
-        </div>
-     </div>
+    <div class="form-label">Selecciona 3 de nuestros servicios</div>
+    <div class="checkbox-form">
+      <label>
+        <input class="input-click" for="branding-option" type="checkbox" name="branding-option" value="" id="checkbox-1">
+        <span class="click-me">Branding</span>
+      </label>
+      <label>
+        <input class="input-click" for="marketing-option" type="checkbox" name="marketing-option" value="" id="checkbox-2">
+        <span class="click-me">Marketing estrátegico</span>
+      </label>
+      <label>
+        <input class="input-click" for="btl-option" type="checkbox" name="btl-option" value="" id="checkbox-3" >
+        <span class="click-me">Btl</span>
+      </label>
+      <label>
+        <input class="input-click" for="social-option" type="checkbox" name="social-option" value="" id="checkbox-4">
+        <span class="click-me">Social Media</span>
+      </label>
+      <label>
+        <input class="input-click" for="desarrollo-option" type="checkbox" name="desarrollo-option" value="" id="checkbox-5">
+        <span class="click-me">Desarrollo Web</span>
+      </label>
+      <label>
+        <input class="input-click" for="advertising-option" type="checkbox" name="advertising-option" value="" id="checkbox-6">
+        <span class="click-me">Publicidad</span>
+      </label>
     </div>
     </div>
+    <div>
       <label class="form-label" for="message">Mensaje</label>
-      <textarea name="name" rows="8" cols="80" placeholder="Tu mensaje" required="required"></textarea>
+      <textarea name="message" rows="8" cols="80" placeholder="Tu mensaje"></textarea>
     </div>
     <div>
-      <button class="btn-send" type="submit">Enviar</button>
+      <input class="btn-send" name="send" type="submit" value="Enviar">
+      <input type="hidden" name="_next" value="/email.html" />
     </div>
 </form>

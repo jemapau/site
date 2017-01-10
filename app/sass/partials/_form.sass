@@ -4,7 +4,7 @@
   margin: 20px 0
 
 input, textarea
-  display: block 
+  display: block
   width: 100%
   padding: 10px
   text-align: left
@@ -19,3 +19,31 @@ textarea
 
 .inputs
   display: table
+
+.cotiza-input
+  display: none
+
+.logo-inner--email *
+  fill: $color-blue
+  margin: 0 auto
+  width: 30%
+  @media screen and (max-width:$screen-xs-max)
+    width: 100%
+
+.content-inner
+  &--email
+    width: 80%
+    margin-top: 100px
+    margin-left: auto
+    margin-right: auto
+    padding: 40px
+    border: 1px solid transparentize($color-grey, 0.8)
+    text-align: center
+
+.btn-send
+  background-color: $color-blue
+  color: white
+  border-radius: 20px
+  border: none
+  text-align: center
+  margin-top: 20px

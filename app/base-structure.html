@@ -95,17 +95,17 @@
             </p>
           </div>
           <div class="content-inner col span_6_of_12 hideme animated fadeInLeft">
-            <form class="form" action="http://formspree.io/je.mapau@gmail.com" method="POST">
+            <form id="contact-form" class="form" action="https://formspree.io/je.mapau@gmail.com" method="POST" name="form">
                 <div>
                   <label class="form-label" for="name">Nombre</label>
-                  <input type="text" name="name" value="" required="required">
+                  <input type="text" name="name" value="" required>
                 </div>
                 <div>
                   <label class="form-label" for="last-name">Apellido</label>
-                  <input type="text" name="last-name" value="" required="required">
+                  <input type="text" name="last-name" value="" required>
                 </div>
                 <div>
-                <div class="form-label" for="">Selecciona 3 de nuestros servicios</div>
+                <div class="form-label">Selecciona 3 de nuestros servicios</div>
                 <div class="checkbox-form">
                   <label>
                     <input class="input-click" for="branding-option" type="checkbox" name="branding-option" value="" id="checkbox-1">
@@ -138,7 +138,8 @@
                   <textarea name="message" rows="8" cols="80" placeholder="Tu mensaje"></textarea>
                 </div>
                 <div>
-                  <button class="btn-send" type="submit">Enviar</button>
+                  <input class="btn-send" name="send" type="submit" value="Enviar">
+                  <input type="hidden" name="_next" value="/email.html" />
                 </div>
             </form>
           </div>
@@ -155,6 +156,7 @@
   <script src="js/main.js"></script>
 <!-- endbuild -->
 <script src="js/viewportchecker.js"></script>
+<script src="js/formspree.js"></script>
 <script  type="text/javascript">
 /* Every time the window is scrolled ... */
 $(window).scroll( function(){

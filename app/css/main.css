@@ -1040,7 +1040,6 @@ footer {
     background-size: cover;
     background-repeat: no-repeat; }
     .foo-top--date {
-      display: block;
       color: white; }
       @media screen and (max-width: 767px) {
         .foo-top--date {
@@ -1336,6 +1335,13 @@ figure.thumbnail-image {
   height: 100%;
   padding: 8px !important; }
 
+.btn-cotizacion {
+  display: inline-block;
+  padding: 0px 20px;
+  border: 1px solid #787878;
+  border-radius: 20px;
+  margin-top: 20px; }
+
 .underline-hover {
   color: #787878;
   display: inline-block;
@@ -1518,6 +1524,34 @@ textarea {
 
 .inputs {
   display: table; }
+
+.cotiza-input {
+  display: none; }
+
+.logo-inner--email * {
+  fill: #56bad2;
+  margin: 0 auto;
+  width: 30%; }
+  @media screen and (max-width: 767px) {
+    .logo-inner--email * {
+      width: 100%; } }
+
+.content-inner--email {
+  width: 80%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  border: 1px solid rgba(120, 120, 120, 0.2);
+  text-align: center; }
+
+.btn-send {
+  background-color: #56bad2;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  margin-top: 20px; }
 
 /*!
  * animate.css -http://daneden.me/animate

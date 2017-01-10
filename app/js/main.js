@@ -40,8 +40,17 @@ $(document).ready(function() {
     });
     $( "#load-form-internas" ).load( "views/form-internas.html", function() {
       checkbox();
+      $('.btn-cotizar').click(function() {
+        $('.cotiza-input').fadeIn();
+        $('.btn-cotizar').addClass('bg-color');
+      });
+      $('.btn-asesoria').click(function() {
+        $('.cotiza-input').fadeOut();
+        $('.btn-cotizar').addClass('bg-color');
+      });
     });
     $( ".logo-makemark" ).load( "images/makemark-logo.svg");
+    $( ".logo-inner--email" ).load( "images/makemark-logo.svg");
   }
 
   $( "#nav-open" ).click(function() {
@@ -131,9 +140,7 @@ $('.work-trigger').mouseenter(function () {
   $('.logo-makemark *').css({'fill':'#000'});
   $('.text-sli').css({'color':'#333'});
 
-
-
-
+  $('.logo-inner--img').css({'fill':'#333'});
 });
 
 function Animation() {
