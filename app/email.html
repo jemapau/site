@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="css/main.css">
+  <title>MakeMark Site</title>
+</head>
+<body class="body body-inner preload">
+  <div class="wrapper">
+    <header class="top-header--inner nav-down">
+        <!-- Load Header.html -->
+        <div class="progress"></div>
+    </header>
+  </div>
+  <div class="container">
+    <div class="breadcrumb">
+      <ul class="breadcrumb-block">
+        <li class="breadcrumb-list"><a href="index.html" class="breadcrumb-list--link">Inicio</a></li>
+        <li class="breadcrumb-list"><a href="branding.html" class="breadcrumb-list--link active">Mensaje enviado</a></li>
+      </ul>
+    </div>
+  </div>
+  <section>
+  <div class="wrapper">
+      <div class="container">
+          <div class="section group">
+            <div class="content-inner col span_6_of_12 hideme animated fadeInLeft">
+              <div class="content-inner--info content-inner--email">
+
+                <p>
+                  Tu mensaje fue enviado con éxito
+                  Pronto estaremos en contacto
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="foo">
+      <!-- Load Footer.html -->
+  </footer>
+</body>
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!-- build:js js/main.min.js -->
+  <script src="js/main.js"></script>
+<!-- endbuild -->
+<script src="js/viewportchecker.js"></script>
+<script src="js/formspree.js"></script>
+<script  type="text/javascript">
+/* Every time the window is scrolled ... */
+$(window).scroll( function(){
+
+   /* Check the location of each desired element */
+   $('.hideme').each( function(i){
+
+       var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+       var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+       /* If the object is completely visible in the window, fade it it */
+       if( bottom_of_window > bottom_of_object ){
+
+           $(this).animate({'opacity':'1'},500);
+
+       }
+
+   });
+
+});
+</script>
+</html>

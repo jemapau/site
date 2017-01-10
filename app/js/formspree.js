@@ -1,4 +1,9 @@
-var $contactForm = $('#contact-form');
+var allowCrossDomain = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+};
 
 $contactForm.submit(function(e) {
 	e.preventDefault();
@@ -6,21 +11,16 @@ $contactForm.submit(function(e) {
 	var defaultSubmitText = $submit.val();
 
 	$.ajax({
-		url: 'https://formspree.io/je.mapau@gmail.com',
+		url: '//formspree.io/je.mapau@gmail.com',
 		method: 'POST',
 		data: $(this).serialize(),
 		dataType: 'json',
-    async: false,
-    headers: {
-       'Content-Type':'application/jsonrequest',
-    },
-    Accept: 'application/jsonrquest',
 		beforeSend: function() {
 			//$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
 			$submit.attr('disabled', true).val('Sending message…');
 		},
 		success: function(data) {
-			$contactForm.append('<div class="alert alert--success">Message sent!</div>');
+			//$contactForm.append('<div class="alert alert--success">Message sent!</div>');
 			$submit.val('Message sent!');
 			setTimeout(function() {
 				//$('.alert--success').remove();
