@@ -53,19 +53,6 @@ $(document).ready(function() {
     $( ".logo-inner--email" ).load( "images/makemark-logo.svg");
   }
 
-  //$( "#nav-open" ).click(function() {
-  //   $(this).toggleClass('open');
-  //   $( "#full-menu" ).toggleClass( "open-menu");
-  //   $('body').addClass("modal-open");
-  // });
-
-  // $("#nav-close").click(function(a) {
-  //     $('body').removeClass("modal-open");
-  //     a.preventDefault();
-  //     $("#full-menu").removeClass("open-menu");
-  //     //$header.headroom("pin");
-  // });
-
   var newClass = window.location.pathname;
   newClass = newClass.substring(newClass.lastIndexOf('/') + 1, newClass.lastIndexOf("."));
   $('body').addClass(newClass);
@@ -79,7 +66,6 @@ $(document).ready(function() {
     $("#nav-close").click(function(a) {
         a.preventDefault();
         $("#full-menu").removeClass("open-menu");
-        //$header.headroom("pin");
         $('body').removeClass("modal-open");
     });
   }
@@ -337,7 +323,4 @@ function hasScrolled() {
 
     lastScrollTop = st;
 }
-
-
-
 }
