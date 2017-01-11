@@ -47,3 +47,68 @@ textarea
   border: none
   text-align: center
   margin-top: 20px
+
+.text
+  width: 100%
+  text-align: center
+  margin-top: 20px
+  height: 70px
+
+textarea
+  font-size: $font-size-small
+  border-radius: 3px
+  border: 1px solid transparentize($color-grey, 0.8)
+
+// New Checkbox Style
+
+.checkbox-form
+  padding: 20px
+  border: 1px solid transparentize($color-grey, 0.8)
+  border-radius: 3px
+  label
+    margin-bottom: 10px
+
+input.input-click[type=checkbox]
+  display: none
+
+span.click-me
+  background-color: white
+  -webkit-border-radius: 20px
+  -moz-border-radius: 20px
+  border-radius: 20px
+  border: 1px solid transparentize($color-grey, 0.6)
+  color: $color-grey
+  font-size: .85em
+  text-decoration: none
+  text-align: center
+  width: auto
+  padding: 5px 20px
+  cursor: pointer
+  display: inline-block
+  margin: 0 auto 10px
+  -webkit-transition: background-color 150ms ease-in
+  -moz-transition: background-color 150ms ease-in
+  -ms-transition: background-color 150ms ease-in
+  -o-transition: background-color 150ms ease-in
+  transition: background-color 150ms ease-in
+  &:hover
+    background-color: $color-blue
+
+input.input-click[type=checkbox]:checked
+  + span.click-me
+    background-color: $color-blue
+    color: white
+    text-decoration: none
+    -webkit-border-radius: 20px
+    -moz-border-radius: 20px
+    border-radius: 20px
+    border: none
+    background-size: 15px 13px
+  &:hover + span.click-me
+    background-color: $color-blue
+    color: rgba(255, 255, 255, 0.5)
+    text-decoration: none
+    -webkit-border-radius: 20px
+    -moz-border-radius: 20px
+    border-radius: 20px
+    background-size: 15px 15px
