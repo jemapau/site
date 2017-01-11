@@ -1346,6 +1346,10 @@ figure.thumbnail-image {
   border-radius: 20px;
   margin-top: 20px; }
 
+.btn-active {
+  background-color: #56bad2;
+  color: white; }
+
 .underline-hover {
   color: #787878;
   display: inline-block;

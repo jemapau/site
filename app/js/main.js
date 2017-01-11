@@ -42,12 +42,19 @@ $(document).ready(function() {
       checkbox();
       $('.btn-cotizar').click(function() {
         $('.cotiza-input').fadeIn();
-        $('.btn-cotizar').addClass('bg-color');
+        $('.btn-cotizar').addClass('btn-active');
+        $('.btn-asesoria').removeClass('btn-active');
       });
       $('.btn-asesoria').click(function() {
         $('.cotiza-input').fadeOut();
-        $('.btn-cotizar').addClass('bg-color');
+        $('.btn-asesoria').addClass('btn-active');
+        $('.btn-cotizar').removeClass('btn-active');
       });
+    });
+    $('.btn-cotizacion').click(function() {
+      if ( $(this).hasClass('active') ) {
+        $('btn-cotizacion').addClass('bg-color');
+      }
     });
     $( ".logo-makemark" ).load( "images/makemark-logo.svg");
     $( ".logo-inner--email" ).load( "images/makemark-logo.svg");
