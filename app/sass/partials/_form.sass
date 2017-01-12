@@ -67,6 +67,7 @@ textarea
   padding: 20px
   border: 1px solid transparentize($color-grey, 0.8)
   border-radius: 3px
+  margin-top: 20px
   label
     margin-bottom: 10px
 
@@ -114,3 +115,48 @@ input.input-click[type=checkbox]:checked
     -moz-border-radius: 20px
     border-radius: 20px
     background-size: 15px 15px
+
+.ui-tabs-nav
+  width: 100%
+  margin-bottom: 0px
+
+.ui-tabs-tab
+  background-color: white
+  border-top-left-radius: 3px
+  border-top-right-radius: 3px
+  border: 1px solid transparentize($color-grey, 0.6)
+  border-bottom: 1px solid white
+  color: $color-grey
+  font-size: .85em
+  text-decoration: none
+  text-align: center
+  width: auto
+  cursor: pointer
+  display: inline-block
+  margin: 0 auto
+  -webkit-transition: background-color 150ms ease-in
+  -moz-transition: background-color 150ms ease-in
+  -ms-transition: background-color 150ms ease-in
+  -o-transition: background-color 150ms ease-in
+  transition: background-color 150ms ease-in
+  &:hover
+    background-color: $color-blue
+
+.ui-tabs-panel
+  padding: 20px
+  border-top-right-radius: 3px
+  border-top-left-radius: 3px
+  border: 1px solid transparentize($color-grey, 0.8)
+
+.ui-tabs-anchor
+  display: block
+  padding: 5px 20px
+  &:focus
+    background: $color-blue
+    outline: none
+    border: none
+    color: white
+.dev-checkbox
+  display: none
+.general-checkbox
+  display: none

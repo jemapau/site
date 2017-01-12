@@ -44,23 +44,35 @@ $(document).ready(function() {
         //Checked option depending on page view
        if ($('body').hasClass('branding')) {
          document.getElementById("checkbox-1").checked = true;
+         $('.branding-checkbox').show();
        } else if ($('body').hasClass('social-media')){
          document.getElementById("checkbox-2").checked = true;
+         $('.social-checkbox').show();
        } else if ($('body').hasClass('desarrollo-web')){
          document.getElementById("checkbox-3").checked = true;
+         $('.dev-checkbox').show();
        } else if ($('body').hasClass('publicidad')){
          document.getElementById("checkbox-4").checked = true;
        } else if ($('body').hasClass('btl')){
          document.getElementById("checkbox-5").checked = true;
+       } else if ($('body').hasClass('base-structure')){
+         $('.general-checkbox').show();
+         $('.dev-checkbox').hide();
        }
+
+       $( function() {
+         $( "#tabs" ).tabs();
+       } );
 
       $('.btn-cotizar').click(function() {
         $('.cotiza-input').fadeIn();
         $('.btn-cotizar').addClass('btn-active');
         $('.btn-asesoria').removeClass('btn-active');
+        $('.checkbox-form').fadeOut();
       });
       $('.btn-asesoria').click(function() {
         $('.cotiza-input').fadeOut();
+        $('.checkbox-form').fadeIn();
         $('.btn-asesoria').addClass('btn-active');
         $('.btn-cotizar').removeClass('btn-active');
       });

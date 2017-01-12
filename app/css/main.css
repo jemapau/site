@@ -1478,7 +1478,8 @@ textarea {
 .checkbox-form {
   padding: 20px;
   border: 1px solid rgba(120, 120, 120, 0.2);
-  border-radius: 3px; }
+  border-radius: 3px;
+  margin-top: 20px; }
   .checkbox-form label {
     margin-bottom: 10px; }
 
@@ -1526,6 +1527,53 @@ input.input-click[type=checkbox]:checked:hover + span.click-me {
   -moz-border-radius: 20px;
   border-radius: 20px;
   background-size: 15px 15px; }
+
+.ui-tabs-nav {
+  width: 100%;
+  margin-bottom: 0px; }
+
+.ui-tabs-tab {
+  background-color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border: 1px solid rgba(120, 120, 120, 0.4);
+  border-bottom: 1px solid white;
+  color: #787878;
+  font-size: .85em;
+  text-decoration: none;
+  text-align: center;
+  width: auto;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  -webkit-transition: background-color 150ms ease-in;
+  -moz-transition: background-color 150ms ease-in;
+  -ms-transition: background-color 150ms ease-in;
+  -o-transition: background-color 150ms ease-in;
+  transition: background-color 150ms ease-in; }
+  .ui-tabs-tab:hover {
+    background-color: #56bad2; }
+
+.ui-tabs-panel {
+  padding: 20px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border: 1px solid rgba(120, 120, 120, 0.2); }
+
+.ui-tabs-anchor {
+  display: block;
+  padding: 5px 20px; }
+  .ui-tabs-anchor:focus {
+    background: #56bad2;
+    outline: none;
+    border: none;
+    color: white; }
+
+.dev-checkbox {
+  display: none; }
+
+.general-checkbox {
+  display: none; }
 
 /*!
  * animate.css -http://daneden.me/animate
