@@ -1181,6 +1181,9 @@ footer {
     .content-inner--lightbox ul li {
       text-transform: uppercase;
       padding: 0px 20px; }
+      .content-inner--lightbox ul li > ul {
+        border-left: none;
+        padding: 0px; }
 
 .graph-block {
   position: absolute;
@@ -1426,7 +1429,9 @@ input, textarea {
 textarea {
   display: block;
   width: 100%;
-  padding: 10px; }
+  padding: 10px;
+  font-size: 1em;
+  font-family: "Pragati Narrow", sans-serif; }
 
 .inputs {
   display: table; }

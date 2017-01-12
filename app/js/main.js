@@ -40,6 +40,20 @@ $(document).ready(function() {
     });
     $( "#load-form-internas" ).load( "views/form-internas.html", function() {
       checkbox();
+
+        //Checked option depending on page view
+       if ($('body').hasClass('branding')) {
+         document.getElementById("checkbox-1").checked = true;
+       } else if ($('body').hasClass('social-media')){
+         document.getElementById("checkbox-2").checked = true;
+       } else if ($('body').hasClass('desarrollo-web')){
+         document.getElementById("checkbox-3").checked = true;
+       } else if ($('body').hasClass('publicidad')){
+         document.getElementById("checkbox-4").checked = true;
+       } else if ($('body').hasClass('btl')){
+         document.getElementById("checkbox-5").checked = true;
+       }
+
       $('.btn-cotizar').click(function() {
         $('.cotiza-input').fadeIn();
         $('.btn-cotizar').addClass('btn-active');
@@ -122,8 +136,6 @@ $('.work-trigger').mouseenter(function () {
   $('.work--giro').removeClass('work--gire');
   $('.work').removeClass('blue');
 
-
-
   if ( $(this).hasClass('video-bg') ) {
     var video_name = $(this).attr('data-service');
     var sel = $('#'+video_name);
@@ -143,14 +155,6 @@ $('.work-trigger').mouseenter(function () {
 function Animation() {
   $('#divAnimation').animateCss('fadeInLeft');
 }
-
-//Form selection
-
-$(function(){
-   if ($('body').hasClass('desarrollo-web')) {
-     //on progress
-   }
-});
 
 //Date and phrases
 
