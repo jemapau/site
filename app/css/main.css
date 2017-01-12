@@ -27,7 +27,7 @@ html {
   overflow: hidden;
   height: 100%;
   font-family: "Pragati Narrow", sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.5;
   letter-spacing: 2px;
   color: #787878;
@@ -74,7 +74,7 @@ a {
   position: absolute;
   top: 40%;
   width: 100%;
-  font-size: 32px;
+  font-size: 1.8em;
   font-weight: normal; }
 
 .logo-makemark {
@@ -90,17 +90,17 @@ a {
     width: 100%; }
 
 .section-desc {
-  font-size: 22px;
+  font-size: 1.2em;
   margin: 20px 0; }
 
 .section-link {
   position: relative;
   color: white;
-  font-size: 22px; }
+  font-size: 1.2em; }
   .section-link a span {
     position: absolute;
     color: #56bad2;
-    font-size: 48px;
+    font-size: 2.3em;
     display: inline-block;
     margin-top: -5px;
     margin-left: -40px;
@@ -120,7 +120,7 @@ a {
 .lets-talk {
   color: white;
   font-family: "Open Sans", sans-serif;
-  font-size: 48px;
+  font-size: 2.3em;
   position: absolute;
   left: 0;
   right: 0;
@@ -538,8 +538,8 @@ section.active {
       padding: 10px 20px;
       width: 100%;
       height: 100%;
-      background: #56bad2;
-      color: white;
+      text-align: center;
+      border-bottom: 1px solid #56bad2;
       content: attr(data-hover);
       -webkit-transition: -webkit-transform 0.3s;
       -moz-transition: -moz-transform 0.3s;
@@ -650,7 +650,7 @@ section.active {
   margin-top: 15px;
   text-align: center;
   color: #333;
-  font-size: 32px; }
+  font-size: 1.8em; }
   .text-slide span {
     font-family: "Libre Baskerville", serif;
     font-style: italic;
@@ -1051,7 +1051,7 @@ footer {
     .foo-top--phrase {
       position: relative;
       color: #56bad2;
-      font-size: 22px; }
+      font-size: 1.2em; }
       @media screen and (max-width: 767px) {
         .foo-top--phrase {
           padding: 0px;
@@ -1073,7 +1073,7 @@ footer {
         margin-top: 40px; } }
     .foo-bottom--phrase {
       color: #56bad2;
-      font-size: 22px;
+      font-size: 1.2em;
       text-align: center;
       display: inline-flex;
       align-items: center;
@@ -1129,18 +1129,18 @@ footer {
     min-height: 335px;
     background-color: #56bad2;
     color: white;
-    font-size: 60px; }
+    font-size: 3.3em; }
     .inner-title--desc span {
       font-weight: bold; }
   .inner-title--info > ul {
     margin-top: 50px;
     color: #787878;
-    font-size: 48px; }
+    font-size: 2.3em; }
 
 .info-list {
   margin-top: 50px;
   color: black;
-  font-size: 22px;
+  font-size: 1.2em;
   font-style: italic; }
 
 .inner-slide {
@@ -1165,7 +1165,7 @@ footer {
     top: 25%;
     text-align: center;
     color: white;
-    font-size: 22px; }
+    font-size: 1.2em; }
     .inner-slide--deck span {
       width: 100%;
       display: block; }
@@ -1174,13 +1174,16 @@ footer {
   display: inline-block; }
   .content-inner--title {
     font-family: "Libre Baskerville", serif;
-    font-size: 48px;
+    font-size: 2.3em;
     color: #56bad2; }
   .content-inner--lightbox ul {
     border-left: 1px solid #787878; }
     .content-inner--lightbox ul li {
       text-transform: uppercase;
       padding: 0px 20px; }
+      .content-inner--lightbox ul li > ul {
+        border-left: none;
+        padding: 0px; }
 
 .graph-block {
   position: absolute;
@@ -1341,10 +1344,16 @@ figure.thumbnail-image {
 
 .btn-cotizacion {
   display: inline-block;
-  padding: 0px 20px;
-  border: 1px solid #787878;
+  padding: 5px 20px;
+  border: 1px solid rgba(120, 120, 120, 0.2);
   border-radius: 20px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  cursor: pointer; }
+
+.btn-active {
+  background-color: #56bad2;
+  color: white;
+  border: 0px; }
 
 .underline-hover {
   color: #787878;
@@ -1365,7 +1374,7 @@ figure.thumbnail-image {
     left: 50%;
     right: 50%;
     bottom: 0;
-    background: #2098d1;
+    background: #56bad2;
     height: 1px;
     -webkit-transition-property: left, right;
     transition-property: left, right;
@@ -1393,7 +1402,7 @@ button.btn-send {
       width: 100%; } }
 
 input {
-  border: 1px solid #787878;
+  border: 1px solid rgba(120, 120, 120, 0.2);
   border-radius: 3px;
   text-align: center;
   width: 50%; }
@@ -1404,62 +1413,71 @@ input {
 input.newsletter {
   border-radius: 20px; }
 
+.form-label {
+  display: block;
+  margin: 20px 0; }
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  color: #6f6f6f;
+  font-size: 14px;
+  outline: none; }
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  font-family: "Pragati Narrow", sans-serif; }
+
+.inputs {
+  display: table; }
+
+.cotiza-input {
+  display: none; }
+
+.logo-inner--email * {
+  fill: #56bad2;
+  margin: 0 auto;
+  width: 30%; }
+  @media screen and (max-width: 767px) {
+    .logo-inner--email * {
+      width: 100%; } }
+
+.content-inner--email {
+  width: 80%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  border: 1px solid rgba(120, 120, 120, 0.2);
+  text-align: center; }
+
+.btn-send {
+  background-color: #56bad2;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  margin-top: 20px; }
+
 .text {
   width: 100%;
   text-align: center;
   margin-top: 20px;
   height: 70px; }
 
-.area {
-  width: 100%;
-  float: left;
-  margin-top: 15px;
-  border: 1px solid #787878;
-  border-radius: 3px;
-  padding: 20px; }
-  .area .input {
-    width: auto;
-    padding: 0px 15px;
-    float: left;
-    margin: 5px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    background-color: white;
-    border: 1px solid rgba(120, 120, 120, 0.2); }
-    .area .input label {
-      width: auto;
-      float: left;
-      position: relative; }
-    .area .input input {
-      display: none; }
-    .area .input label {
-      font-weight: 400;
-      text-align: center;
-      text-transform: uppercase;
-      cursor: pointer;
-      font-size: 14px;
-      z-index: 3;
-      height: 30px;
-      line-height: 30px; }
-    .area .input:hover {
-      box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
-
-.click-efect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #56bad2;
-  border-radius: 50%; }
-
 textarea {
-  font-size: 16px;
+  font-size: 1em;
   border-radius: 3px;
-  border: 1px solid #787878; }
+  border: 1px solid rgba(120, 120, 120, 0.2); }
 
 .checkbox-form {
   padding: 20px;
-  border: 1px solid #787878;
+  border: 1px solid rgba(120, 120, 120, 0.2);
   border-radius: 3px; }
   .checkbox-form label {
     margin-bottom: 10px; }
@@ -1497,6 +1515,7 @@ input.input-click[type=checkbox]:checked + span.click-me {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
+  border: none;
   background-size: 15px 13px; }
 
 input.input-click[type=checkbox]:checked:hover + span.click-me {
@@ -1507,55 +1526,6 @@ input.input-click[type=checkbox]:checked:hover + span.click-me {
   -moz-border-radius: 20px;
   border-radius: 20px;
   background-size: 15px 15px; }
-
-.form-label {
-  display: block;
-  margin: 20px 0; }
-
-input, textarea {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  text-align: left;
-  color: #6f6f6f;
-  font-size: 14px;
-  outline: none; }
-
-textarea {
-  display: block;
-  width: 100%;
-  padding: 10px; }
-
-.inputs {
-  display: table; }
-
-.cotiza-input {
-  display: none; }
-
-.logo-inner--email * {
-  fill: #56bad2;
-  margin: 0 auto;
-  width: 30%; }
-  @media screen and (max-width: 767px) {
-    .logo-inner--email * {
-      width: 100%; } }
-
-.content-inner--email {
-  width: 80%;
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 40px;
-  border: 1px solid rgba(120, 120, 120, 0.2);
-  text-align: center; }
-
-.btn-send {
-  background-color: #56bad2;
-  color: white;
-  border-radius: 20px;
-  border: none;
-  text-align: center;
-  margin-top: 20px; }
 
 /*!
  * animate.css -http://daneden.me/animate

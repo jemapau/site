@@ -1,12 +1,10 @@
 $(document).ready(function() {
-
 	load_files();
 	$('.anim').fadeIn('slow');
 });
 
 
 function load_files() {
-
 	$( ".top-header--inner" ).load( "views/header.html", function(){
 		menu();
 		links();
