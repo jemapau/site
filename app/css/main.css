@@ -1575,6 +1575,25 @@ input.input-click[type=checkbox]:checked:hover + span.click-me {
 .general-checkbox {
   display: none; }
 
+.error {
+  color: red; }
+
+.plan {
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: #6f6f6f;
+  font-size: 14px;
+  border: 1px solid rgba(120, 120, 120, 0.2);
+  border-radius: 3px;
+  margin-bottom: 40px; }
+  .plan-item {
+    padding: 20px; }
+  .plan-title {
+    display: block;
+    background: pink;
+    font-size: 1.8em; }
+
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.1
@@ -3962,6 +3981,7 @@ input.input-click[type=checkbox]:checked:hover + span.click-me {
 .col {
   display: block;
   float: left;
+  padding: 0 20px;
   margin: 1% 0 1% 1.6%; }
   .col:first-child {
     margin-left: 0; }

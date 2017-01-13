@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $("html").css("display", "none");
-
   $("html").fadeIn(600);
 
   $("a.transition").click(function(event){
@@ -40,21 +39,23 @@ $(document).ready(function() {
     });
     $( "#load-form-internas" ).load( "views/form-internas.html", function() {
       checkbox();
-
+        console.log('hola this')
         //Checked option depending on page view
        if ($('body').hasClass('branding')) {
-         document.getElementById("checkbox-1").checked = true;
+         document.getElementById("checkbox-6").checked = true;
          $('.branding-checkbox').show();
        } else if ($('body').hasClass('social-media')){
-         document.getElementById("checkbox-2").checked = true;
+         document.getElementById("checkbox-11").checked = true;
          $('.social-checkbox').show();
        } else if ($('body').hasClass('desarrollo-web')){
-         document.getElementById("checkbox-3").checked = true;
+         document.getElementById("checkbox-18").checked = true;
          $('.dev-checkbox').show();
        } else if ($('body').hasClass('publicidad')){
-         document.getElementById("checkbox-4").checked = true;
+         document.getElementById("checkbox-25").checked = true;
+         $('.campaign-checkbox').show();
        } else if ($('body').hasClass('btl')){
-         document.getElementById("checkbox-5").checked = true;
+         document.getElementById("checkbox-28").checked = true;
+         $('.btl-checkbox').show();
        } else if ($('body').hasClass('base-structure')){
          $('.general-checkbox').show();
          $('.dev-checkbox').hide();
@@ -82,6 +83,8 @@ $(document).ready(function() {
         $('btn-cotizacion').addClass('bg-color');
       }
     });
+
+
     $( ".logo-makemark" ).load( "images/makemark-logo.svg");
     $( ".logo-inner--email" ).load( "images/makemark-logo.svg");
   }
