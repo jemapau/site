@@ -39,7 +39,6 @@ $(document).ready(function() {
     });
     $( "#load-form-internas" ).load( "views/form-internas.html", function() {
       checkbox();
-        console.log('hola this')
         //Checked option depending on page view
        if ($('body').hasClass('branding')) {
          document.getElementById("checkbox-6").checked = true;
@@ -65,7 +64,18 @@ $(document).ready(function() {
          $( "#tabs" ).tabs();
        } );
 
-      $('.btn-cotizar').click(function() {
+      $('.btn-cotizar, .plan-btn').click(function() {
+        if (this.id == 'plan-uno'){
+          document.getElementById("plan-1").checked = true;
+          document.getElementById("plan-uno").click("#tabs-2");
+          alert("plan uno was clicked");
+        } else if (this.id == 'plan-dos') {
+          alert("plan dos was clicked");
+          document.getElementById("plan-2").checked = true;
+        } else if (this.id == 'plan-tres') {
+          alert("plan tres was clicked");
+          document.getElementById("plan-3").checked = true;
+        }
         $('.cotiza-input').fadeIn();
         $('.btn-cotizar').addClass('btn-active');
         $('.btn-asesoria').removeClass('btn-active');
@@ -83,7 +93,6 @@ $(document).ready(function() {
         $('btn-cotizacion').addClass('bg-color');
       }
     });
-
 
     $( ".logo-makemark" ).load( "images/makemark-logo.svg");
     $( ".logo-inner--email" ).load( "images/makemark-logo.svg");
@@ -237,7 +246,7 @@ function checkbox() {
 
 $(".area .input").click(function(e) {
 
-   $("label[type='checkbox']", this)
+   $("label[type='checkbox']", this);
    var pX = e.pageX,
       pY = e.pageY,
       oX = parseInt($(this).offset().left),
@@ -246,7 +255,7 @@ $(".area .input").click(function(e) {
    $(this).addClass('active');
 
    if ($(this).hasClass('active')) {
-      $(this).removeClass('active')
+      $(this).removeClass('active');
       if ($(this).hasClass('active-2')) {
          if ($("input", this).attr("type") == "checkbox") {
             if ($("span", this).hasClass('click-efect')) {

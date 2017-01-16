@@ -1579,6 +1579,7 @@ input.input-click[type=checkbox]:checked:hover + span.click-me {
   color: red; }
 
 .plan {
+  flex-wrap: wrap;
   display: block;
   width: 100%;
   text-align: left;
@@ -1588,11 +1589,25 @@ input.input-click[type=checkbox]:checked:hover + span.click-me {
   border-radius: 3px;
   margin-bottom: 40px; }
   .plan-item {
-    padding: 20px; }
+    padding: 20px;
+    align-content: stretch; }
   .plan-title {
     display: block;
-    background: pink;
+    color: #56bad2;
+    flex-wrap: wrap;
     font-size: 1.8em; }
+    .plan-title--item {
+      align-items: stretch; }
+      .plan-title--item:last-child {
+        float: right; }
+  .plan-desc {
+    flex-wrap: wrap;
+    position: relative;
+    padding: 15px; }
+    .plan-desc--item {
+      align-items: stretch; }
+      .plan-desc--item:last-child {
+        float: right; }
 
 /*!
  * animate.css -http://daneden.me/animate
