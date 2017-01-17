@@ -40,6 +40,15 @@ textarea
     padding: 40px
     border: 1px solid transparentize($color-grey, 0.8)
     text-align: center
+  &--title
+    margin: 0
+
+.ui-tabs-tab
+  @media screen and (max-width:$screen-xs-max)
+    width: 100% !important
+    border-radius: 0px !important
+    border: 1px solid transparentize($color-grey, 0.8) !important
+
 
 .btn-send
   background-color: $color-blue

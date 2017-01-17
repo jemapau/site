@@ -25,72 +25,24 @@
     <header class="top-header--inner nav-down">
         <!-- Load Header.html -->
     </header>
-  </div>
-  <div class="container">
-    <div class="breadcrumb">
-      <ul class="breadcrumb-block">
-        <li class="breadcrumb-list"><a href="index.html" class="breadcrumb-list--link">Inicio</a></li>
-        <li class="breadcrumb-list"><a href="desarrollo-web.html" class="breadcrumb-list--link active">Desarrollo Web</a></li>
-      </ul>
-    </div>
-  </div>
-    <section>
-      <div class="inner-slide">
-        <img src="../images/slider/inner-slide/desarrollo-web.jpg" alt="" class="inner-slide--img">
-        <div class="inner-slide--deck">
-          <span>Una página web es tu oficina abierta las 24 horas</span>
-          ¿Cómo quieres que te vean?
-        </div>
-      </div>
-  <div class="wrapper">
       <div class="container">
-          <div class="inner-title animated fadeInLeft">
-            <div class="inner-title--icon"></div>
-            <div class="inner-title--desc">
-              Usabilidad - practicidad <br>+ <br>
-              <span>Interactividad</span>
-            </div>
+        <div class="breadcrumb">
+          <ul class="breadcrumb-block">
+            <li class="breadcrumb-list"><a href="index.html" class="breadcrumb-list--link">Inicio</a></li>
+            <li class="breadcrumb-list"><a href="quienes-somos.html" class="breadcrumb-list--link active">Contacto</a></li>
+          </ul>
+        </div>
+          <div class="section group">
+            <h1 class="page-title">¡Hola!</h1>
           </div>
           <div class="section group">
-            <div class="content-inner col span_6_of_12 hideme animated fadeInLeft">
-              <div class="content-inner--title">
-                Diseño y <br/>desarrollo de plataformas web
-              </div>
-              <div class="content-inner--lightbox">
-                <ul>
-                  <li>Sitios web</li>
-                  <li>App web</li>
-                  <li>App móviles</li>
-                  <li>Landing page</li>
-                  <li>Formularios</li>
-                </ul>
-              </div>
+            <div class="contact span_12_of_12 hideme animated fadeInLeft" id="load-form-internas">
+
             </div>
-            <div class="content-inner col span_6_of_12 hideme animated fadeInLeft">
-              <div class="content-inner--info">
-                <ul class="info-list">
-                  <li>Generamos experiencias interactivas.</li>
-                  <li>Conectamos con los usuarios.</li>
-                </ul>
-                <p>
-                  Creamos plataformas web informativas, bajo dos conceptos base,
-                  que son neuro marketing y gamification, haciendo que sean estratégicamente
-                  persuasivos, de fácil navegabilidad y altamente interactivos, generando una
-                  verdadera experiencia multi sensorial con el usuario.
-                </p>
-              </div>
-            </div>
-        </div>
+          </div>
       </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="section group" id="load-form-internas">
-            <!-- Load form-internas.html -->
-        </div>
-      </div>
-    </section>
   </div>
+
   <footer class="foo">
       <!-- Load Footer.html -->
   </footer>
@@ -101,9 +53,12 @@
   <script src="js/main.js"></script>
 <!-- endbuild -->
 <script src="js/viewportchecker.js"></script>
+<script type="text/javascript" src="js/instafeed.min.js"></script>
+<!-- SnapWidget -->
 <script  type="text/javascript">
 /* Every time the window is scrolled ... */
 $(window).scroll( function(){
+
    /* Check the location of each desired element */
    $('.hideme').each( function(i){
 
@@ -114,6 +69,7 @@ $(window).scroll( function(){
        if( bottom_of_window > bottom_of_object ){
 
            $(this).animate({'opacity':'1'},500);
+
        }
    });
 });
