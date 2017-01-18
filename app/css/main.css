@@ -1115,6 +1115,10 @@ footer {
             background-color: #56bad2;
             bottom: 0; }
 
+.letras {
+  position: relative;
+  opacity: 1; }
+
 .inner-title {
   position: relative;
   height: 150px;
