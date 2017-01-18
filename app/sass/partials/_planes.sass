@@ -1,0 +1,30 @@
+.plan
+  flex-wrap: wrap
+  display: block
+  width: 100%
+  text-align: left
+  color: #6f6f6f
+  font-size: 14px
+  border: 1px solid transparentize($color-grey, 0.8)
+  border-radius: 3px
+  margin-bottom: 40px
+  &-item
+    padding: 20px
+    align-content: stretch
+  &-title
+    display: block
+    color: $color-blue
+    flex-wrap: wrap
+    font-size: $font-size-large
+    &--item
+      align-items: stretch
+      &:last-child
+        float: right
+  &-desc
+    flex-wrap: wrap
+    position: relative
+    padding: 15px
+    &--item
+      align-items: stretch
+      &:last-child
+        float: right

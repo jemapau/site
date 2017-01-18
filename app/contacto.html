@@ -19,81 +19,30 @@
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   <link rel="stylesheet" href="css/main.css">
   <title>MakeMark Site</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
-<body class="body body-inner">
+<body class="body body-inner preload">
   <div class="wrapper">
     <header class="top-header--inner nav-down">
         <!-- Load Header.html -->
-        <div class="progress"></div>
     </header>
-  </div>
-  <div class="container">
-    <div class="breadcrumb">
-      <ul class="breadcrumb-block">
-        <li class="breadcrumb-list"><a href="index.html" class="breadcrumb-list--link">Inicio</a></li>
-        <li class="breadcrumb-list"><a href="social-media.html" class="breadcrumb-list--link active">Social Media</a></li>
-      </ul>
-    </div>
-  </div>
-    <section>
-      <div class="inner-slide">
-        <img src="../images/slider/marketing-slider.jpg" alt="" class="inner-slide--img">
-        <div class="inner-slide--deck">
-          <span>¿Sabes algo?</span>
-          ¡Estar en internet no es hacerse visible!
-        </div>
-      </div>
-  <div class="wrapper">
       <div class="container">
-          <div class="inner-title animated fadeInLeft">
-            <div class="inner-title--icon"></div>
-            <div class="inner-title--desc">
-              Estrategia <br>+ <br>
-              <span>Experiencias</span>
-            </div>
+        <div class="breadcrumb">
+          <ul class="breadcrumb-block">
+            <li class="breadcrumb-list"><a href="index.html" class="breadcrumb-list--link">Inicio</a></li>
+            <li class="breadcrumb-list"><a href="quienes-somos.html" class="breadcrumb-list--link active">Contacto</a></li>
+          </ul>
+        </div>
+          <div class="section group">
+            <h1 class="page-title">¡Hola!</h1>
           </div>
           <div class="section group">
-            <div class="content-inner col span_6_of_12 animated fadeInLeft">
-              <div class="content-inner--title">
-                Marketing y<br/> Estrategia digital
-              </div>
-              <div class="content-inner--lightbox">
-                <ul>
-                  <li>Branded Content</li>
-                  <li>Social Media</li>
-                  <li>Seo</li>
-                  <li>SEM Publicidad Online</li>
-                  <li>Planificación de medios online</li>
-                  <li>Creación de campañas Online</li>
-                  <li>Mailing</li>
-                </ul>
-              </div>
+            <div class="contact span_12_of_12 hideme animated fadeInLeft" id="load-form-internas">
+
             </div>
-            <div class="content-inner col span_6_of_12 animated fadeInLeft">
-              <div class="content-inner--info">
-                <ul class="info-list">
-                  <li>Sencillo.</li>
-                  <li>Creamos contenidos para garantizar resultados</li>
-                </ul>
-                <p>
-                  Posicionarte, para que te vean más y mejor. Crear campañas de comunicación y de
-                  publicidad online, que llamen la atención del público objetivo. Planificar, para colorcar
-                  el contenido donde sea fácil de ser consumido por el usuario que nos interesa.
-                </p>
-              </div>
-            </div>
-        </div>
+          </div>
       </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="section group" id="load-form-internas">
-            <!-- Load form-internas.html -->
-        </div>
-      </div>
-    </section>
   </div>
+
   <footer class="foo">
       <!-- Load Footer.html -->
   </footer>
@@ -104,6 +53,8 @@
   <script src="js/main.js"></script>
 <!-- endbuild -->
 <script src="js/viewportchecker.js"></script>
+<script type="text/javascript" src="js/instafeed.min.js"></script>
+<!-- SnapWidget -->
 <script  type="text/javascript">
 /* Every time the window is scrolled ... */
 $(window).scroll( function(){
@@ -120,10 +71,7 @@ $(window).scroll( function(){
            $(this).animate({'opacity':'1'},500);
 
        }
-
    });
-
 });
-
 </script>
 </html>

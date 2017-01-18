@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $("html").css("display", "none");
-
   $("html").fadeIn(600);
 
   $("a.transition").click(function(event){
@@ -22,6 +21,7 @@ $(document).ready(function() {
   $('.anim').fadeIn('slow');
 
   function load_files() {
+    $('.foo-top--phrase').clone().appendTo('.info-box--message');
     $( ".top-header--inner" ).load( "views/header.html", function(){
       menu();
     });
@@ -40,27 +40,58 @@ $(document).ready(function() {
     });
     $( "#load-form-internas" ).load( "views/form-internas.html", function() {
       checkbox();
-
         //Checked option depending on page view
        if ($('body').hasClass('branding')) {
-         document.getElementById("checkbox-1").checked = true;
+         document.getElementById("checkbox-6").checked = true;
+         $('.branding-checkbox').show();
        } else if ($('body').hasClass('social-media')){
-         document.getElementById("checkbox-2").checked = true;
+         document.getElementById("checkbox-11").checked = true;
+         $('.social-checkbox').show();
        } else if ($('body').hasClass('desarrollo-web')){
-         document.getElementById("checkbox-3").checked = true;
+         document.getElementById("checkbox-18").checked = true;
+         $('.dev-checkbox').show();
        } else if ($('body').hasClass('publicidad')){
-         document.getElementById("checkbox-4").checked = true;
+         document.getElementById("checkbox-25").checked = true;
+         $('.campaign-checkbox').show();
        } else if ($('body').hasClass('btl')){
-         document.getElementById("checkbox-5").checked = true;
+         document.getElementById("checkbox-28").checked = true;
+         $('.btl-checkbox').show();
+       } else if ($('body').hasClass('contacto')){
+         $('.general-checkbox , .branding-checkbox , .social-checkbox , .dev-checkbox , .campaign-checkbox , .campaign-checkbox').show();
+         $('.dev-checkbox').hide();
+         $('.content-alterno').hide();
+         $('.content-inner--title').addClass('content-inner--contacto');
        }
 
-      $('.btn-cotizar').click(function() {
+       $( function() {
+         $( "#tabs" ).tabs();
+       } );
+
+      $('.btn-cotizar, .plan-btn').click(function() {
+        if (this.id == 'plan-uno') {
+          document.getElementById("plan-1").checked = true;
+          $('#tabs div').hide();
+          $('#tabs div').eq(0).show();
+          $('#tabs ul li:first-child').eq(0).addClass('active');
+        } else if (this.id == 'plan-dos') {
+          $('#tabs div').hide();
+          $('#tabs div').eq(1).show();
+          $('#tabs ul li').eq(1).addClass('active');
+          document.getElementById("plan-2").checked = true;
+        } else if (this.id == 'plan-tres') {
+          $('#tabs div').hide();
+          $('#tabs div').eq(2).show();
+          $('#tabs ul li').eq(2).addClass('active');
+          document.getElementById("plan-3").checked = true;
+        }
         $('.cotiza-input').fadeIn();
         $('.btn-cotizar').addClass('btn-active');
         $('.btn-asesoria').removeClass('btn-active');
+        $('.checkbox-form').fadeOut();
       });
       $('.btn-asesoria').click(function() {
         $('.cotiza-input').fadeOut();
+        $('.checkbox-form').fadeIn();
         $('.btn-asesoria').addClass('btn-active');
         $('.btn-cotizar').removeClass('btn-active');
       });
@@ -70,6 +101,7 @@ $(document).ready(function() {
         $('btn-cotizacion').addClass('bg-color');
       }
     });
+
     $( ".logo-makemark" ).load( "images/makemark-logo.svg");
     $( ".logo-inner--email" ).load( "images/makemark-logo.svg");
   }
@@ -222,7 +254,7 @@ function checkbox() {
 
 $(".area .input").click(function(e) {
 
-   $("label[type='checkbox']", this)
+   $("label[type='checkbox']", this);
    var pX = e.pageX,
       pY = e.pageY,
       oX = parseInt($(this).offset().left),
@@ -231,7 +263,7 @@ $(".area .input").click(function(e) {
    $(this).addClass('active');
 
    if ($(this).hasClass('active')) {
-      $(this).removeClass('active')
+      $(this).removeClass('active');
       if ($(this).hasClass('active-2')) {
          if ($("input", this).attr("type") == "checkbox") {
             if ($("span", this).hasClass('click-efect')) {

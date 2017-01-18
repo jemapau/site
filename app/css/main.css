@@ -470,12 +470,21 @@ section.active {
     display: inline-flex;
     width: auto;
     padding: 10px 15px; }
+  .nav-container--home {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .nav-container--home:hover {
+      padding-left: 5px; }
 
 .info-box {
   flex-wrap: wrap;
   display: inline-flex;
-  width: 20%;
+  width: 19%;
   padding: 0 10px; }
+  .info-box p {
+    margin: 0px; }
   @media screen and (max-width: 767px) {
     .info-box {
       display: block;
@@ -484,7 +493,13 @@ section.active {
   .info-box--link {
     color: #56bad2;
     display: block;
-    width: 100%; }
+    width: 100%;
+      width--webkit-transition: all 0.5s ease;
+      width--moz-transition: all 0.5s ease;
+      width--o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
+    .info-box--link:hover {
+      padding-left: 5px; }
   .info-box--title {
     font-style: italic;
     position: relative;
@@ -557,6 +572,11 @@ section.active {
 .find-us {
   padding: 0 15px;
   line-height: 10px; }
+  @media screen and (max-width: 767px) {
+    .find-us {
+      display: block;
+      margin: 0px;
+      padding: 5px 0px; } }
   .find-us--ico {
     margin-right: 10px; }
 
@@ -602,13 +622,13 @@ section.active {
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
       backface-visibility: hidden; }
-    @media screen and (max-width: 767px) {
-      .work-trigger {
-        display: block;
-        width: 100% !important; } }
-  @media screen and (max-width: 767px) and (max-width: 767px) {
-    .work-trigger {
-      display: none; } }
+      @media screen and (max-width: 767px) {
+        .work-trigger .work--giro {
+          display: block;
+          width: 100% !important; } }
+      @media screen and (max-width: 767px) {
+        .work-trigger .work--giro {
+          display: none; } }
     .work-trigger--access {
       display: inline-flex;
       align-content: center;
@@ -1141,6 +1161,10 @@ footer {
     color: #787878;
     font-size: 2.3em; }
 
+.service-desc {
+  text-align: center;
+  margin: 100px 0; }
+
 .info-list {
   margin-top: 50px;
   color: black;
@@ -1284,7 +1308,8 @@ h2 {
   margin-top: 100px; }
   .newsletter--input {
     border-radius: 20px;
-    margin: 0px !important; }
+    margin: 0px !important;
+    padding: 8px 15px !important; }
   .newsletter--btn {
     margin-top: 0px !important; }
     @media screen and (max-width: 767px) {
@@ -1293,8 +1318,11 @@ h2 {
   .newsletter-form--info {
     margin-bottom: 100px; }
 
+.services-feed {
+  padding-top: 0px !important; }
+
 .social-feed {
-  padding-top: 100px !important;
+  padding-top: 100px;
   display: block; }
   .social-feed--ico {
     position: absolute;
@@ -1460,6 +1488,18 @@ textarea {
   border: 1px solid rgba(120, 120, 120, 0.2);
   text-align: center; }
 
+.content-inner--title {
+  margin: 0; }
+
+@media screen and (max-width: 767px) {
+  .ui-tabs-tab {
+    width: 100% !important;
+    border-radius: 0px !important;
+    border: 1px solid rgba(120, 120, 120, 0.2) !important; } }
+
+.content-alterno {
+  margin-top: 40px; }
+
 .btn-send {
   background-color: #56bad2;
   color: white;
@@ -1482,7 +1522,8 @@ textarea {
 .checkbox-form {
   padding: 20px;
   border: 1px solid rgba(120, 120, 120, 0.2);
-  border-radius: 3px; }
+  border-radius: 3px;
+  margin-top: 20px; }
   .checkbox-form label {
     margin-bottom: 10px; }
 
@@ -1530,6 +1571,87 @@ input.input-click[type=checkbox]:checked:hover + span.click-me {
   -moz-border-radius: 20px;
   border-radius: 20px;
   background-size: 15px 15px; }
+
+.ui-tabs-nav {
+  width: 100%;
+  margin-bottom: 0px; }
+
+.ui-tabs-tab {
+  background-color: white;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border: 1px solid rgba(120, 120, 120, 0.4);
+  border-bottom: 1px solid white;
+  color: #787878;
+  font-size: .85em;
+  text-decoration: none;
+  text-align: center;
+  width: auto;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+  -webkit-transition: background-color 150ms ease-in;
+  -moz-transition: background-color 150ms ease-in;
+  -ms-transition: background-color 150ms ease-in;
+  -o-transition: background-color 150ms ease-in;
+  transition: background-color 150ms ease-in; }
+  .ui-tabs-tab:hover {
+    background-color: #56bad2; }
+
+.ui-tabs-panel {
+  padding: 20px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border: 1px solid rgba(120, 120, 120, 0.2); }
+
+.ui-tabs-anchor {
+  display: block;
+  padding: 5px 20px; }
+  .ui-tabs-anchor:focus {
+    background: #56bad2;
+    outline: none;
+    border: none;
+    color: white; }
+
+.dev-checkbox {
+  display: none; }
+
+.general-checkbox {
+  display: none; }
+
+.error {
+  color: red; }
+
+.plan {
+  flex-wrap: wrap;
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: #6f6f6f;
+  font-size: 14px;
+  border: 1px solid rgba(120, 120, 120, 0.2);
+  border-radius: 3px;
+  margin-bottom: 40px; }
+  .plan-item {
+    padding: 20px;
+    align-content: stretch; }
+  .plan-title {
+    display: block;
+    color: #56bad2;
+    flex-wrap: wrap;
+    font-size: 1.8em; }
+    .plan-title--item {
+      align-items: stretch; }
+      .plan-title--item:last-child {
+        float: right; }
+  .plan-desc {
+    flex-wrap: wrap;
+    position: relative;
+    padding: 15px; }
+    .plan-desc--item {
+      align-items: stretch; }
+      .plan-desc--item:last-child {
+        float: right; }
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -3918,6 +4040,7 @@ input.input-click[type=checkbox]:checked:hover + span.click-me {
 .col {
   display: block;
   float: left;
+  padding: 0 20px;
   margin: 1% 0 1% 1.6%; }
   .col:first-child {
     margin-left: 0; }

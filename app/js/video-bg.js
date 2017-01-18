@@ -2,8 +2,8 @@ $(document).ready(function() {
 	links();
 	movemouse();
 	overs();
-	navegadores();
 	typed();
+	navegadores();
 	cube();
 	back_user();
 
@@ -50,16 +50,13 @@ function overs() {
 
 }
 
-
 function typed() {
-
-    $(".text-sli").typed({
-        strings: ["Conectamos con nuevas ^1000 <span>audiencias</span>", "Conectamos con nuevas ^1000 <span>emociones</span>", "Conectamos con nuevas ^1000 <span>alegrias</span>"],
-        typeSpeed: 12,
-        loop: true,
-        backDelay: 2000,
-    });
-
+	$(".text-sli").typed({
+	  strings: ["Conectamos con nuevas ^1000 <span>audiencias</span>", "Conectamos con nuevas ^1000 <span>emociones</span>", "Conectamos con nuevas ^1000 <span>alegrias</span>"],
+	  typeSpeed: 12,
+		loop: true,
+	  backDelay: 2000
+	});
 }
 
 function cube() {
