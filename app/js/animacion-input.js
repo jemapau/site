@@ -1,5 +1,5 @@
 $(function() {
-   
+
   var texto = $('.animar-texto').html();
   var partir = texto.split("");
   $('.animar-texto').html("");
@@ -12,13 +12,13 @@ $(function() {
     var randY = Math.floor(Math.random() * $(window).height());
 
     if (index >= 0) {
-      $(this).css({"left":randX+'px', "top":randY+'px', "opacity":0}, 3000 );
+      $(this).css({"center":randX+'px', "top":randY+'px', "opacity":0}, 3000 );
     }
   });
 
   $('.animar-texto-h').mouseenter(function() {
     $('.letras').animate({"left": 0, "top": 0, "opacity": 1}, 3000);
   });
- 
+
 
 });
