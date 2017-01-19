@@ -30,8 +30,7 @@ $(document).ready(function() {
       $('.nav-top--line').removeClass('nav-inner--line');
       $('.social-item--inner').removeClass('social-item--inner');
       $('.logo-inner').hide();
-      $('.foo-top--phrase').appendTo('.info-box--message');
-    });
+      });
     $( ".foo" ).load( "views/footer.html", function() {
       initclock();
       read_bar();
@@ -123,20 +122,21 @@ $(document).ready(function() {
     });
   }
 
-  function read_bar() {
+function read_bar() {
 
-      var windHeight = $(window).height(),
-      docHeight = $(document).height(),
-        progressBar = $('.progress'),
+    var windHeight = $(window).height(),
+    docHeight = $(document).height(),
+      progressBar = $('.progress'),
 
-      max = docHeight - windHeight;
-      progressBar.css('width', max);
+    max = docHeight - windHeight;
+    progressBar.css('width', max);
 
-      $(document).on('scroll', function(){
-          value = $(window).scrollTop();
-          progressBar.css('width', value);
-      });
-  }
+    $(document).on('scroll', function(){
+        value = $(window).scrollTop();
+        progressBar.css('width', value);
+    });
+}
+
 
 // work
 $('.work-trigger').mouseenter(function () {

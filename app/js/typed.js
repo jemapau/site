@@ -176,15 +176,15 @@
 
 				if (self.contentType === 'html') {
 					// skip over html tags while typing
-					var curChar = curString.substr(curStrPos).charAt(0)
+					var curChar = curString.substr(curStrPos).charAt(0);
 					if (curChar === '<' || curChar === '&') {
 						var tag = '';
 						var endTag = '';
 						if (curChar === '<') {
-							endTag = '>'
+							endTag = '>';
 						}
 						else {
-							endTag = ';'
+							endTag = ';';
 						}
 						while (curString.substr(curStrPos + 1).charAt(0) !== endTag) {
 							tag += curString.substr(curStrPos).charAt(0);

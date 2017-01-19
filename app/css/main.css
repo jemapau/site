@@ -1179,7 +1179,6 @@ footer {
   background-repeat: repeat; }
   .inner-slide--img {
     width: 100%;
-    top: -150px;
     position: absolute;
     opacity: 0.5; }
     @media screen and (max-width: 767px) {
@@ -1320,6 +1319,30 @@ h2 {
 
 .services-feed {
   padding-top: 0px !important; }
+  .services-feed--list {
+    display: inline-block;
+    position: relative;
+    overflow: hidden; }
+  .services-feed--post {
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.3); }
+  .services-feed--img {
+    height: 250px;
+    transition: transform 0.4s;
+    position: absolute;
+    z-index: -2; }
+  .services-feed--desc {
+    position: absolute;
+    color: #56bad2;
+    font-size: 1.8em;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    left: 20px;
+      left--webkit-transition: ease-out 0.5s all;
+    transition: ease-out 0.5s all; }
+    .services-feed--desc:hover {
+      padding-bottom: 50px; }
 
 .social-feed {
   padding-top: 100px;
