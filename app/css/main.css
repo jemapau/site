@@ -1349,11 +1349,13 @@ h2 {
   display: block; }
   .social-feed--ico {
     position: absolute;
-    bottom: 25px;
+    bottom: 0px;
     left: 0px;
-    width: 10px;
-    height: 10px;
-    background: rgba(0, 0, 0, 0.2); }
+    width: 40px;
+    height: 40px;
+    background: white;
+    padding-top: 10px;
+    text-align: center; }
   .social-feed--list {
     position: relative;
     display: inline-block;
