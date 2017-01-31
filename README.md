@@ -1,5 +1,4 @@
 # README #
-### MakeMark Site ###
 
 To run this project you will need to follow the next steps:
 
@@ -34,15 +33,6 @@ sudo npm install gulp-sass --save-dev
 sudo npm install browser-sync --save-dev
 
 ```
-
-### Patterns
-- ``app`` Folder with main code.
-- ``app/sass`` Folder with main style.
-- ``app/main.sass`` main style file.
-
------------------------
-
-- ``dist`` Folder with production code.
 
 ###Sources
 
