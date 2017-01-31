@@ -25,58 +25,45 @@
     <header class="top-header--inner nav-down">
         <!-- Load Header.html -->
     </header>
+  </div>
+  <div class="container">
+    <div class="breadcrumb">
+      <ul class="breadcrumb-block">
+        <li class="breadcrumb-list"><a href="index.html" class="breadcrumb-list--link">Inicio</a></li>
+        <li class="breadcrumb-list"><a href="branding.html" class="breadcrumb-list--link active">Mensaje enviado</a></li>
+      </ul>
+    </div>
+  </div>
+  <section>
+  <div class="wrapper">
       <div class="container">
-        <div class="breadcrumb">
-          <ul class="breadcrumb-block">
-            <li class="breadcrumb-list"><a href="index.html" class="breadcrumb-list--link">Inicio</a></li>
-            <li class="breadcrumb-list"><a href="quienes-somos.html" class="breadcrumb-list--link active">Quienes Somos</a></li>
-          </ul>
-        </div>
           <div class="section group">
-            <h1 class="page-title">Nosotros</h1>
-            <div class="video-team span_8_of_12 pull-center hideme animated fadeInLeft" id="divAnimation">
-              <iframe width="100%" height="445px" src="https://www.youtube.com/embed/fPDMkpMq6mY" frameborder="0" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="section group animar-texto-h">
-            <div class="newsletter span_6_of_12 hideme animated fadeInLeft">
-                <div class="newsletter-desc">
-                  <h2 class="animar-texto">Creando experiencias de marca</h2>
-                  <p>Enteráte de nuestras últimas noticias</p>
+            <div class="hideme animated fadeInLeft">
+              <div class="content-inner--info content-inner--email">
+                <div class="logo-inner--email">
                 </div>
-                <div class="newsletter-form">
-                  <form action="" class="newsletter-form--info col span_12_of_12 hideme animated fadeInLeft" id="divAnimation">
-                    <input class="newsletter--input col span_7_of_12" type="email" placeholder="Ingresa tu E-mail">
-                    <button class="btn-send newsletter--btn col span_5_of_12" type="submit" name="submit">Enviar</button>
-                  </form>
-                </div>
-            </div>
-          </div>
-          <div class="section group">
-            <div class="social-feed span_8_of_12 pull-center hideme animated fadeInLeft" id="divAnimation">
-              <div class="animated fadeInLeft" id="instafeed">
-
+                <p>
+                  Tu mensaje fue enviado con éxito
+                </p>
+                <p>
+                  Pronto estaremos en contacto
+                </p>
               </div>
             </div>
-          </div>
+        </div>
       </div>
+    </section>
   </div>
-
   <footer class="foo">
       <!-- Load Footer.html -->
   </footer>
 </body>
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.12.1/jquery-ui.min.js"></script>
-<!-- build:js js/main.min.js -->
-  <script src="js/main.js"></script>
-<!-- endbuild -->
+<script src="js/main.min.js"></script>
 <script src="js/viewportchecker.js"></script>
-<!-- animacion-input -->
-<script type="text/javascript" src="js/animacion-input.js"></script>
-
-<script type="text/javascript" src="js/instafeed.min.js"></script>
-<!-- SnapWidget -->
+<script src="js/formspree.js"></script>
+<script src="js/video-bg.js"></script>
 <script  type="text/javascript">
 /* Every time the window is scrolled ... */
 $(window).scroll( function(){
@@ -91,21 +78,11 @@ $(window).scroll( function(){
        if( bottom_of_window > bottom_of_object ){
 
            $(this).animate({'opacity':'1'},500);
+
        }
+
    });
+
 });
-</script>
-<script type="text/javascript">
-    var feed = new Instafeed({
-        get: 'user',
-        clientId: 'xxxx',
-        sortBy: 'most-recent',
-        limit: '18',
-        userId: '1599115738',
-        accessToken: 'xxxxxxxxxxx',
-        resolution: 'standard_resolution',
-        template: '<ul class="social-feed--list"><span class="icon-ico-instagram social-feed--ico"></span><li class="social-feed--post"><a href="{{link}}" target="_blank" class="social-feed--link"><img class="social-feed--img" src="{{image}}" /></a></ul>',
-    });
-    feed.run();
 </script>
 </html>
