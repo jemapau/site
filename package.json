@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://jemapau@bitbucket.org/jemapau/makemark-site.git"
+    "url": ""
   },
   "author": "MakeMark Web Development",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/jemapau/makemark-site#readme",
+  "homepage": "",
   "devDependencies": {
     "browser-sync": "^2.17.3",
     "browserify": "^13.1.1",
